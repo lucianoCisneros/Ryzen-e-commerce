@@ -6,6 +6,7 @@ const loginRoutes = require("./routes/login");
 const registerRoutes = require("./routes/register");
 const productRoutes = require("./routes/products");
 const shopCartRoutes = require("./routes/shopCart");
+const aboutUsRoutes = require("./routes/aboutUs");
 
 //Setting template engine
 app.set('view engine', 'ejs');
@@ -18,7 +19,7 @@ app.use(express.json());
 app.listen('3000', () => console.log('Servidor ejecutando en puerto 3000'));
 
 app.use("/", homeRoutes);
-app.use("/quienes-somos", homeRoutes)
+app.use("/quienes-somos", aboutUsRoutes)
 app.use("/login", loginRoutes);
 app.use("/registro", registerRoutes);
 app.use("/producto", productRoutes);

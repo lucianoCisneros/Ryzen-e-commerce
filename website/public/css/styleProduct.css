@@ -327,6 +327,9 @@ div .iconos i{
 .botonesCarrito{
     width: 100%;
 }
+.botones button{
+    font-size: 2rem;
+}
 .totalCompra{
     margin-top:15px;
     margin-bottom:15px;
