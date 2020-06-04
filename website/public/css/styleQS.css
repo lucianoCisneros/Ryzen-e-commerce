@@ -1,0 +1,155 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 11px;
+}
+body {
+    background-color: black;
+}
+
+.cabecera {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+}
+.cabecera a{
+    color: white;
+}
+
+.cabecera p,li{
+    font-family: 'Poppins', sans-serif;
+}
+
+.cabecera p{
+    font-size: 28px;
+}
+.logo{
+    margin-left: 10px;
+    margin-right: 3.7rem;
+}
+.logo a{
+    text-decoration: none;
+}
+.navegacion {
+    display: inline-flex;
+}
+
+.navegacion li{
+    list-style: none;
+    display: inline;
+    padding: 8px;
+}
+.navegacion ul li{
+    margin-right: 0.8px;
+}    
+
+.registro li{
+    list-style: none;
+    display: inline-flex;
+    padding: 8px;
+}
+
+div .dos{
+    display: inline-flex;
+    margin-top: -15px;
+    align-items: center;
+}
+
+div .iconos{
+    border-left: 2px solid white;
+    margin-left: 10px;
+}
+
+div .iconos i{
+    margin-left: 10px;
+}
+
+.iconos i{
+    color: white;
+}
+
+.navbar-brand{
+    font-weight: 700;
+}
+
+.tamano-container {
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    max-width: 95%;
+    font-size: 1.46rem;
+}
+.tamano-container ul{
+    list-style: none;
+    margin-left: 1rem;
+}
+.banner-txt {
+    color: black;
+    text-align: start;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.titulos {
+    text-align: center;
+    font-size: 2.5rem;
+    color: black;
+    font-weight: bold;
+}
+
+.producto-home-desc {
+    color: black;
+}
+
+.compatibilidad {
+    color: black;
+}
+
+.compatibilidad-nom {
+    font-size: 15px;
+    text-align: center;
+    font-weight: 700;
+}
+
+
+.producto-home-desc p {
+    text-align: center;
+}
+
+img {
+    object-fit: contain;
+}
+
+.btn-mf {
+    margin-top: 25%;
+}
+
+.productos-populares {
+    font-size: 15px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.quienes-somos {
+    text-align: center;
+}
+.informacion section{
+    margin-left: 10%;
+}
+
+
+@media (min-width: 487px){
+    .logo{
+        margin-right: 3.7rem;
+    }
+}

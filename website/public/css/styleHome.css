@@ -1,0 +1,148 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+body {
+    background-color: black;
+}
+html{
+    font-size: 11px;
+}
+
+.cabecera {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-weight: bold;
+    color: white;
+    font-size: 16px;
+}
+.cabecera a{
+    color: white;
+}
+
+.cabecera p,li{
+    font-family: 'Poppins', sans-serif;
+     color: white;
+}
+
+.cabecera p{
+    font-size: 28px;
+}
+.logo{
+    margin-left: 10px;
+}
+.logo a{
+    text-decoration: none;
+}
+.navegacion {
+    display: inline-flex;
+}
+
+.navegacion li{
+    list-style: none;
+    display: inline;
+    padding: 8px;
+    margin-right: 1.1px;
+}
+
+.registro li{
+    list-style: none;
+    display: inline-flex;
+    padding: 8px;
+}
+
+div .dos{
+    display: inline-flex;
+    margin-top: -15px;
+    align-items: center;
+}
+
+div .iconos{
+    border-left: 2px solid white;
+    margin-left: 10px;
+}
+
+div .iconos i{
+    margin-left: 10px;
+}
+
+.iconos i{
+    color: white;
+}
+
+
+.tamano-container {
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    max-width: 95%;
+    color: black;
+}
+.tamano-container ul li{
+    color: black;
+}
+
+.banner-txt {
+    color: black;
+    text-align: start;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.producto-home-nom {
+    text-align: center;
+    font-size: 15px; 
+    color: black;
+    font-weight: 700;
+}
+
+.producto-home-desc {
+    color: black;
+}
+
+.compatibilidad {
+    color: black;
+}
+
+.compatibilidad-nom {
+    font-size: 15px;
+    text-align: center;
+    font-weight: 700;
+}
+
+
+.producto-home-desc p {
+    text-align: center;
+}
+
+img {
+    object-fit: contain;
+}
+
+.btn-mf {
+    margin-top: 25%;
+}
+
+.productos-populares {
+    font-size: 15px;
+    text-align: center;
+    font-weight: 700;
+}
+.carousel-item{
+    color: black;
+}
+
+@media (min-width: 487px){
+    .logo{
+        margin-right: 3.7rem;
+    }
+}

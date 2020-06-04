@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /*No incluye bordes ni rellenos*/
+}
+
+html{
+    font-size: 11px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: black;
+    background-size: 1400px;
+    background-position: center;
+}
+
+/*nav{
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 50px;
+    background-color: #fff;
+    color: black;
+}
+
+.navbar-brand{
+    font-weight: 900;
+    margin-left: 30px;
+}
+
+.nav-item{
+    color: black;
+    text-transform: uppercase;
+    margin: 5px;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+}*/
+
+.cabecera {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-weight: bold;
+    color: white;
+    font-size: 16px;
+}
+.cabecera a{
+    color: white;
+}
+
+.cabecera p,li{
+    font-family: 'Poppins', sans-serif;
+}
+
+.cabecera p{
+    font-size: 28px;
+}
+.logo{
+    margin-left: 10px;
+}
+.logo a{
+    text-decoration: none;
+}
+.navegacion {
+    display: inline-flex;
+}
+
+.navegacion li{
+    list-style: none;
+    display: inline;
+    padding: 8px;
+}
+
+.registro li{
+    list-style: none;
+    display: inline-flex;
+    padding: 8px;
+}
+
+div .dos{
+    display: inline-flex;
+    margin-top: -15px;
+    align-items: center;
+}
+
+div .iconos{
+    border-left: 2px solid white;
+    margin-left: 10px;
+}
+
+div .iconos i{
+    margin-left: 10px;
+}
+
+.iconos i{
+    color: white;
+}
+
+.wrap{
+    width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* Contenedor del Formulario*/
+.form-container{
+    width: 100%;
+    max-width: 40rem;
+    position: relative;
+    padding: 2rem 0;
+    border-radius: 1rem;
+}
+
+.form-container::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30rem;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    z-index: -1;
+}
+
+form{
+    padding: 1rem 0;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 1px 1.5rem rgba(0, 0, 0, 0.1);
+
+}
+
+/* Cantidad de campos a ingresar */
+.input-group{
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: baseline;
+}
+
+/* Estilos de los campos */
+.input-group input{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: relative;
+    width: 100%;
+    padding: 1rem 0;
+    margin-top: .5rem;
+    border: none;
+    outline: none;
+    font-size: 1.8rem;
+    color: #37474F;
+}
+
+.input-group > i{ /* Selector > que incluye todos los i del div */
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: #37474F;
+}
+
+.input-group .bar{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .1);
+    width: 100%;
+    height: 1px;
+}
+
+.input-group .bar::before{
+    content: '';
+    position: absolute;
+    background-color: #222222;
+    width: 0;
+    height: 2px;
+    transition: width 650ms;
+}
+
+.input-group input:focus + .bar::before{ /* Selector del input y bar, despues del div */
+    width: 100%;
+}
+
+.input-group button{
+    margin: 3rem auto;
+    padding: 1rem 5rem;
+    background: linear-gradient(to left, lightgrey, #37474F);
+    border: none;
+    color: #fff;
+    font-size: 2.5rem;
+    cursor: pointer;
+    border-radius: 3rem;
+}
+
+.input-group button:focus, .input-group button:hover{
+    color: #242528
+}
+
+.switch-login{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.switch-login a{
+    text-decoration: none;
+    color: #a1a1a1;
+    font-size: 1.5rem;
+}
+
+.switch-login a span{
+    color: #37474F;
+}
+
+.switch-login a span:hover{
+    padding-bottom: 2px;
+    border-bottom: 2px solid #37474F;
+}
+
+@media screen and (max-width: 700px){
+    .form-container::before{
+        height: 10rem;
+    }
+    .form-heading{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    form{
+        border-radius: initial;
+        transform: initial;
+        box-shadow: none;
+    }
+}
+
+@media (min-width: 487px){
+    .logo{
+        margin-right: 3.7rem;
+    }
+}
