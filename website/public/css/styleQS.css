@@ -78,15 +78,18 @@ div .iconos i{
 .navbar-brand{
     font-weight: 700;
 }
-
+.informacion{
+    display: flex;
+    flex-wrap: wrap;
+}
 .tamano-container {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
     padding-top: 15px;
     padding-bottom: 15px;
-    max-width: 95%;
+
     font-size: 1.46rem;
 }
 .tamano-container ul{
@@ -142,9 +145,11 @@ img {
 
 .quienes-somos {
     text-align: center;
+    padding: 5px;
 }
-.informacion section{
-    margin-left: 10%;
+.quienesSomos{
+    display: block;
+    width: 100vw;
 }
 
 

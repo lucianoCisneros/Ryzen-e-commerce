@@ -114,7 +114,6 @@ div .iconos i{
     max-width: 40rem;
     position: relative;
     padding: 2rem 0;
-    border-radius: 1rem;
 }
 
 .form-container::before{
@@ -132,7 +131,7 @@ div .iconos i{
 form{
     padding: 1rem 0;
     background-color: #fff;
-    border-radius: 1rem;
+    border-radius: 20px;
     box-shadow: 0 1px 1.5rem rgba(0, 0, 0, 0.1);
 
 }
@@ -233,7 +232,7 @@ form{
         transform: translateX(-50%);
     }
     form{
-        border-radius: initial;
+        border-radius: 20px;
         transform: initial;
         box-shadow: none;
     }

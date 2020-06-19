@@ -76,13 +76,18 @@ div .iconos i{
     color: white;
 }
 
-
-.tamano-container {
-    background-color: white;
-    border-radius: 5px;
+.contactContainer{
     margin-top: 20px;
     margin-bottom: 20px;
     padding-top: 15px;
+    padding-bottom: 15px;
+    max-width: 95%;
+}
+.tamano-container {
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     padding-bottom: 15px;
     max-width: 95%;
     color: black;
@@ -90,19 +95,61 @@ div .iconos i{
 .tamano-container ul li{
     color: black;
 }
-
-.banner-txt {
-    color: black;
-    text-align: start;
-    padding-top: 10%;
-    padding-bottom: 10%;
+.firstContainer{
+   background: grey;
 }
-
+.firstContainerRow{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+    width: 100vw;
+    justify-content: center;
+    align-content: center;
+}
+.banner-txt {
+    color: white;
+    text-align: center;
+    font-size: 1.8rem;
+    width: 100vw;
+}
+.banner-title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 3.4rem;
+    padding-top: 5%;
+    color: white;
+}
+.banner-mi{
+    display: block;
+    width: 100vw;
+    font-size: 1.1rem;
+    text-align: left;
+    justify-content: left;
+}
+.banner-mi-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+.banner-mi a{
+    text-decoration: none;
+    color: rgb(86, 158, 230);
+    font-weight: bold;
+}
+.secondContainerInfo{
+    display: flex;
+    flex-wrap: wrap;
+}
 .producto-home-nom {
     text-align: center;
-    font-size: 15px; 
-    color: black;
-    font-weight: 700;
+    font-size: 3rem; 
+    color: white;
+    font-weight: bold;
+}
+.secondDescription{
+    color: white;
+    text-align: justify;
+    font-size: 1.2rem;
 }
 
 .producto-home-desc {
@@ -113,13 +160,21 @@ div .iconos i{
     color: black;
 }
 
-.compatibilidad-nom {
-    font-size: 15px;
+.subH2 {
+    font-size: 3rem;
     text-align: center;
-    font-weight: 700;
+    font-weight: bold;
+    margin-bottom: 2%;
 }
-
-
+.contacto{
+    text-align: center;
+    font-size: 2rem; 
+    color: white;
+    font-weight: bold;
+}
+.contactInfo{
+    font-size: 1.3rem;
+}
 .producto-home-desc p {
     text-align: center;
 }
@@ -129,13 +184,20 @@ img {
 }
 
 .btn-mf {
-    margin-top: 25%;
-}
-
-.productos-populares {
-    font-size: 15px;
+    display: block;
+    width: 100vw;
+    justify-content: center;
     text-align: center;
-    font-weight: 700;
+    align-self: center;
+    align-items: center;
+    align-content: center;
+}
+.btn-mi{
+    font-size: 1.2rem;
+    background: white;
+    color: black;
+    font-weight: bold;
+    border-radius: 20px;
 }
 .carousel-item{
     color: black;
@@ -144,5 +206,13 @@ img {
 @media (min-width: 487px){
     .logo{
         margin-right: 3.7rem;
+    }
+}
+
+@media (min-width: 1000px){
+    .firstContainerRow{
+        display: flex;
+        flex-direction: initial;
+        flex-wrap: initial;
     }
 }

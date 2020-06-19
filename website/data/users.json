@@ -5,5 +5,19 @@
   "edad": "2020-06-04",
   "email": "ignaciomolina.95@hotmail.com",
   "password": "$2a$10$zUB3gRATr0r/ECx6eU9RKukRcoMuvED3io0NKFpbVHG4jdtfcpPFe"
+ },
+ {
+  "id": 2,
+  "username": "lautimol",
+  "edad": "2000-08-15",
+  "email": "lauti@gmail.com",
+  "password": "$2a$10$utB7QOq2wX615Qs4dE6uReXIef2jkMl7mK4KUkC91ibQsixjAXW4a"
+ },
+ {
+  "id": 3,
+  "username": "patricia",
+  "edad": "1980-06-11",
+  "email": "patricia@gmail.com",
+  "password": "$2a$10$aK7FjjcFWwxkp9M0799lVeUCZGnsG9HDBmw1nE75ucbkZfrHijN.6"
  }
 ]
