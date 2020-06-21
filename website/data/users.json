@@ -19,5 +19,23 @@
   "edad": "1980-06-11",
   "email": "patricia@gmail.com",
   "password": "$2a$10$aK7FjjcFWwxkp9M0799lVeUCZGnsG9HDBmw1nE75ucbkZfrHijN.6"
+ },
+ {
+  "id": 4,
+  "username": "nachito",
+  "email": "nachito@gmail.com",
+  "password": "$2a$10$5YSiai.bDpFsBLm4IGl9g.4HLELHyIqu9sYBnl/LvytBc7.7PKluC"
+ },
+ {
+  "id": 5,
+  "username": "mardonal",
+  "email": "admin@gmail.com",
+  "password": "$2a$10$G1L44yV7HR/Th7iYWIn27OIcvmmtpakVMnB68SGYBdUgbW.YqGEy."
+ },
+ {
+  "id": 6,
+  "username": "lautaro",
+  "email": "lautaro@gmail.com",
+  "password": "$2a$10$NdXqMn8EocLrtpcIEo6/uuYnPgpn6YJ4TiksFqsfCRtu0OVq9Ioim"
  }
 ]

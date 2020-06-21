@@ -38,6 +38,20 @@
         </div>
     </header>
     <div class="wrap">
+        <div class="registerErrors col-12">
+            <% if (typeof errors!= 'undefined') { %>
+            <p class="errorsTitle col-12"><span style="color: red">X</span> Error al ingresar <span style="color: red">X</span></p>
+            <ul>
+                <% for(let i=0; i< errors.length; i++) { %>
+                <div class="errorList col-12">
+                    <li class="errorType">
+                        <%= errors[i].msg %>
+                    </li>
+                </div>
+                <% } %>
+            </ul>
+            <% } %>
+        </div>
         <div class="form-container">
             <form action="/login" method="post">
                 <div class="input-group">
