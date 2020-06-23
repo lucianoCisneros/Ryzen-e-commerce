@@ -106,6 +106,21 @@ div .iconos i{
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+}
+
+.registerErrors{
+    display: flex;
+    color: white;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+.errorsTitle{
+    font-weight: bold;
+    font-size: 3rem;
+}
+.errorType{
+    font-size: 1.4rem;
 }
 
 /* Contenedor del Formulario*/
@@ -241,5 +256,23 @@ form{
 @media (min-width: 487px){
     .logo{
         margin-right: 3.7rem;
+    }
+}
+
+@media (min-width: 768px){
+    .registerErrors ul{
+        width: 100vw;
+    }
+    .errorsTitle{
+        justify-content: center;
+        text-align: center;
+    }
+    .errorList{
+        display: flex;
+    }
+}
+@media (min-width: 800px){
+    .errorList{
+        justify-content: center;
     }
 }

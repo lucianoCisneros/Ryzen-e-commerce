@@ -36,6 +36,20 @@
         </div>
     </header>
     <div class="wrap">
+        <div class="registerErrors col-12">
+            <% if (typeof errors!= 'undefined') { %>
+            <p class="errorsTitle col-12"><span style="color: red">X</span> Error al registrar <span style="color: red">X</span></p>
+            <ul>
+                <% for(let i=0; i< errors.length; i++) { %>
+                <div class="errorList col-12">
+                    <li class="errorType">
+                        <%= errors[i].msg %>
+                    </li>
+                </div>
+                <% } %>
+            </ul>
+            <% } %>
+        </div>
         <div class="form-container">
             <form action="/registro" method="post" enctype="application/x-www-form-urlencoded">
                 <div class="input-group">
@@ -47,7 +61,7 @@
                 <div class="input-group">
                     <i class="fas fa-birthday-cake"></i>
                     <label for="edad"></label>
-                    <input type="date" placeholder="Fecha de Nacimiento" required id="edad" name="edad" value=''>
+                    <input type="date" placeholder="Fecha de Nacimiento" required id="birthdate" name="birthdate" value=''>
                     <span class="bar"></span>
                 </div>
                 <div class="input-group">
