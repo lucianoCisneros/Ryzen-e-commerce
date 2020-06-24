@@ -160,9 +160,7 @@ form{
 .input-group input{
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    text-transform: uppercase;
     position: relative;
-    width: 100%;
     padding: 1rem 0;
     margin-top: .5rem;
     border: none;
@@ -223,6 +221,7 @@ form{
     text-decoration: none;
     color: #a1a1a1;
     font-size: 1.5rem;
+    padding:7.5px;
 }
 
 .switch-login a span{

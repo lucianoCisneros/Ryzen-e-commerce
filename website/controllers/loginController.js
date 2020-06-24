@@ -18,14 +18,15 @@ const loginController = {
             if (usuarioEncontrado) {
                 let passwordValidation = bcrypt.compareSync(req.body.password, usuarioEncontrado.password);
                 if (passwordValidation){
-                    res.send('¡Te pudiste loguear! Al fin');
+                    req.session.userLogged = usuarioEncontrado;
+                    return res.send('¡Te pudiste loguear! Al fin');
                 }
                 else {
-                    res.render('login', { errors: [{ msg: "Contraseña invalida" }] })
+                    return res.render('login', { errors: [{ msg: "Contraseña invalida" }] })
                 }
             }
             else {
-                    res.render('login', { errors: [{ msg: "Usuario no existe" }] })
+                    return res.render('login', { errors: [{ msg: "Usuario no existe" }] })
             }
         }
         else {

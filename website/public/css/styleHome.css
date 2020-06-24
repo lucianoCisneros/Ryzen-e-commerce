@@ -86,7 +86,7 @@ div .iconos i{
 .tamano-container {
     background-color: white;
     border-radius: 20px;
-    margin-top: 20px;
+    
     margin-bottom: 20px;
     padding-bottom: 15px;
     max-width: 95%;
@@ -97,6 +97,7 @@ div .iconos i{
 }
 .firstContainer{
    background: grey;
+   padding-top: 15px;
 }
 .firstContainerRow{
     display: flex;
@@ -105,6 +106,9 @@ div .iconos i{
     width: 100vw;
     justify-content: center;
     align-content: center;
+}
+.firstContainerInfo{
+    width: 100vw;
 }
 .banner-txt {
     color: white;
@@ -123,8 +127,7 @@ div .iconos i{
     display: block;
     width: 100vw;
     font-size: 1.1rem;
-    text-align: left;
-    justify-content: left;
+    text-align: center;
 }
 .banner-mi-container{
     display: flex;
@@ -132,9 +135,9 @@ div .iconos i{
     width: 100vw;
 }
 .banner-mi a{
-    text-decoration: none;
     color: rgb(86, 158, 230);
     font-weight: bold;
+    width: 100vw;
 }
 .secondContainerInfo{
     display: flex;
@@ -179,9 +182,7 @@ div .iconos i{
     text-align: center;
 }
 
-img {
-    object-fit: contain;
-}
+
 
 .btn-mf {
     display: block;
@@ -208,11 +209,27 @@ img {
         margin-right: 3.7rem;
     }
 }
+@media (min-width: 768px){
 
-@media (min-width: 1000px){
+}
+@media (min-width: 992px){
     .firstContainerRow{
         display: flex;
         flex-direction: initial;
         flex-wrap: initial;
+        width: 100vw;
+    }
+    .firstContainer row{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .firstContainerInfo{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .banner-mi{
+        margin-top: 50%;
+        font-size: 1.4rem;
     }
 }
