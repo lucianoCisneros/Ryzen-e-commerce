@@ -21,6 +21,7 @@ app.listen('3000', () => console.log('Servidor ejecutando en puerto 3000'));
 const homeRoutes = require("./routes/home");
 const loginRoutes = require("./routes/login");
 const registerRoutes = require("./routes/register");
+const logoutRoutes = require("./routes/logout")
 const productRoutes = require("./routes/products");
 const shopCartRoutes = require("./routes/shopCart");
 const aboutUsRoutes = require("./routes/aboutUs");
@@ -30,5 +31,6 @@ app.use("/", homeRoutes);
 app.use("/quienes-somos", aboutUsRoutes)
 app.use("/login", loginRoutes);
 app.use("/registro", registerRoutes);
+app.use("/logout", logoutRoutes);
 app.use("/producto", productRoutes);
 app.use("/carrito", shopCartRoutes);

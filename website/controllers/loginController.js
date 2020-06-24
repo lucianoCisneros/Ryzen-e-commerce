@@ -22,7 +22,8 @@ const loginController = {
                     if (req.body.rememberUser != undefined){
                         res.cookie('username', req.session.userLogged.username, {maxAge: 1000000});
                     }
-                    return res.send('¡Te pudiste loguear! Al fin');
+                    
+                    return res.redirect('/');
                 }
                 else {
                     return res.render('login', { errors: [{ msg: "Contraseña invalida" }] })

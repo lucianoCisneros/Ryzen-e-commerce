@@ -3,8 +3,9 @@ const router = express.Router();
 const registerController = require('../controllers/registerController');
 let {check, validationResult, body} = require('express-validator')
 const registerMiddleware = require('../middlewares/registerMiddleware');
+const guestMiddleware = require('../middlewares/guestMiddleware')
 
-router.get('/', registerController.index);
+router.get('/', guestMiddleware, registerController.index);
 router.post('/', registerMiddleware, registerController.register);
 
 module.exports = router;
