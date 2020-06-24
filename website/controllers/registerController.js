@@ -9,17 +9,17 @@ const registerController = {
     },
     //index2: (req, res) => {
     //    let users = fs.readFileSync(path.join(__dirname, '../data/users.json'), 'utf-8');
-        //users = JSON.parse(users);
+    //users = JSON.parse(users);
     //    res.send("lo lograste")
     //},
     register: (req,res) => {
         // res.send('Llegaron los datos ' + req.body)
         let errors = validationResult(req);
         if (errors.isEmpty()){
-            let users = fs.readFileSync(path.join(__dirname, '/../data/users.json'), 'utf-8');
-            users = JSON.parse(users);
+            let usersFilePath = path.join(__dirname, '/../data/users.json');
+            let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
             let nextId;
-
+            
             // Crear id para usuario
             if (users == false) {
                 nextId = 1;
@@ -27,7 +27,7 @@ const registerController = {
                 nextId = users[users.length - 1].id + 1;
             }
             // Crear un usuario
-
+            
             let user = {
                 id: nextId,
                 username: req.body.username,
@@ -38,22 +38,27 @@ const registerController = {
             console.log(req.body)
             // Agregar el dato del archivo para recuperarlo despues
             let usuarioEncontrado = users.find((usuario) => {
+                return usuario.username === user.username
+            });
+            let emailEncontrado = users.find((usuario) => {
                 return usuario.email === user.email
             });
             if (usuarioEncontrado) {
-                res.send('El usuario ya existe')
-            } else {
+                return res.render('register', { errors: [{ msg: "El nombre de usuario ya está en uso" }] })
+            }
+            else {
                 // Agregar al usuario en la base de datos
                 users = [...users, user]; // Tengo array de usuario en formato de objetos
                 users = JSON.stringify(users, null, ' '); // Lo transformo en cadena de texto (unica manera de guardar usuarios)
-
+                
                 //Guardarlo
                 fs.writeFileSync(path.join(__dirname, '/../data/users.json'), users);
-
+                
                 //Redirigir
                 res.redirect('/login');
             }
-        } else {
+        }
+        else {
             res.render('register', {errors: errors.errors});
         }
     }
