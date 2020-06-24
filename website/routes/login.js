@@ -5,6 +5,7 @@ const loginMiddlewares = require('../middlewares/loginMiddleware');
 
 router.get('/', loginController.index);
 router.post('/', loginMiddlewares, loginController.login);
+
 router.get('/check', function(req,res){
     if (req.session.userLogged == undefined) {
         res.send('no estas logueado')
