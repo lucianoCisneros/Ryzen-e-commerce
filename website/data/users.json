@@ -37,5 +37,11 @@
   "username": "lautaro",
   "email": "lautaro@gmail.com",
   "password": "$2a$10$NdXqMn8EocLrtpcIEo6/uuYnPgpn6YJ4TiksFqsfCRtu0OVq9Ioim"
+ },
+ {
+  "id": 7,
+  "username": "lautarito",
+  "email": "cbellati@grupobgk.com",
+  "password": "$2a$10$5tVYk9lQSb3m87DYw0O4KOkjwFp18ZdzpgOCDZOiukHUOUc5Z.f5u"
  }
 ]

@@ -19,6 +19,9 @@ const loginController = {
                 let passwordValidation = bcrypt.compareSync(req.body.password, usuarioEncontrado.password);
                 if (passwordValidation){
                     req.session.userLogged = usuarioEncontrado;
+                    if (req.body.rememberUser != undefined){
+                        res.cookie('username', req.session.userLogged.username, {maxAge: 1000000});
+                    }
                     return res.send('¡Te pudiste loguear! Al fin');
                 }
                 else {

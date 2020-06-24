@@ -3,6 +3,7 @@ const app = express();
 const path = require('path');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
+const rememberUserMiddleware = require("./middlewares/rememberUserMiddleware2");
 
 //Setting template engine
 app.set('view engine', 'ejs');
@@ -29,4 +30,5 @@ app.use("/quienes-somos", aboutUsRoutes)
 app.use("/login", loginRoutes);
 app.use("/registro", registerRoutes);
 app.use("/producto", productRoutes);
-app.use("/carrito", shopCartRoutes)
+app.use("/carrito", shopCartRoutes);
+app.use(rememberUserMiddleware);
