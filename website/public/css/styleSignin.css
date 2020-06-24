@@ -33,6 +33,7 @@ body{
 .nav-item{
     color: black;
 }*/
+
 .cabecera {
     display: flex;
     flex-wrap: wrap;
@@ -41,6 +42,7 @@ body{
     color: white;
     font-size: 16px;
 }
+
 .cabecera a{
     color: white;
 }
@@ -52,12 +54,15 @@ body{
 .cabecera p{
     font-size: 28px;
 }
+
 .logo{
     margin-left: 10px;
 }
+
 .logo a{
     text-decoration: none;
 }
+
 .navegacion {
     display: inline-flex;
 }
@@ -100,15 +105,18 @@ div .iconos i{
     justify-content: center;
     flex-wrap: wrap;
 }
+
 .registerErrors{
     color: white;
     margin-top: 10px;
     flex-wrap: wrap;
 }
+
 .errorsTitle{
     font-weight: bold;
     font-size: 3rem;
 }
+
 .errorType{
     font-size: 1.4rem;
 }
