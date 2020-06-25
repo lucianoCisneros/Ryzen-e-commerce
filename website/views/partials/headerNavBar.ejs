@@ -1,0 +1,32 @@
+<header>
+    <div class="container cabecera">
+        <nav class="row navbar navegacion">
+            
+            <span class="logo">
+                <p><a href="/">RYZEN</a></p>
+            </span>
+            <ul>
+                <li class="nav-item active"><a href="/producto">VISORES</a></li>
+                <li class="nav-item">APPS Y JUEGOS</li>
+                <li class="nav-item"><a href="/quienes-somos">QUIENES SOMOS</a></li>
+            </ul>
+        </nav>
+        <span class="dos">
+            <% if(locals.user){ %>
+            <span class="registro">
+                <li><a href="/login">MI PERFIL</a></li>
+                <li><a href="/logout">CERRAR SESIÓN</a></li>
+            </span>
+            <% } else { %>
+            <span class="registro">
+                <li><a href="/login">LOGIN</a></li>
+                <li><a href="/registro">REGISTRO</a></li>
+            </span>
+            <% } %>
+            <span class="iconos">
+                <a href=""><i class="fas fa-search" disabled></i></a>
+                <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+            </span>
+        </span>
+    </div>
+</header>
