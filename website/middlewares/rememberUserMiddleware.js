@@ -7,6 +7,7 @@ function rememberUserMiddleware(req, res, next) {
 
   if (req.session.userLogged) {
     res.locals.user = req.session.userLogged;
+    
     return next();
   }
   else if (req.cookies.username) {

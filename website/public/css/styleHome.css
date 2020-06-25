@@ -75,6 +75,9 @@ div .iconos i{
 .iconos i{
     color: white;
 }
+.userLogged{
+    text-transform: uppercase;
+}
 
 .contactContainer{
     margin-top: 20px;
@@ -86,10 +89,8 @@ div .iconos i{
 .tamano-container {
     background-color: white;
     border-radius: 20px;
-    
     margin-bottom: 20px;
     padding-bottom: 15px;
-    max-width: 95%;
     color: black;
 }
 .tamano-container ul li{
@@ -110,6 +111,11 @@ div .iconos i{
 .firstContainerInfo{
     width: 100vw;
 }
+.bannerIcon{
+    color: white;
+    margin-right: 20px;
+    display: none;
+}
 .banner-txt {
     color: white;
     text-align: center;
@@ -122,6 +128,7 @@ div .iconos i{
     font-size: 3.4rem;
     padding-top: 5%;
     color: white;
+    text-shadow: 0 0 15px #0a0a0a;
 }
 .banner-mi{
     display: block;
@@ -135,7 +142,8 @@ div .iconos i{
     width: 100vw;
 }
 .banner-mi a{
-    color: rgb(86, 158, 230);
+    /* color: rgb(86, 158, 230); */
+    color: rgb(21, 90, 160);
     font-weight: bold;
     width: 100vw;
 }
@@ -154,7 +162,9 @@ div .iconos i{
     text-align: justify;
     font-size: 1.2rem;
 }
-
+.secondDescription p{
+    color: white;
+}
 .producto-home-desc {
     color: black;
 }
@@ -162,12 +172,14 @@ div .iconos i{
 .compatibilidad {
     color: black;
     margin-top: 20px;
+    background: white;
 }
 
 .subH2 {
     font-size: 3rem;
     text-align: center;
     font-weight: bold;
+    color: black;
     margin-bottom: 2%;
 }
 .contacto{
@@ -195,11 +207,18 @@ div .iconos i{
     align-content: center;
 }
 .btn-mi{
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     background: white;
     color: black;
     font-weight: bold;
-    border-radius: 20px;
+    border: 1px solid black;
+        border-radius: 10px;
+}
+.btn-mi:hover{
+    background: black;
+    color: white;
+    border: 1px solid black;
+    transition: all 0.3s ease 0s;
 }
 .carousel-item{
     color: black;
@@ -208,6 +227,11 @@ div .iconos i{
 @media (min-width: 487px){
     .logo{
         margin-right: 3.7rem;
+    }
+}
+@media (max-width: 575px){
+    .tamano-container{
+        max-width: 95%;
     }
 }
 @media (min-width: 768px){
@@ -227,10 +251,70 @@ div .iconos i{
 
     .firstContainerInfo{
         flex-direction: column;
-        justify-content: space-around;
+        align-self: center;
+    }
+    .firstContainerInfo p{
+        margin-top: 40px;
+        margin-bottom: 40px;
     }
     .banner-mi{
-        margin-top: 50%;
-        font-size: 1.4rem;
+        /* margin-top: 50%; */
+        font-size: 1.5rem;
+    }
+    .banner-mi a:hover{
+    background: rgb(21, 90, 160);
+    color: WHITE;
+    text-shadow: 0 0 15px #00f3ff;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.3s ease 0s;
+    }
+    .btn-mi:hover{
+    transition: all 0.3s ease 0s;
+    text-shadow: 0 0 35px white;
+    }
+    .banner-title{
+        font-size: 4.3rem;
+    }
+    .banner-txt{
+        font-size: 1.9rem;
+    }
+    .tamano-container{
+        max-width: 100%;
+        border-radius: 0px;
+    }
+    .secondDescription{
+        font-size: 1.6rem;
+        line-height: 3rem;
+    }
+    .producto-home-nom{
+        font-size: 4rem;
+
+    }
+    .compatibleContainer{
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .compatible img{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media (min-width: 1025px){
+    .banner-title{
+        font-size: 5rem;
+    }
+    .banner-txt{
+        font-size: 2.1rem;
+    }
+    .bannerIcon{
+    font-size: 4.5rem;
+    display: inline;
+    }
+    .secondContainer{
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
 }

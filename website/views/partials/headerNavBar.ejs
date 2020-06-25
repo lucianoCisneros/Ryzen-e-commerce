@@ -1,5 +1,5 @@
 <header>
-    <div class="container cabecera">
+    <div class="container col-xl-11 cabecera">
         <nav class="row navbar navegacion">
             
             <span class="logo">
@@ -14,7 +14,7 @@
         <span class="dos">
             <% if(locals.user){ %>
             <span class="registro">
-                <li><a href="/login">MI PERFIL</a></li>
+                <li><a href="/login" class="userLogged">¡Hola <%= locals.user.username %></a>!</li>
                 <li><a href="/logout">CERRAR SESIÓN</a></li>
             </span>
             <% } else { %>

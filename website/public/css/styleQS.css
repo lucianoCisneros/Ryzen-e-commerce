@@ -88,7 +88,6 @@ div .iconos i{
     margin-bottom: 20px;
     padding-top: 15px;
     padding-bottom: 15px;
-
     font-size: 1.46rem;
 }
 .tamano-container ul{
@@ -155,5 +154,19 @@ img {
 @media (min-width: 487px){
     .logo{
         margin-right: 3.7rem;
+    }
+}
+@media (min-width: 992px){
+    .tamano-container{
+        max-width: 100%;
+        width: 100vw;
+        border-radius: 0px;
+        background: none;
+    }
+    .contactos{
+        color: white;
+    }
+    .contactos .titulos{
+        color: white;
     }
 }
