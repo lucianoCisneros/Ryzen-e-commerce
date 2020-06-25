@@ -58,11 +58,11 @@ module.exports = function(sequelize, dataTypes){
     user.associate = function (modelos) {
         user.belongsTo(modelos.item, {
             foreignKey: 'idUser',
-            as: 'user'
+            as: 'item'
         });
         user.belongsTo(modelos.cart, {
             foreignKey: 'idUser',
-            as: 'user'
+            as: 'cart'
         });
     }
 

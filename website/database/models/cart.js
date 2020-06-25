@@ -50,7 +50,7 @@ module.exports = function (sequelize, dataTypes) {
         });
         cart.belongsTo(modelos.item, {
             foreignKey: 'idCart',
-            as: 'cart'
+            as: 'item'
         })
     }
 
