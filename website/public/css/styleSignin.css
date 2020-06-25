@@ -176,7 +176,7 @@ form{
     /*transform: translateX(10rem);*/
     padding: 2rem 0;
     background-color: #fff;
-    border-radius: 1rem;
+    border-radius: 20px;
     box-shadow: 0 1px 1.5rem rgba(0, 0, 0, .1);
 }
 
@@ -307,6 +307,10 @@ form{
     .errorsTitle{
         justify-content: center;
         text-align: center;
+        font-size: 25px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px;
     }
     .errorList{
         display: flex;
