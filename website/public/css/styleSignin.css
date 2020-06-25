@@ -181,7 +181,7 @@ form{
     /*transform: translateX(10rem);*/
     padding: 2rem 0;
     background-color: #fff;
-    border-radius: 1rem;
+    border-radius: 20px;
     box-shadow: 0 1px 1.5rem rgba(0, 0, 0, .1);
 }
 
