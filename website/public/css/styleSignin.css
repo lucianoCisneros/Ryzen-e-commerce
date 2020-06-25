@@ -305,6 +305,9 @@ form{
     .errorsTitle{
         justify-content: center;
         text-align: center;
+        font-size: 25px;
+        text-transform: uppercase;
+        font-weight: bold;
     }
     .errorList{
         display: flex;
