@@ -3,7 +3,7 @@ const app = express();
 const path = require('path');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
-const rememberUserMiddleware = require("./middlewares/rememberUserMiddleware2");
+const rememberUserMiddleware = require("./middlewares/rememberUserMiddleware");
 
 //Setting template engine
 app.set('view engine', 'ejs');
