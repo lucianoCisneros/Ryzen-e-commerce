@@ -41,41 +41,37 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    letter-spacing: 3px;
-    min-height: 8vh;
     font-weight: bold;
     color: white;
-    font-size: 14px;
+    font-size: 16px;
 }
-
 .cabecera a{
     color: white;
 }
 
-.cabecera p li{
+.cabecera p,li{
     font-family: 'Poppins', sans-serif;
+     color: white;
 }
 
 .cabecera p{
     font-size: 28px;
 }
-
 .logo{
     margin-left: 10px;
 }
-
 .logo a{
     text-decoration: none;
 }
-
 .navegacion {
     display: inline-flex;
 }
 
 .navegacion li{
     list-style: none;
-    display: inline-flex;
+    display: inline;
     padding: 8px;
+    margin-right: 1.1px;
 }
 
 .registro li{
@@ -86,7 +82,7 @@ body{
 
 div .dos{
     display: inline-flex;
-    margin-bottom: 10px;
+    margin-top: -15px;
     align-items: center;
 }
 
@@ -151,7 +147,6 @@ div .iconos i{
     max-width: 40rem;
     /*background-color: #fff;*/
     position: relative;
-    padding: 10rem 0;
     /*box-shadow: 0 1px 1.5rem rgba(0, 0, 0, .1);*/
     z-index: 1;
 }
@@ -255,13 +250,15 @@ form{
     text-align: center;
 }
 
-.switch-login a{
-    text-decoration: none;
+.switch-login p{
     color: #a1a1a1;
     font-size: 1.5rem;
 }
-
+.switch-login a{
+    text-decoration: none;
+}
 .switch-login a span{
+
     color: #37474F;
 }
 
@@ -270,8 +267,13 @@ form{
     border-bottom: 2px solid #37474F;
 }
 
+@media (max-width: 349px){
+    .input-group input{
+    width: 85%;
+    }
+}
 @media (min-width: 425px){
-    .switch-login a{
+    .switch-login p{
         margin-left: 5px;
         margin-right: 5px;
     }
