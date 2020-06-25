@@ -35,7 +35,7 @@
             <div class="form-container">
                 <form action="/login" method="post">
                     <div class="input-group">
-                        <i class="fas fa-envelope"></i>
+                        <i class="fas fa-user"></i>
                         <input type="username" placeholder="Usuario" required name="username">
                         <span class="bar"></span>
                     </div>
@@ -44,16 +44,17 @@
                         <input type="password" placeholder="Contraseña" required name="password">
                         <span class="bar"></span>
                     </div>
-                    <!--<div class="input-group">
-                        <input type="checkbox" name="Contraseña" id="RememberUser"><label for="RememberUser">Recuerdame</label>
-                    </div>-->
+                    <div class="input-group" style="padding-top: 11px;">
+                        <input class="checkbox" id="checkbox" type="checkbox" value="" name=""/>
+                        <label class="remember" for="checkbox" style="margin-bottom: 0px; height: 16px;">Recuérdame</label>
+                    </div>
                     <div class="input-group">
                         <button type="submit">
                             <i class="fas fa-vr-cardboard"></i>
                         </button>
                     </div>
                     <div class="switch-login">
-                        <a href="/registro">Todavia no tienes una cuenta? <span>Registrate</span></a>
+                        <p>¿Todavía no tienes una cuenta? <a href="/registro"><span>Regístrate</span></a></p>
                     </div>
                 </form>
             </div>
