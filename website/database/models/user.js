@@ -8,6 +8,11 @@ module.exports = function(sequelize, dataTypes){
             autoIncrement: true,
             unsigned: true
         },
+        userName: {
+            type: dataTypes.STRING,
+            unique: true,
+            allowNull: false
+        },
         name: {
             type: dataTypes.STRING,
             allowNull: false
@@ -34,17 +39,17 @@ module.exports = function(sequelize, dataTypes){
         },
         createdAt: {
             type: 'TIMESTAMP',
-            defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
         updatedAt: {
             type: 'TIMESTAMP',
-            defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
         deleteAt: {
         type: 'TIMESTAMP',
-        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
+        defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
         allowNull: false
         }
     }
@@ -58,11 +63,11 @@ module.exports = function(sequelize, dataTypes){
     user.associate = function (modelos) {
         user.belongsTo(modelos.item, {
             foreignKey: 'idUser',
-            as: 'user'
+            as: 'item'
         });
         user.belongsTo(modelos.cart, {
             foreignKey: 'idUser',
-            as: 'user'
+            as: 'cart'
         });
     }
 
