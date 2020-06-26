@@ -28,6 +28,7 @@ h2,h3,span,p{
 h3{
     font-size: 20px;
 }
+/* DESKTOP HEADER */
 .cabecera {
     display: flex;
     flex-wrap: wrap;
@@ -88,6 +89,53 @@ div .iconos i{
 .iconos i{
     color: white;
 }
+.userLogged{
+    text-transform: uppercase;
+}
+/* DESKTOP HEADER ENDS */
+
+/* MOBILE HEADER */
+.mobile-header{
+    display: none;
+}
+.mobileNavbar{
+    background: black;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.mobileNavbar a{
+    color: white;
+}
+.navLogo{
+    font-size: 28px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.navbar-nav{
+    margin-left: 10px;
+}
+.navbar-toggler{
+    margin-right: px;
+}
+.fa-bars{
+    background: black;
+    font-size: 25px;
+    color: white;
+}
+.nav-items{
+    display: flex;
+    align-items: center;
+}
+.nav-items a{
+    margin-left: 10px;
+}
+.nav-items i{
+    color: white;
+}
+/* MOBILE HEADER ENDS */
 
 .producto {
     display: flex;
@@ -351,7 +399,14 @@ div .iconos i{
 .carritoTitulo span {
     display: none;
 }
-
+@media (max-width:991px){
+    .mobile-header{
+        display: inline!important;
+    }
+    .desktop-header{
+        display: none!important;
+    }
+}
 @media (min-width: 992px){
     /* Medidas PC */
     .carritoTitulo {

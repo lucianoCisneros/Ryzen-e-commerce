@@ -13,7 +13,7 @@ html{
 
 body{
     background: black;
-    background: url('../img/vr9.jpg');
+    /* background: url('../img/vr9.jpg'); */
     /*background-size: 1400px;*/
     background-attachment: fixed;
     background-position: center;
@@ -43,7 +43,7 @@ body{
     font-weight: 600;
 }*/
 
-
+/* DESKTOP HEADER */
 .cabecera {
     display: flex;
     flex-wrap: wrap;
@@ -116,7 +116,53 @@ div .iconos i{
 .iconos i{
     color: white;
 }
+/* DESKTOP HEADER ENDS */
 
+/* MOBILE HEADER */
+.mobile-header{
+    display: none;
+}
+.mobileNavbar{
+    background: black;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.mobileNavbar a{
+    color: white;
+}
+.navLogo{
+    font-size: 28px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.navbar-nav{
+    margin-left: 10px;
+}
+.navbar-toggler{
+    margin-right: px;
+}
+.fa-bars{
+    background: black;
+    font-size: 25px;
+    color: white;
+}
+.nav-items{
+    display: flex;
+    align-items: center;
+}
+.nav-items a{
+    margin-left: 10px;
+}
+.nav-items i{
+    color: white;
+}
+/* MOBILE HEADER ENDS */
+.userLogged{
+    text-transform: uppercase;
+}
 .wrap{
     width: 90%;
     margin: 0 auto;
@@ -134,9 +180,12 @@ div .iconos i{
 .errorsTitle{
     font-weight: bold;
     font-size: 3rem;
+    text-align: center;
 }
 .errorType{
     font-size: 1.4rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Contenedor del Formulario*/
@@ -144,7 +193,7 @@ div .iconos i{
     width: 100%;
     max-width: 40rem;
     position: relative;
-        margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .form-container::before{
@@ -256,7 +305,7 @@ form{
 
 @media (max-width: 349px){
     .input-group input{
-    width: 85%;
+        width: 85%;
 }
 }
 @media screen and (max-width: 700px){
@@ -295,5 +344,13 @@ form{
 @media (min-width: 800px){
     .errorList{
         justify-content: center;
+    }
+}
+@media (max-width:991px){
+    .mobile-header{
+        display: inline!important;
+    }
+    .desktop-header{
+        display: none!important;
     }
 }
