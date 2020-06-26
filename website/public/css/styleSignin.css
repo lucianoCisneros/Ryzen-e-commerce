@@ -330,7 +330,6 @@ form{
     padding-bottom: 2px;
     border-bottom: 2px solid #37474F;
 }
-
 @media (max-width: 349px){
     .input-group input{
     width: 85%;
@@ -343,7 +342,6 @@ form{
         margin-right: 5px;
     }
 }
-
 @media screen and (max-width: 700px){
     .form-container::before{
         height: 10rem;

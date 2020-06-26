@@ -223,24 +223,8 @@ img {
     align-items: center;
     justify-content: space-between;
 }
-@media (max-width: 380px){
-    .contactDiv {
-        display: block;
-        align-items: center;
-    }
-}
-.iconoIg {
-    height: 90px;
-    width: 90px;
-}
-@media (max-width: 768px){
-    .iconoIg {
-        width: 75px;
-        height: 75px;
-    }
-}
 .contacto{
-    text-align: center;
+    text-align: left;
     font-size: 2rem; 
     color: white;
     font-weight: bold;
@@ -256,14 +240,30 @@ img {
     margin-right: auto;
     border-radius: 5px;
 }
+.linkIg .fab{
+    color: white;
+    font-size: 3.5rem;
+    margin-right:5px;
+}
+@media (max-width: 380px){
+    .contactDiv {
+        display: block;
+        align-items: center;
+    }
+}
 
+@media (max-width: 768px){
+    .iconoIg {
+        width: 75px;
+        height: 75px;
+    }
+}
 @media (min-width: 425px){
     .googleMap {
         width: 220px;
         height: 220px;
     }
 }
-
 @media (min-width: 768px){
     .googleMap {
         width: 300px;

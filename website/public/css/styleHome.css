@@ -129,13 +129,14 @@ div .iconos i{
     text-transform: uppercase;
 }
 
-.contactContainer{
+/* .contactContainer{
     margin-top: 20px;
     margin-bottom: 20px;
     padding-top: 15px;
     padding-bottom: 15px;
     max-width: 95%;
-}
+} */
+
 .contactDiv {
     display: flex;
     flex-wrap: wrap;
@@ -264,6 +265,7 @@ div .iconos i{
 }
 .carouselContainer{
     background-color: rgb(13, 77, 141);
+    margin-bottom: 0px;
 }
 .carouselIndex{
     width: 50vw;
@@ -280,6 +282,7 @@ div .iconos i{
     color: white;
     padding-top: 15px;
     width: 100%;
+    text-shadow: 0 0 18px #0a0a0a;
 }
 .carousel-caption h2, .carousel-caption p{
     font-weight: bold;
@@ -297,7 +300,7 @@ div .iconos i{
     margin-bottom: 3%;
 }
 .contacto{
-    text-align: center;
+    text-align: left;
     font-size: 2rem; 
     color: white;
     font-weight: bold;
@@ -340,19 +343,10 @@ div .iconos i{
 .carousel-item img{
     height: 30vw;
 }
-@media (max-width: 768px){
-    .iconoIg {
-        width: 75px;
-        height: 75px;
-    }
-}
-@media (max-width:337px){
-    .producto-home-nom {
-        font-size: 3.75rem;
-    }
-    .secondDescription {
-        font-size: 1.19rem;
-    }
+.linkIg .fab{
+    color: white;
+    font-size: 3.5rem;
+    margin-right:5px;
 }
 
 @media (min-width: 320px){
@@ -361,6 +355,14 @@ div .iconos i{
     }
     .carouselContainer .subH2{
         font-size: 2.7rem;
+    }
+}
+@media (max-width:337px){
+    .producto-home-nom {
+        font-size: 3.75rem;
+    }
+    .secondDescription {
+        font-size: 1.19rem;
     }
 }
 @media (max-width: 380px){

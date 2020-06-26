@@ -162,9 +162,6 @@ div .iconos i{
     flex-direction: column;
 
 }
-.divProductoUnico{
-
-}
 .carritoTitulo{
     display: flex;
     justify-content: center;
@@ -409,6 +406,11 @@ div .iconos i{
 .carritoTitulo span {
     display: none;
 }
+.linkIg .fab{
+    color: white;
+    font-size: 3.5rem;
+    margin-right:5px;
+}
 @media (max-width: 320px){
     .detalle{
         font-size: 1.3rem;
@@ -424,6 +426,7 @@ div .iconos i{
     .cartButton{
         margin-top: 10px;
     }
+    
 }
 @media (max-width:575px){
     .productoUnico{
