@@ -1,5 +1,5 @@
 module.exports = function (sequelize, dataTypes) {
-    let alias = 'products';
+    let alias = 'Product';
  
     let cols = {
         id: {
@@ -29,36 +29,17 @@ module.exports = function (sequelize, dataTypes) {
             type: dataTypes.INTEGER,
             unsigned: true,
             allowNull: false
-        },
-        createdAt: {
-            type: 'TIMESTAMP',
-            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
-            allowNull: false
-        },
-        updatedAt: {
-            type: 'TIMESTAMP',
-            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
-            allowNull: false
-        },
-        deleteAt: {
-            type: 'TIMESTAMP',
-            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
-            allowNull: false
         }
     }
 
-    let config = {
-        timestamps: true
-    }
+    let Product = sequelize.define(alias, cols);
 
-    let product = sequelize.define(alias, cols, config);
-
-    product.associate = function (modelos) {
-        product.belongsTo(modelo.category, {
+    Product.associate = function (modelos) {
+        Product.belongsTo(modelos.Category, {
             foreignKey: 'idCategory',
             as: 'category'
         })
     }
 
-    return product;
+    return Product;
 }

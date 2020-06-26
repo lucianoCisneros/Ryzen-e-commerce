@@ -1,6 +1,7 @@
 const fs = require('fs');
 const bcrypt = require('bcryptjs');
 const path = require('path');
+const db = require('../database/models');
 let { check, validationResult, body } = require("express-validator");
 
 const loginController = {
@@ -8,33 +9,30 @@ const loginController = {
         res.render("login")
     },
     login: (req,res) => {
-        let usersFilePath = path.join(__dirname, '/../data/users.json');
-        let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-        let userNick = req.body.username;
-        let usuarioEncontrado = users.find((user) => {return userNick === user.username});
-        let errors = validationResult(req);
+        db.User.findOne({
+            where: {
+                userName: req.body.username
+            }
+        }).then((usuarioEncontrado) => {
+            if (usuarioEncontrado){
+                if(bcrypt.compareSync(req.body.password, usuarioEncontrado.password)) {
+                    let user = usuarioEncontrado;
+                    delete user.password;
 
-        if (errors.isEmpty()) {
-            if (usuarioEncontrado) {
-                let passwordValidation = bcrypt.compareSync(req.body.password, usuarioEncontrado.password);
-                if (passwordValidation){
-                    req.session.userLogged = usuarioEncontrado;
-                    if (req.body.rememberUser != undefined){
-                        res.cookie('username', req.session.userLogged.username, {maxAge: 1000000});
+                    req.session.user = user;
+
+                    if(req.body.rememberUser) {
+                        res.cookie('username', user.username, {maxAge: 1000});
                     }
-                    return res.redirect('/');
+
+                    return res.redirect('/')
+                } else {
+                    return res.render('login', { errors: [{ msg: "Contraseña invalida" }] });
                 }
-                else {
-                    return res.render('login', { errors: [{ msg: "Contraseña invalida" }] })
-                }
+            } else {
+                res.render('login', { errors: [{ msg: "El usuario no existe" }] });
             }
-            else {
-                    return res.render('login', { errors: [{ msg: "Usuario no existe" }] })
-            }
-        }
-        else {
-            return res.render('login', {errors: errors.errors})
-        }
+        })
     }
 }
 
