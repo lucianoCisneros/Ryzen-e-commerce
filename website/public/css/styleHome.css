@@ -136,6 +136,16 @@ div .iconos i{
     padding-bottom: 15px;
     max-width: 95%;
 }
+.contactDiv {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.iconoIg {
+    height: 90px;
+    width: 90px;
+}
 .tamano-container {
     background-color: white;
     border-radius: 20px;
@@ -237,6 +247,7 @@ div .iconos i{
     border-radius: 50%;
     padding: 10px;
     border: 2px solid grey;
+    display: flex;
 }
 .secondDescription p{
     color: white;
@@ -329,6 +340,12 @@ div .iconos i{
 .carousel-item img{
     height: 30vw;
 }
+@media (max-width: 768px){
+    .iconoIg {
+        width: 75px;
+        height: 75px;
+    }
+}
 @media (max-width:337px){
     .producto-home-nom {
         font-size: 3.75rem;
@@ -337,12 +354,19 @@ div .iconos i{
         font-size: 1.19rem;
     }
 }
+
 @media (min-width: 320px){
     .subH2{
         font-size: 3rem;
     }
     .carouselContainer .subH2{
         font-size: 2.7rem;
+    }
+}
+@media (max-width: 380px){
+    .contactDiv {
+        display: block;
+        align-items: center;
     }
 }
 @media (min-width: 425px){
