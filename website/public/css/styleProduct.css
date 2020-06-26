@@ -140,6 +140,7 @@ div .iconos i{
 .producto {
     display: flex;
     font-size: 1.46rem;
+    flex-wrap: wrap;
 }
 
 .productoUnico {
@@ -159,6 +160,10 @@ div .iconos i{
     /* height: 75vh; */
     padding: 30px;
     flex-direction: column;
+
+}
+.divProductoUnico{
+
 }
 .carritoTitulo{
     display: flex;
@@ -226,14 +231,14 @@ div .iconos i{
 
 .product-container {
     display: flex;
+    flex-wrap: wrap;
 }
 .imagenProducto img {
     object-fit: contain;
 
 }
-
-.botones button:last-child {
-    margin-left: 20px;
+.rowMoreInfo{
+    width:100vw;
 }
 .moreInfo{
     display: flex;
@@ -258,16 +263,19 @@ div .iconos i{
 }
 .infoContainer{
     display: flex;
+    flex-wrap: wrap;
 }
 .moreInfoContainer{
     display: flex;
     margin-top: 10px;
+    flex-wrap: wrap;
 }
 .video{
     display: flex;
 }
 .contenedorVideo{
     display: flex;
+    flex-wrap: wrap;
 }
 .youtubeVideo{
     margin: 20px 0
@@ -286,9 +294,11 @@ div .iconos i{
     background: white;
     border-radius: 20px;
     font-size: 1.46rem;
+    flex-wrap: wrap;
 }
 .titulosEspecificaciones ul{
     display: flex;
+    flex-wrap: wrap;
 }
 .titulosEspecificaciones ul li{
     color: black;
@@ -399,12 +409,87 @@ div .iconos i{
 .carritoTitulo span {
     display: none;
 }
+@media (max-width: 320px){
+    .detalle{
+        font-size: 1.3rem;
+    }
+    .prodArticulo .datos{
+        margin-left: 0px;
+    }
+    .botones button{
+      font-size: 1.8rem;
+  }
+}
+@media (max-width:443px){
+    .cartButton{
+        margin-top: 10px;
+    }
+}
+@media (max-width:575px){
+    .productoUnico{
+        border-radius: 0px;
+    }
+    .especificaciones{
+        border-radius: 0px;
+    }
+}
+@media only screen and (max-width: 1075px) and (min-width: 992px) {  
+  .youtubeVideo{
+      width: 90%;
+  }
+} 
+@media only screen and (max-width: 1199px) and (min-width: 992px) {  
+  .botones button{
+      font-size: 1.2rem;
+  }
+  .cartButton{
+      margin-left: 1rem;
+  }
+}  
 @media (max-width:991px){
     .mobile-header{
         display: inline!important;
     }
     .desktop-header{
         display: none!important;
+    }
+    .block-container{
+        display: none;
+    }
+    .accion{
+        display: none;
+    }
+    .youtubeContainer .youtubeVideo{
+        width: 80vw;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+    .moreInfo{
+        padding: 0px;
+    }
+    .infoPrimera, .infoSegunda{
+        text-align: center;
+    }
+    .infoPrimera img, .infoSegunda img{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .infoImagen, .infoImagenSegunda{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .rowMoreInfo{
+        width: 100vw;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .rowVideo{
+        width: 100vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .rowVideo, .contenedorVideo{
+        padding: 0px
     }
 }
 @media (min-width: 992px){
@@ -413,7 +498,6 @@ div .iconos i{
         justify-content: flex-start;
         margin-bottom: 2rem;
     }
-
     .carritoTitulo span {
         display: inline-block;
         margin-left: 2rem;
@@ -468,7 +552,6 @@ div .iconos i{
         font-weight: 400;
         font-size: 32px;
     }
-
     .botonesCarrito{
         display: flex;
         flex-direction: row-reverse;
@@ -479,4 +562,9 @@ div .iconos i{
     .botonesCarrito > div {
         max-width: 30%;
     }
+}
+@media (min-width: 1256px){
+    .botones button:last-child {
+    margin-left: 20px;
+}
 }
