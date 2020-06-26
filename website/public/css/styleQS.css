@@ -11,6 +11,7 @@ body {
     background-color: black;
 }
 
+/* DESKTOP HEADER */
 .cabecera {
     display: flex;
     flex-wrap: wrap;
@@ -74,6 +75,53 @@ div .iconos i{
 .iconos i{
     color: white;
 }
+.userLogged{
+    text-transform: uppercase;
+}
+/* DESKTOP HEADER ENDS */
+
+/* MOBILE HEADER */
+.mobile-header{
+    display: none;
+}
+.mobileNavbar{
+    background: black;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.mobileNavbar a{
+    color: white;
+}
+.navLogo{
+    font-size: 28px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.navbar-nav{
+    margin-left: 10px;
+}
+.navbar-toggler{
+    margin-right: px;
+}
+.fa-bars{
+    background: black;
+    font-size: 25px;
+    color: white;
+}
+.nav-items{
+    display: flex;
+    align-items: center;
+}
+.nav-items a{
+    margin-left: 10px;
+}
+.nav-items i{
+    color: white;
+}
+/* MOBILE HEADER ENDS */
 
 .navbar-brand{
     font-weight: 700;
@@ -81,10 +129,26 @@ div .iconos i{
 .informacion{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.informacion .quienesSomos{
+    background: white;
+    width: 100vw;
+}
+.informacion .container{
+    width: 100vw;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.contactos, .contactos .titulos{
+    color: white;
+}
+.container{
+    width: 100vw;
 }
 .tamano-container {
-    background-color: white;
-    border-radius: 20px;
     margin-bottom: 20px;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -154,6 +218,14 @@ img {
 @media (min-width: 487px){
     .logo{
         margin-right: 3.7rem;
+    }
+}
+@media (max-width:991px){
+    .mobile-header{
+        display: inline!important;
+    }
+    .desktop-header{
+        display: none!important;
     }
 }
 @media (min-width: 992px){
