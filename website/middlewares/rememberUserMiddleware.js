@@ -1,31 +1,31 @@
-const path = require('path');
-const fs = require('fs');
+
+const DB = require('../database/models');
 //let usuarioALoguearse = userList.find((user) => {return user.username == req.cookies.rememberUser;});
 
 function rememberUserMiddleware(req, res, next) {
   res.locals.user = false;
+  // return res.send(req.session)
+  if(req.session.user){
+    res.locals.user = req.session.user;
+    return next();
+  } else if(req.cookies.username){
+    DB.User.findOne({
+      where: {
+        userName: req.cookies.username
+      }
+    }).then((user) => {
+      if(user){
+        delete user.password;
+        req.session.user = user;
+        res.locals.user = user;
+      }
+      
+      return next();
 
-  if (req.session.userLogged) {
-    res.locals.user = req.session.userLogged;
-    
-    return next();
-  }
-  else if (req.cookies.username) {
-    let usersFilePath = path.join(__dirname, "/../data/users.json");
-    let userList = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-    const user = userList.find((e) => e.username == req.cookies.username);
-    
-    // return res.send(user)
-    if (user) {
-      delete user.password;
-      req.session.userLogged = user;
-      res.locals.user = user;
-    }
-    return next();
+    })
   } else {
     return next();
   }
-  
 }
 
 module.exports = rememberUserMiddleware;
