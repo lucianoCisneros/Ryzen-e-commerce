@@ -36,7 +36,7 @@ module.exports = function (sequelize, dataTypes) {
     let Item = sequelize.define(alias, cols);
 
     Item.associate = function (modelos) {
-        Item.hasMany(modelos.User, {
+        Item.belongsTo(modelos.User, {
             foreignKey: 'idUser',
             as: 'users'
         })

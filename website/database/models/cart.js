@@ -29,7 +29,7 @@ module.exports = function (sequelize, dataTypes) {
             foreignKey: 'idUser',
             as: 'user'
         });
-        Cart.belongsTo(modelos.Item, {
+        Cart.hasMany(modelos.Item, {
             foreignKey: 'idCart',
             as: 'item'
         })

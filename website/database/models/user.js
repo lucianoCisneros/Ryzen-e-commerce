@@ -42,11 +42,11 @@ module.exports = function(sequelize, dataTypes){
     let User = sequelize.define(alias, cols);
 
     User.associate = function (modelos) {
-        User.belongsTo(modelos.Item, {
+        User.hasMany(modelos.Item, {
             foreignKey: 'idUser',
             as: 'item'
         });
-        User.belongsTo(modelos.Cart, {
+        User.hasMany(modelos.Cart, {
             foreignKey: 'idUser',
             as: 'cart'
         });

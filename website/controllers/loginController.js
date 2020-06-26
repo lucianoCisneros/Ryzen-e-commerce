@@ -1,7 +1,5 @@
-const fs = require('fs');
 const bcrypt = require('bcryptjs');
-const path = require('path');
-const db = require('../database/models');
+const DB = require('../database/models');
 let { check, validationResult, body } = require("express-validator");
 
 const loginController = {
@@ -9,7 +7,7 @@ const loginController = {
         res.render("login")
     },
     login: (req,res) => {
-        db.User.findOne({
+        DB.User.findOne({
             where: {
                 userName: req.body.username
             }
@@ -17,7 +15,7 @@ const loginController = {
             if (usuarioEncontrado){
                 if(bcrypt.compareSync(req.body.password, usuarioEncontrado.password)) {
                     let user = usuarioEncontrado;
-                    delete user.password;
+                    delete user.dataValues.password;
 
                     req.session.user = user;
 
