@@ -20,7 +20,6 @@ const registerController = {
 
         db.User.create(user)
             .then(() => res.redirect('/login'));
-
     }
 }
 
