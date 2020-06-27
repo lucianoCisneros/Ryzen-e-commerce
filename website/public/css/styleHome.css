@@ -442,7 +442,7 @@ div .iconos i{
     }
     .secondDescriptionContainers:hover {
     text-shadow: 0 0 7px white;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     }
     .producto-home-nom{
