@@ -274,6 +274,7 @@ div .iconos i{
 }
 .carousel-inner{
     background-color: rgb(13, 77, 141);
+    border-radius: 20px;
 }
 .fa-star{
     color: white;
@@ -287,7 +288,8 @@ div .iconos i{
 .carousel-caption h2, .carousel-caption p{
     font-weight: bold;
     font-size: rem;
-    color: red;
+    color: black;
+    background: rgba(255, 255, 255, 0.8);
 }
 .carousel-caption{
     margin-top: 60px;
@@ -348,7 +350,6 @@ div .iconos i{
     font-size: 3.5rem;
     margin-right:5px;
 }
-
 @media (min-width: 320px){
     .subH2{
         font-size: 3rem;
@@ -482,5 +483,12 @@ div .iconos i{
     .secondContainerIcons{
         margin-top: 10px;
         margin-bottom: 10px;
+    }
+    .cabecera {
+    margin-top: auto;
+    margin-bottom: auto;
+    }
+    .carousel-caption p{
+        font-size: 1.6rem;
     }
 }
