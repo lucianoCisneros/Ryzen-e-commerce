@@ -282,6 +282,7 @@ div .iconos i{
 .rojo{
     font-family: 'Chelsea Market', cursive;
     margin:0 20%;
+    text-shadow: 0 0 20px red;
 }
 .especificaciones{
     display: flex;

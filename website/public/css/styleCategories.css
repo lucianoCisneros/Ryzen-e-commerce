@@ -1,0 +1,169 @@
+* {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+body {
+    background-color: black;
+       font-family: 'Poppins', sans-serif;
+}
+html{
+    font-size: 11px;
+}
+
+/* DESKTOP HEADER BEGINS */
+.cabecera {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-weight: bold;
+    color: white;
+    font-size: 16px;
+}
+.cabecera a{
+    color: white;
+}
+
+.cabecera p,li{
+    font-family: 'Poppins', sans-serif;
+     color: white;
+}
+
+.cabecera p{
+    font-size: 28px;
+}
+.logo{
+    margin-left: 10px;
+}
+.logo a{
+    text-decoration: none;
+}
+.navegacion {
+    display: flex;
+}
+.navegacion ul li{
+    justify-content: center;
+}
+
+.navegacion li{
+    list-style: none;
+    display: inline;
+    padding: 8px;
+    
+    text-align: center;
+}
+
+.registro li{
+    list-style: none;
+    display: inline-flex;
+    padding: 8px;
+}
+
+div .dos{
+    display: inline-flex;
+    margin-top: -15px;
+    align-items: center;
+}
+
+div .iconos{
+    border-left: 2px solid white;
+    margin-left: 10px;
+}
+
+div .iconos i{
+    margin-left: 10px;
+}
+
+.iconos i{
+    color: white;
+}
+/* DESKTOP HEADER ENDS */
+
+/* MOBILE HEADER */
+.mobile-header{
+    display: none;
+}
+.mobileNavbar{
+    background: black;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.mobileNavbar a{
+    color: white;
+}
+.navLogo{
+    font-size: 28px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.navbar-nav{
+    margin-left: 10px;
+}
+.navbar-toggler{
+    margin-right: px;
+}
+.fa-bars{
+    background: black;
+    font-size: 25px;
+    color: white;
+}
+.nav-items{
+    display: flex;
+    align-items: center;
+}
+.nav-items a{
+    margin-left: 10px;
+}
+.nav-items i{
+    color: white;
+}
+/* MOBILE HEADER ENDS */
+
+.userLogged{
+    text-transform: uppercase;
+}
+.contactDiv {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.contactInfo{
+    font-size: 1.3rem;
+}
+.contacto{
+    text-align: left;
+    font-size: 2rem; 
+    color: white;
+    font-weight: bold;
+}
+.linkIg .fab{
+    color: white;
+    font-size: 3.5rem;
+    margin-right:5px;
+}
+@media (max-width: 380px){
+    .contactDiv {
+        display: block;
+        align-items: center;
+    }
+}
+@media (min-width: 487px){
+    .logo{
+        margin-right: 3.7rem;
+    }
+}
+@media (max-width:991px){
+    .mobile-header{
+        display: inline!important;
+    }
+    .desktop-header{
+        display: none!important;
+    }
+}

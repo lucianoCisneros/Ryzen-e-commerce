@@ -380,10 +380,24 @@ div .iconos i{
         font-size: 3.6rem;
     }
 }
+@media (max-width: 450px){
+    .carouselIndex{
+        width: 90vw;
+    }
+    .carousel-item img{
+        height: 50vh;
+    }
+}
 @media (min-width: 487px){
     .logo{
         margin-right: 3.7rem;
     }
+}
+@media (max-width: 750px){
+    .carousel-item img{
+    
+    width: 100vw;
+}
 }
 @media (max-width:991px){
     .mobile-header{

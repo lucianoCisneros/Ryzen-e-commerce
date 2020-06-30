@@ -25,6 +25,7 @@ const logoutRoutes = require("./routes/logout")
 const productRoutes = require("./routes/products");
 const shopCartRoutes = require("./routes/shopCart");
 const aboutUsRoutes = require("./routes/aboutUs");
+const categoriesRouter = require("./routes/categories");
 
 app.use(rememberUserMiddleware);
 app.use("/", homeRoutes);
@@ -34,3 +35,4 @@ app.use("/registro", registerRoutes);
 app.use("/logout", logoutRoutes);
 app.use("/producto", productRoutes);
 app.use("/carrito", shopCartRoutes);
+app.use("/categorias", categoriesRouter);
