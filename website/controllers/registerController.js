@@ -7,19 +7,40 @@ const registerController = {
         res.render("register")
     },
     register: (req, res) => {
-        //faltan validaciones
-        let user = req.body;
-        //Objeto que se va a guardar en base de datos
-        delete user.retype;
-        user.userName = req.body.username;
-        user.name = req.body.name;
-        user.lastName = req.body.lastname;
-        user.birthday = req.body.birthday;
-        user.email = req.body.email;
-        user.password = bcrypt.hashSync(user.password, 15);
+        let errors = validationResult(req);
+        let newUser = req.body;
 
-        db.User.create(user)
-            .then(() => res.redirect('/login'));
+        //Objeto que se va a guardar en base de datos
+
+        if(errors.isEmpty){
+            delete newUser.retype;
+            newUser.userName = req.body.username;
+            newUser.name = req.body.name;
+            newUser.lastName = req.body.lastname;
+            newUser.birthday = req.body.birthday;
+            newUser.email = req.body.email;
+            newUser.password = bcrypt.hashSync(newUser.password, 15);
+
+            let usuarioEncontrado = () => {
+                let user = req.body;
+                return db.User.userName === user.username;
+            }
+            let emailEncontrado = () => {
+                let user = req.body;
+                return db.User.email === user.email;
+            }
+
+            if(usuarioEncontrado){
+                return res.render('register', { errors: [{ msg: "El nombre de usuario ingresado ya está en uso" }] })
+            } else if (emailEncontrado){
+                return res.render('register', { errors: [{ msg: "El email ingresado ya está en uso" }] })
+            } else {
+                db.User.create(newUser)
+                    .then(() => res.redirect('/login'));
+            }
+        } else {
+            res.render('register', { errors: errors.errors });
+        }
     }
 }
 
