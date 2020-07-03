@@ -1,6 +1,6 @@
 const bcrypt = require('bcryptjs');
 const DB = require('../database/models');
-let { check, validationResult, body } = require("express-validator");
+let { validationResult } = require("express-validator");
 
 const registerController = {
     index: (req, res) => {
