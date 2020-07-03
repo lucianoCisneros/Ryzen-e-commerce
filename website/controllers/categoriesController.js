@@ -1,6 +1,6 @@
 const categoriesController = {
     index: (req,res) => {
-        return res.render('categories');
+        return res.render('categoriesCopy');
     }
 }
 

@@ -279,6 +279,10 @@ div .iconos i{
     font-size: 3em;
     margin: 25% 0;
 }
+.accion h3{
+    text-shadow: 0 0 20px red;
+    margin-left: -10px;
+}
 .rojo{
     font-family: 'Chelsea Market', cursive;
     margin:0 20%;

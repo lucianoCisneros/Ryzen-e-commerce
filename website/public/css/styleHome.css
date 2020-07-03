@@ -401,7 +401,7 @@ div .iconos i{
 }
 @media (max-width:991px){
     .mobile-header{
-        display: inline!important;
+        display: block!important;
     }
     .desktop-header{
         display: none!important;
@@ -418,7 +418,6 @@ div .iconos i{
         margin-left: auto;
         margin-right: auto;
     }
-
     .firstContainerInfo{
         flex-direction: column;
         align-self: center;
