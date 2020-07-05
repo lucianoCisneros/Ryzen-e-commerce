@@ -3,6 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 html{
     font-size: 11px;
@@ -11,6 +12,7 @@ body {
     background-color: black;
 }
 
+/* DESKTOP HEADER */
 .cabecera {
     display: flex;
     flex-wrap: wrap;
@@ -74,6 +76,53 @@ div .iconos i{
 .iconos i{
     color: white;
 }
+.userLogged{
+    text-transform: uppercase;
+}
+/* DESKTOP HEADER ENDS */
+
+/* MOBILE HEADER */
+.mobile-header{
+    display: none;
+}
+.mobileNavbar{
+    background: black;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.mobileNavbar a{
+    color: white;
+}
+.navLogo{
+    font-size: 28px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.navbar-nav{
+    margin-left: 10px;
+}
+.navbar-toggler{
+    margin-right: px;
+}
+.fa-bars{
+    background: black;
+    font-size: 25px;
+    color: white;
+}
+.nav-items{
+    display: flex;
+    align-items: center;
+}
+.nav-items a{
+    margin-left: 10px;
+}
+.nav-items i{
+    color: white;
+}
+/* MOBILE HEADER ENDS */
 
 .navbar-brand{
     font-weight: 700;
@@ -81,10 +130,26 @@ div .iconos i{
 .informacion{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.informacion .quienesSomos{
+    background: white;
+    width: 100vw;
+}
+.informacion .container{
+    width: 100vw;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.contactos, .contactos .titulos{
+    color: white;
+}
+.container{
+    width: 100vw;
 }
 .tamano-container {
-    background-color: white;
-    border-radius: 20px;
     margin-bottom: 20px;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -140,7 +205,10 @@ img {
     text-align: center;
     font-weight: 700;
 }
-
+.cabecera p,li{
+    font-family: 'Poppins', sans-serif;
+     color: white;
+}
 .quienes-somos {
     text-align: center;
     padding: 5px;
@@ -149,11 +217,71 @@ img {
     display: block;
     width: 100vw;
 }
+.contactDiv {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.contacto{
+    text-align: left;
+    font-size: 2rem; 
+    color: white;
+    font-weight: bold;
+}
+.contactInfo{
+    font-size: 1.3rem;
+}
+.googleMap {
+    width: 170px;
+    height: 170px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+.linkIg .fab{
+    color: white;
+    font-size: 3.5rem;
+    margin-right:5px;
+}
+@media (max-width: 380px){
+    .contactDiv {
+        display: block;
+        align-items: center;
+    }
+}
 
+@media (max-width: 768px){
+    .iconoIg {
+        width: 75px;
+        height: 75px;
+    }
+}
+@media (min-width: 425px){
+    .googleMap {
+        width: 220px;
+        height: 220px;
+    }
+}
+@media (min-width: 768px){
+    .googleMap {
+        width: 300px;
+        height: 300px;
+    }
+}
 
 @media (min-width: 487px){
     .logo{
         margin-right: 3.7rem;
+    }
+}
+@media (max-width:991px){
+    .mobile-header{
+        display: inline!important;
+    }
+    .desktop-header{
+        display: none!important;
     }
 }
 @media (min-width: 992px){

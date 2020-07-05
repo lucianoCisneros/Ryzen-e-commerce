@@ -13,7 +13,7 @@ html{
 
 body{
     background: black;
-    background: url('../img/vr9.jpg');
+    /* background: url('../img/vr9.jpg'); */
     /*background-size: 1400px;*/
     background-attachment: fixed;
     background-position: center;
@@ -37,6 +37,7 @@ body{
     color: black;
 }*/
 
+/* DESKTOP HEADER */
 .cabecera {
     display: flex;
     flex-wrap: wrap;
@@ -98,7 +99,53 @@ div .iconos i{
 .iconos i{
     color: white;
 }
+/* DESKTOP HEADER ENDS */
 
+/* MOBILE HEADER */
+.mobile-header{
+    display: none;
+}
+.mobileNavbar{
+    background: black;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.mobileNavbar a{
+    color: white;
+}
+.navLogo{
+    font-size: 28px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.navbar-nav{
+    margin-left: 10px;
+}
+.navbar-toggler{
+    margin-right: px;
+}
+.fa-bars{
+    background: black;
+    font-size: 25px;
+    color: white;
+}
+.nav-items{
+    display: flex;
+    align-items: center;
+}
+.nav-items a{
+    margin-left: 10px;
+}
+.nav-items i{
+    color: white;
+}
+/* MOBILE HEADER ENDS */
+.userLogged{
+    text-transform: uppercase;
+}
 .wrap{
     width: 100vw;
     margin: 0 auto;
@@ -116,10 +163,15 @@ div .iconos i{
 .errorsTitle{
     font-weight: bold;
     font-size: 3rem;
+    text-align: center;
+    list-style: none;
 }
 
 .errorType{
     font-size: 1.4rem;
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
 }
 
 /*#wrapper{
@@ -149,6 +201,7 @@ div .iconos i{
     position: relative;
     /*box-shadow: 0 1px 1.5rem rgba(0, 0, 0, .1);*/
     z-index: 1;
+    margin-bottom: 20px;
 }
 
 .form-container::before{
@@ -278,6 +331,7 @@ form{
     border-bottom: 2px solid #37474F;
 }
 
+
 @media (max-width: 349px){
     .input-group input{
     width: 85%;
@@ -290,7 +344,6 @@ form{
         margin-right: 5px;
     }
 }
-
 @media screen and (max-width: 700px){
     .form-container::before{
         height: 10rem;
@@ -332,5 +385,13 @@ form{
 @media (min-width: 800px){
     .errorList{
         justify-content: center;
+    }
+}
+@media (max-width:991px){
+    .mobile-header{
+        display: inline!important;
+    }
+    .desktop-header{
+        display: none!important;
     }
 }

@@ -13,25 +13,26 @@
 <body>
     <!-- Header -->
     <%- include('partials/headerNavbar') %>
+    <%- include('partials/mobileNavBar') %>
     <!-- /Header -->
     
     <div class="container col-xl-11 producto">
         <div class="row productoUnico">
-            <div class="col-12">
+            <div class="col-12 divProductoUnico">
                 <section class="prodArticulo col-12">
-                    <div class="product-container">
+                    <div class="product-container col-12">
                         <div class="block-container">
                             <div class="block"><img src="./img/visor1.jpg" alt="imagen" srcset=""></div>
                             <div class="block"><img src="./img/visor3.webp" alt="imagen" srcset=""></div>
                             <div class="block"><img src="./img/visor4.jpg" alt="imagen" srcset=""></div>
                         </div>
-                        <div class="col-12 col-lg-7">
+                        <div class="col-12 col-lg-6">
                             <h3 class="detalle">Detalle del producto: VISORES SAMSUNG</h3>
                             <figure class="imagenProducto">
                                 <img src="./img/visores.jpg" alt='imagen de producto'>
                             </figure>
                         </div>
-                        <article class="datos col-4">
+                        <article class="datos col-xl-4 col-lg-4 col-12">
                             <div class="datosProducto">
                                 <h2 class="nombre">GEAR VR</h2>
                                 <div class="copy-container">
@@ -42,7 +43,7 @@
                             <div class="botones">
                                 <p class="precio">U$D1.000</p>
                                 <button type="button" class="btn btn-outline-success btn-lg">Comprar</button>
-                                <button type="button" class="btn btn-outline-warning btn-lg">Agregar al carro</button>
+                                <button type="button" class="btn btn-outline-warning btn-lg cartButton">Agregar al carro</button>
                             </div>
                         </article>
                     </div>
@@ -50,8 +51,8 @@
             </div>
         </div>
     </div>
-    <div class="container col-xl-11 moreInfo">
-        <div class="row rowMoreInfo">
+    <div class="container col-xl-11 col-12 moreInfo">
+        <div class="row rowMoreInfo col-12">
             <div class="col-12 moreInfo-box">
                 <section class="moreInfo-description">
                     <div class="infoContainer">
@@ -60,16 +61,16 @@
                             <p class="infoDescripcion">Con Gear VR si te aburres es porque tú quieres. Su gran variedad de juegos, apps y experiencias, siempre tendrás algo
                             nuevo por descubrir. Compatibilidad con Galaxy S9, S9+, Galaxy Note8, Galaxy S8, S8+, S7, S7 edge, S6 edge+, S6, S6 edge, Galaxy A8.</p>
                         </div>
-                        <div class="infoImagen col-5">
+                        <div class="infoImagen col-12 col-md-10 col-lg-5 col-xl-5">
                             <img src="./img/control.webp" alt="Info imagen" srcset="">
                         </div>
                     </div>
                     <div class="moreInfoContainer">
-                        <div class="infoImagenSegunda col-5">
+                        <div class="infoImagenSegunda col-12 col-md-10 col-lg-5 col-xl-5">
                             <img src="./img/aplicaciones.jpg" alt="" srcset="">
                         </div>
                         <div class="infoSegunda col-lg-7">
-                            <h4 class="subInfoTitulo">Explora nuevas dimensiones</h4>
+                            <h4 class="infoTitulo">Explora nuevas dimensiones</h4>
                             <p class="subInfoDescripcion">Viaja a nuevos mundos y contempla paisajes mágicos con su amplio campo de visión de 101º. Su rastreo de cabeza, mucho
                             más estable y preciso gracias a su acelerómetro y giroscopio incorporados, lo convertirá en un agradable paseo.</p>
                         </div>
@@ -77,9 +78,9 @@
                 </section>
             </div>
             <div class="container video">
-                <div class="row">
+                <div class="row rowVideo col-12">
                     <div class="col-12 contenedorVideo">
-                        <div class="col-8">
+                        <div class="youtubeContainer col-12 col-lg-8 col-xl-8">
                         <iframe class="youtubeVideo" width="560" height="315" src="https://www.youtube-nocookie.com/embed/-gnvQS2xhRg?controls=0" frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
@@ -91,9 +92,9 @@
             </div>
         </div>
     </div>
-    <div class="container  especificaciones">
-        <div class="row">
-            <div class="especificacionesTecnicas col-12">
+    <div class="container  col-12 col-xl-11 col-lg-11 especificaciones">
+        <div class="row col-xl-11 col-lg-11 col-12">
+            <div class="especificacionesTecnicas col-12 col-lg-11 col-xl-11">
                 <div class="titulosEspecificaciones col-12">
                     <ul>
                         <li><a href="#titulosEspecificaciones">Especificaciones</a></li>

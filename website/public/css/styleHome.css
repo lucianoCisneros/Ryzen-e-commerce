@@ -1,5 +1,4 @@
 * {
-    font-family: 'Poppins', sans-serif;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -9,11 +8,13 @@
 
 body {
     background-color: black;
+       font-family: 'Poppins', sans-serif;
 }
 html{
     font-size: 11px;
 }
 
+/* DESKTOP HEADER BEGINS */
 .cabecera {
     display: flex;
     flex-wrap: wrap;
@@ -41,14 +42,18 @@ html{
     text-decoration: none;
 }
 .navegacion {
-    display: inline-flex;
+    display: flex;
+}
+.navegacion ul li{
+    justify-content: center;
 }
 
 .navegacion li{
     list-style: none;
     display: inline;
     padding: 8px;
-    margin-right: 1.1px;
+    
+    text-align: center;
 }
 
 .registro li{
@@ -75,16 +80,72 @@ div .iconos i{
 .iconos i{
     color: white;
 }
+/* DESKTOP HEADER ENDS */
+
+/* MOBILE HEADER */
+.mobile-header{
+    display: none;
+}
+.mobileNavbar{
+    background: black;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.mobileNavbar a{
+    color: white;
+}
+.navLogo{
+    font-size: 28px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.navbar-nav{
+    margin-left: 10px;
+}
+.navbar-toggler{
+    margin-right: px;
+}
+.fa-bars{
+    background: black;
+    font-size: 25px;
+    color: white;
+}
+.nav-items{
+    display: flex;
+    align-items: center;
+}
+.nav-items a{
+    margin-left: 10px;
+}
+.nav-items i{
+    color: white;
+}
+/* MOBILE HEADER ENDS */
+
 .userLogged{
     text-transform: uppercase;
 }
 
-.contactContainer{
+/* .contactContainer{
     margin-top: 20px;
     margin-bottom: 20px;
     padding-top: 15px;
     padding-bottom: 15px;
     max-width: 95%;
+} */
+
+.contactDiv {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.iconoIg {
+    height: 90px;
+    width: 90px;
 }
 .tamano-container {
     background-color: white;
@@ -92,6 +153,8 @@ div .iconos i{
     margin-bottom: 20px;
     padding-bottom: 15px;
     color: black;
+    max-width: 100%;
+    border-radius: 0px;
 }
 .tamano-container ul li{
     color: black;
@@ -114,7 +177,7 @@ div .iconos i{
 .bannerIcon{
     color: white;
     margin-right: 20px;
-    display: none;
+    display: none !important;
 }
 .banner-txt {
     color: white;
@@ -152,15 +215,40 @@ div .iconos i{
     flex-wrap: wrap;
 }
 .producto-home-nom {
-    text-align: center;
-    font-size: 3rem; 
+    text-align: right;
+    font-size: 4rem; 
     color: white;
     font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .secondDescription{
     color: white;
     text-align: justify;
     font-size: 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.secondDescriptionContainers{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.secondDescriptionTitles{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+.secondContainerIcons{
+    border-radius: 50%;
+    padding: 10px;
+    border: 2px solid grey;
+    display: flex;
 }
 .secondDescription p{
     color: white;
@@ -173,17 +261,48 @@ div .iconos i{
     color: black;
     margin-top: 20px;
     background: white;
+    margin-bottom: 0px;
 }
-
+.carouselContainer{
+    background-color: rgb(13, 77, 141);
+    margin-bottom: 0px;
+}
+.carouselIndex{
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+.carousel-inner{
+    background-color: rgb(13, 77, 141);
+    border-radius: 20px;
+}
+.fa-star{
+    color: white;
+}
+.carouselContainer .subH2{
+    color: white;
+    padding-top: 15px;
+    width: 100%;
+    text-shadow: 0 0 18px #0a0a0a;
+}
+.carousel-caption h2, .carousel-caption p{
+    font-weight: bold;
+    font-size: rem;
+    color: black;
+    background: rgba(255, 255, 255, 0.8);
+}
+.carousel-caption{
+    margin-top: 60px;
+}
 .subH2 {
-    font-size: 3rem;
+    font-size: 3.7rem;
     text-align: center;
     font-weight: bold;
     color: black;
-    margin-bottom: 2%;
+    margin-bottom: 3%;
 }
 .contacto{
-    text-align: center;
+    text-align: left;
     font-size: 2rem; 
     color: white;
     font-weight: bold;
@@ -223,19 +342,56 @@ div .iconos i{
 .carousel-item{
     color: black;
 }
-
+.carousel-item img{
+    height: 30vw;
+}
+.linkIg .fab{
+    color: white;
+    font-size: 3.5rem;
+    margin-right:5px;
+}
+@media (min-width: 320px){
+    .subH2{
+        font-size: 3rem;
+    }
+    .carouselContainer .subH2{
+        font-size: 2.7rem;
+    }
+}
+@media (max-width:337px){
+    .producto-home-nom {
+        font-size: 3.75rem;
+    }
+    .secondDescription {
+        font-size: 1.19rem;
+    }
+}
+@media (max-width: 380px){
+    .contactDiv {
+        display: block;
+        align-items: center;
+    }
+}
+@media (min-width: 425px){
+    .subH2{
+        font-size: 4rem;
+    }
+    .carouselContainer .subH2{
+        font-size: 3.6rem;
+    }
+}
 @media (min-width: 487px){
     .logo{
         margin-right: 3.7rem;
     }
 }
-@media (max-width: 575px){
-    .tamano-container{
-        max-width: 95%;
+@media (max-width:991px){
+    .mobile-header{
+        display: inline!important;
     }
-}
-@media (min-width: 768px){
-
+    .desktop-header{
+        display: none!important;
+    }
 }
 @media (min-width: 992px){
     .firstContainerRow{
@@ -272,7 +428,7 @@ div .iconos i{
     }
     .btn-mi:hover{
     transition: all 0.3s ease 0s;
-    text-shadow: 0 0 35px white;
+    
     }
     .banner-title{
         font-size: 4.3rem;
@@ -280,17 +436,17 @@ div .iconos i{
     .banner-txt{
         font-size: 1.9rem;
     }
-    .tamano-container{
-        max-width: 100%;
-        border-radius: 0px;
-    }
     .secondDescription{
-        font-size: 1.6rem;
-        line-height: 3rem;
+        font-size: 1.3rem;
+        line-height: 2.5rem;
+    }
+    .secondDescriptionContainers:hover {
+    text-shadow: 0 0 7px white;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
     }
     .producto-home-nom{
-        font-size: 4rem;
-
+        font-size: 4.7rem;
     }
     .compatibleContainer{
     width: 50vw;
@@ -301,6 +457,9 @@ div .iconos i{
         margin-left: auto;
         margin-right: auto;
     }
+    .carouselContainer{
+    height: 40vw;
+}
 }
 @media (min-width: 1025px){
     .banner-title{
@@ -311,10 +470,25 @@ div .iconos i{
     }
     .bannerIcon{
     font-size: 4.5rem;
-    display: inline;
+    display: inline !important;
     }
     .secondContainer{
         margin-top: 50px;
         margin-bottom: 50px;
+    }
+    .producto-home-nom{
+        text-align: right;
+        margin-bottom: 20px;
+    }
+    .secondContainerIcons{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .cabecera {
+    margin-top: auto;
+    margin-bottom: auto;
+    }
+    .carousel-caption p{
+        font-size: 1.6rem;
     }
 }

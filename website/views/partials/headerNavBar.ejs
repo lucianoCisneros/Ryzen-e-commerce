@@ -1,4 +1,4 @@
-<header>
+<header class="desktop-header">
     <div class="container col-xl-11 cabecera">
         <nav class="row navbar navegacion">
             
@@ -8,13 +8,13 @@
             <ul>
                 <li class="nav-item active"><a href="/producto">VISORES</a></li>
                 <li class="nav-item">APPS Y JUEGOS</li>
-                <li class="nav-item"><a href="/quienes-somos">QUIENES SOMOS</a></li>
+                <li class="nav-item"><a href="/quienes-somos">QUIÉNES SOMOS</a></li>
             </ul>
         </nav>
         <span class="dos">
             <% if(locals.user){ %>
             <span class="registro">
-                <li><a href="/login" class="userLogged">¡Hola <%= locals.user.username %></a>!</li>
+                <li><a href="/login" class="userLogged">¡Hola <%= locals.user.userName %></a>!</li>
                 <li><a href="/logout">CERRAR SESIÓN</a></li>
             </span>
             <% } else { %>

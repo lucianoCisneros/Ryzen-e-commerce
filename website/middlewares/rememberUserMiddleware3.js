@@ -1,15 +1,18 @@
-const path = require('path');
-const fs = require('fs');
+
+const DB = require('../database/models');
 
 function rememberUserMiddleware(req, res, next){
     next();
 
-    if (req.cookies.username != undefined && req.session.userLogged == undefined){
-        let usersFilePath = path.join(__dirname, "/../data/users.json");
-        let users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-        let usuarioALoguearse = users.find((user) => {return user.username == req.cookies.username;});
+    if (req.cookies.username != undefined && req.session.user == undefined){
+        let users = DB.User.findAll({});
+        let usuarioALoguearse = users.findOne({
+            where: {
+                userName: req.cookies.username
+            }
+        });
 
-        req.session.userLogged = usuarioALoguearse;
+        req.session.user = usuarioALoguearse;
     }
 };
 

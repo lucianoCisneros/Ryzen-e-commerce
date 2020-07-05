@@ -1,5 +1,3 @@
-const fs = require('fs');
-
 const homeController = {
     index: (req,res) => {
         res.render("index")
