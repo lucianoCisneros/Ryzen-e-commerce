@@ -1,37 +1,32 @@
-const bcrypt = require('bcryptjs');
 const DB = require('../database/models');
-let { check, validationResult, body } = require("express-validator");
+let { validationResult } = require("express-validator");
 
 const loginController = {
     index: (req, res) => {
-        res.render("login")
+        res.render('login');
     },
     login: (req,res) => {
-        DB.User.findOne({
-            where: {
-                userName: req.body.username
-            }
-        }).then((usuarioEncontrado) => {
-            if (usuarioEncontrado){
-                if(bcrypt.compareSync(req.body.password, usuarioEncontrado.password)) {
-                    let user = usuarioEncontrado;
-                    delete user.dataValues.password;
+        const errors = validationResult(req);
 
-                    req.session.user = user;
-
-                    if(req.body.rememberUser) {
-                        res.cookie('username', user.username, {maxAge: 1000});
-                    }
-
-                    return res.redirect('/')
-                } else {
-                    return res.render('login', { errors: [{ msg: "Contraseña invalida" }] });
+        if(errors.isEmpty()){
+            DB.User.findOne({
+                where: {
+                    userName: req.body.username
                 }
-            } else {
-                res.render('login', { errors: [{ msg: "El usuario no existe" }] });
-            }
-        })
+            })
+            .then((usuarioEncontrado) => {
+                delete usuarioEncontrado.password;
+                req.session.user = usuarioEncontrado;
+                if (req.body.rememberUser != undefined) {
+                    res.cookie('username', usuarioEncontrado.userName, { maxAge: 1000 * 60 * 60 });
+                }
+                return res.redirect('/');
+            })
+        } else {
+            res.render('login', { errors: errors.errors });
+        }
     }
 }
+
 
 module.exports = loginController;

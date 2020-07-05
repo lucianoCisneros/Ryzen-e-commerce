@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <form action="/productos/crear" method="POST">
+                <div class="contactForm">
+                    <h2>Crear Producto</h2>
+                    <div class="formBox">
+                        <div class="inputBox w50">
+                            <input type="text" placeholder="Nombre" required id="name" name="name" value=''>
+                            <!--<span>Nombre</span>-->
+                            <span class="bar"></span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="number" placeholder="Precio" required id="price " name="price" value=''>
+                            <!--<span>Precio</span>-->
+                            <span class="bar"></span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="text" placeholder="Marca" required id="brand" name="brand" value=''>
+                            <!--<span>Marca</span>-->
+                            <span class="bar"></span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="file" placeholder="" required id="img" name="img" value=''
+                                style="height: 38px;">
+                            <!--<span></span>-->
+                            <span class="bar"></span>
+                        </div>
+                        <div class="inputBox w50">
+                            <textarea placeholder="Descripción" name="description" required id="description"></textarea>
+                            <!--<span>Descripción</span>-->
+                            <span class="bar"></span>
+                        </div>
+                        <div class="inputBox w50">
+                            <label for="category" style="height: 30px;">Categoria</label>
+                            <select name="category" id="category">
+                                <option value="1">Visores</option>
+                                <option value="2">Accesorios</option>
+                                <option value="3">Aplicaciones</option>
+                                <option value="4">Juegos</option>
+                            </select>
+                            <!--<textarea type="text" placeholder="Categorias" required id="categories" name="categories" value=''></textarea>-->
+                            <!--<span></span>-->
+                            <span class="bar"></span>
+                        </div>
+                        <div class="inputBox w100">
+                            <input type="submit" value="Crear">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
