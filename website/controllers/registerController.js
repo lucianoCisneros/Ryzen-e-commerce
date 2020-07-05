@@ -1,25 +1,32 @@
 const bcrypt = require('bcryptjs');
-const db = require('../database/models');
-let { check, validationResult, body } = require("express-validator");
+const DB = require('../database/models');
+let { validationResult } = require("express-validator");
 
 const registerController = {
     index: (req, res) => {
         res.render("register")
     },
     register: (req, res) => {
-        //faltan validaciones
-        let user = req.body;
-        //Objeto que se va a guardar en base de datos
-        delete user.retype;
-        user.userName = req.body.username;
-        user.name = req.body.name;
-        user.lastName = req.body.lastname;
-        user.birthday = req.body.birthday;
-        user.email = req.body.email;
-        user.password = bcrypt.hashSync(user.password, 15);
+        const errors = validationResult(req);
+        let newUser = req.body;
 
-        db.User.create(user)
-            .then(() => res.redirect('/login'));
+        //Objeto que se va a guardar en base de datos
+
+        if(errors.isEmpty()){
+            delete newUser.retype;
+            newUser.userName = req.body.username;
+            newUser.name = req.body.name;
+            newUser.lastName = req.body.lastname;
+            newUser.birthday = req.body.birthday;
+            newUser.email = req.body.email;
+            newUser.password = bcrypt.hashSync(newUser.password, 15);
+
+            DB.User.create(newUser)
+                    .then(() => res.redirect('/login'));
+
+        } else {
+            res.render('register', { errors: errors.errors });
+        }
     }
 }
 

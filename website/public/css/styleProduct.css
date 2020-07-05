@@ -215,7 +215,7 @@ div .iconos i{
 }
 
 .precio{
-    font-size: 2em;
+    font-size: 2.6em;
     font-weight: 400;
 }
 
@@ -279,9 +279,14 @@ div .iconos i{
     font-size: 3em;
     margin: 25% 0;
 }
+.accion h3{
+    text-shadow: 0 0 20px red;
+    margin-left: -10px;
+}
 .rojo{
     font-family: 'Chelsea Market', cursive;
     margin:0 20%;
+    text-shadow: 0 0 20px red;
 }
 .especificaciones{
     display: flex;
