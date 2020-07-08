@@ -31,12 +31,19 @@ const productsController = {
             .then(() => res.redirect('/producto/editar/' + newProduct.id));
     },
     edit: (req,res) => {
-        DB.Product.findByPk(req.params.id, {
+        /* DB.Product.findByPk(req.params.id, {
             include: [{association: "category"}]
         })
             .then( producto => {
-                console.log(req.params.id)
                 res.render('edit-product', { producto: producto})
+            })
+            .catch(error => console.log(error)); */
+        let totalProducts = DB.Product.findByPk(req.params.id);
+        let totalCategories = DB.Category.findAll();
+        
+        Promise.all([totalProducts, totalCategories])
+            .then(function([products, categories]){
+                res.render('edit-product', {products: products, categories: categories});
             })
             .catch(error => console.log(error));
     },
@@ -44,17 +51,6 @@ const productsController = {
         return res.render("add-category")
     },
     createCategory: (req,res) => {
-    /* let newCategory = req.body;*/
-        console.log(req.body.name);
-        console.log(req.body.description);
-
-        /*newCategory.name = req.body.name;
-        newCategory.description = req.body.description;
-
-        DB.Category.create(newCategory)
-            .then(() => res.redirect('/categoria'))
-            .catch(error => console.log(error)); */
-
         DB.Category.create({
             name: req.body.name,
             description: req.body.description
@@ -63,10 +59,29 @@ const productsController = {
             .catch(error => console.log(error));
     },
     update: (req,res) => {
-
+        DB.Product.update({
+            name: req.body.name,
+            price: req.body.price,
+            description: req.body.description,
+            brand: req.body.brand,
+            img: req.file.filename,
+            idCategory: req.body.category
+        }, {
+            where: {
+                id: req.params.id
+            }
+        })
+            .then(() => res.redirect('/categorias'))
+            .catch(error => console.log(error));;
     },
     delete: (req,res) => {
-
+        DB.Product.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+            .then(() => res.redirect("/categorias"))
+            .catch(error => console.log(error));
     }
 }
 

@@ -24,43 +24,43 @@
     <!--home-->
     <section>
         <div class="container">
-            <form action="">
+            <form action="/producto/editar/<%= products.id %>" method="POST" enctype="multipart/form-data">
                 <div class="contactForm">
                     <h2>Editar Producto</h2>
                     <div class="formBox">
                         <div class="inputBox w50">
                             <label for="name"></label>
-                            <input type="text" placeholder="Nombre" required id="name" name="name" value='<%= producto.name %>'>
+                            <input type="text" placeholder="Nombre" required id="name" name="name" value='<%= products.name %>'>
                             <!--<span>Nombre</span>-->
                             <span class="bar"></span>
                         </div>
                         <div class="inputBox w50">
                             <label for="price"></label>
-                            <input type="number" placeholder="Precio" required id="price " name="price" value='<%= producto.price %>'>
+                            <input type="number" placeholder="Precio" required id="price " name="price" value='<%= products.price %>'>
                             <!--<span>Precio</span>-->
                             <span class="bar"></span>
                         </div>
                         <div class="inputBox w50">
                             <label for="brand"></label>
-                            <input type="text" placeholder="Marca" required id="brand" name="brand" value='<%= producto.brand %>'>
+                            <input type="text" placeholder="Marca" required id="brand" name="brand" value='<%= products.brand %>'>
                             <!--<span>Marca</span>-->
                             <span class="bar"></span>
                         </div>
                         <div class="inputBox w50">
                             <label for="img"></label>
-                            <input type="file" placeholder="" required id="img" name="img" value='<%= producto.img %>' style="height: 38px;">
+                            <input type="file" placeholder="" required id="img" name="img" value='<%= products.img %>' style="height: 38px;">
                             <!--<span></span>-->
                             <span class="bar"></span>
                         </div>
                         <div class="inputBox w50">
                             <label for="description"></label>
-                            <textarea placeholder="Descripción" name="description" required id="description"><%= producto.description %></textarea>
+                            <textarea placeholder="Descripción" name="description" required id="description"><%= products.description %></textarea>
                             <!--<span>Descripción</span>-->
                             <span class="bar"></span>
                         </div>
                         <div class="inputBox w50">
                             <label for="category" style="height: 30px;">Categoría</label>
-                            <select name="category" id="category" value="<%= producto.idCategory %>">
+                            <select name="category" id="category" value="<%= products.idCategory %>">
                                 <option value="1">Visores</option>
                                 <option value="2">Accesorios</option>
                                 <option value="3">Aplicaciones</option>
@@ -71,7 +71,7 @@
                         </div>
                         <div class="inputBox w100">
                             <input type="submit" value="Editar">
-                            <input type="submit" value="Borrar">
+                            <input type="submit" value="Borrar" formaction="/producto/editar/eliminar/<%= products.id %>">
                         </div>
                     </div>
                 </div>

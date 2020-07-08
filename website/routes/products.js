@@ -34,8 +34,8 @@ router.post('/crear', authMiddleware, upload.single('img'), productsController.s
 router.get('/categorias', authMiddleware, productsController.category)
 router.post('/categorias', authMiddleware, productsController.createCategory);
 router.get('/editar/:id', authMiddleware, productsController.edit);
-router.post('/editar/:id', authMiddleware, productsController.update);
-router.post('/eliminar', authMiddleware, productsController.delete);
+router.post('/editar/:id', authMiddleware, upload.single('img'), productsController.update);
+router.post('/editar/eliminar/:id', authMiddleware, productsController.delete);
 router.get('/:id', productsController.detail);
 
 module.exports = router;
