@@ -157,10 +157,8 @@ div .iconos i{
 
 .prodArticulo {
     display: flex;
-    /* height: 75vh; */
     padding: 30px;
     flex-direction: column;
-
 }
 .carritoTitulo{
     display: flex;
@@ -230,9 +228,11 @@ div .iconos i{
     display: flex;
     flex-wrap: wrap;
 }
+.imagenProducto{
+    height: 100%;
+}
 .imagenProducto img {
-    object-fit: contain;
-
+    height: 100%;
 }
 .rowMoreInfo{
     width:100vw;
@@ -499,6 +499,9 @@ div .iconos i{
 }
 @media (min-width: 992px){
     /* Medidas PC */
+    .prodArticulo {
+        height: 65vh;
+    }
     .carritoTitulo {
         justify-content: flex-start;
         margin-bottom: 2rem;
@@ -507,7 +510,6 @@ div .iconos i{
         display: inline-block;
         margin-left: 2rem;
     }
-
     .prodCarrito {
         display: flex;
         flex-direction: row;

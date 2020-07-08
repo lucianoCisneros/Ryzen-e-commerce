@@ -170,9 +170,18 @@ div .iconos i{
     width: 100vw;
     justify-content: center;
     align-content: center;
+    height: 86vh;
 }
 .firstContainerInfo{
     width: 100vw;
+}
+.firstContainerImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.firstContainerImg img{
+    width: 100%;
 }
 .bannerIcon{
     color: white;
@@ -413,6 +422,7 @@ div .iconos i{
         flex-direction: initial;
         flex-wrap: initial;
         width: 100vw;
+        height: 82vh;
     }
     .firstContainer row{
         margin-left: auto;

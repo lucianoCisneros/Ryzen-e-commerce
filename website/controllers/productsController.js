@@ -28,7 +28,7 @@ const productsController = {
             idCategory: req.body.category
         }
         DB.Product.create(newProduct)
-            .then(() => res.redirect('/producto/editar'));
+            .then(() => res.redirect('/producto/editar/' + newProduct.id));
     },
     edit: (req,res) => {
         DB.Product.findByPk(req.params.id, {
