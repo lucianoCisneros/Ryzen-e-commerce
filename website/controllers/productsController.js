@@ -28,16 +28,9 @@ const productsController = {
             idCategory: req.body.category
         }
         DB.Product.create(newProduct)
-            .then(() => res.redirect('/producto/editar/' + newProduct.id));
+            .then(() => res.redirect('/categorias'));
     },
     edit: (req,res) => {
-        /* DB.Product.findByPk(req.params.id, {
-            include: [{association: "category"}]
-        })
-            .then( producto => {
-                res.render('edit-product', { producto: producto})
-            })
-            .catch(error => console.log(error)); */
         let totalProducts = DB.Product.findByPk(req.params.id);
         let totalCategories = DB.Category.findAll();
         
@@ -55,7 +48,7 @@ const productsController = {
             name: req.body.name,
             description: req.body.description
         })
-            .then(() => res.redirect('/producto/categorias'))
+            .then(() => res.redirect('/productos/categorias'))
             .catch(error => console.log(error));
     },
     update: (req,res) => {
@@ -81,6 +74,15 @@ const productsController = {
             }
         })
             .then(() => res.redirect("/categorias"))
+            .catch(error => console.log(error));
+    },
+    visorsCategory: (req,res) => {
+        DB.Product.findAll({
+            where: {
+                idCategory: 1
+            }
+        })
+            .then((products) => res.render('categories-visors', {products: products}))
             .catch(error => console.log(error));
     }
 }

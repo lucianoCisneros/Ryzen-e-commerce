@@ -24,7 +24,7 @@
     <!--home-->
     <section>
         <div class="container">
-            <form action="/producto/editar/<%= products.id %>" method="POST" enctype="multipart/form-data">
+            <form action="/productos/editar/<%= products.id %>" method="POST" enctype="multipart/form-data">
                 <div class="contactForm">
                     <h2>Editar Producto</h2>
                     <div class="formBox">
@@ -61,17 +61,24 @@
                         <div class="inputBox w50">
                             <label for="category" style="height: 30px;">Categoría</label>
                             <select name="category" id="category" value="<%= products.idCategory %>">
-                                <option value="1">Visores</option>
-                                <option value="2">Accesorios</option>
-                                <option value="3">Aplicaciones</option>
-                                <option value="4">Juegos</option>
+                                <% for (let i = 0; i < categories.length; i++) { %>
+                                    <% if (categories[i].id == products.idCategory) { %>
+                                        <option value="<%=categories[i].id%>" selected>
+                                            <%= categories[i].name %>
+                                        </option>
+                                    <% } else { %>
+                                        <option value="<%=categories[i].id%>">
+                                            <%= categories[i].name %>
+                                        </option>
+                                        <% } %>
+                                    <% } %>
                             </select>
                             <!--<span></span>-->
                             <span class="bar"></span>
                         </div>
                         <div class="inputBox w100">
                             <input type="submit" value="Editar">
-                            <input type="submit" value="Borrar" formaction="/producto/editar/eliminar/<%= products.id %>">
+                            <input type="submit" value="Borrar" formaction="/productos/editar/eliminar/<%= products.id %>">
                         </div>
                     </div>
                 </div>

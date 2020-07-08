@@ -33,6 +33,7 @@ router.get('/crear', authMiddleware, productsController.create);
 router.post('/crear', authMiddleware, upload.single('img'), productsController.store);
 router.get('/categorias', authMiddleware, productsController.category)
 router.post('/categorias', authMiddleware, productsController.createCategory);
+router.get('/visores', productsController.visorsCategory);
 router.get('/editar/:id', authMiddleware, productsController.edit);
 router.post('/editar/:id', authMiddleware, upload.single('img'), productsController.update);
 router.post('/editar/eliminar/:id', authMiddleware, productsController.delete);
