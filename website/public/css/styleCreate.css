@@ -247,9 +247,11 @@ section .container .contactForm .formBox .inputBox input[type="submit"]{
 section .container .contactForm .formBox .inputBox input[type="submit"]:hover{
     background: black;
 }
+
 .contactContainer .row{
     width: 100vw;
 }
+
 .contacto{
     text-align: left;
     font-size: 2rem; 
@@ -260,22 +262,26 @@ section .container .contactForm .formBox .inputBox input[type="submit"]:hover{
     font-size: 1.3rem;
      list-style: none;
 }
+
 .contactDiv {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
+
 .linkIg .fab{
     color: white;
     font-size: 3.5rem;
     margin-right:5px;
 }
+
 @media (min-width: 487px){
     .logo{
         margin-right: 3.7rem;
     }
 }
+
 @media (min-width: 768px){
     .registerErrors ul{
         width: 100vw;
@@ -288,11 +294,13 @@ section .container .contactForm .formBox .inputBox input[type="submit"]:hover{
         display: flex;
     }
 }
+
 @media (min-width: 800px){
     .errorList{
         justify-content: center;
     }
 }
+
 @media (max-width:991px){
     .mobile-header{
         display: inline!important;
