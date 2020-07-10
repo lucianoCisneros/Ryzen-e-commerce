@@ -28,7 +28,13 @@ const productsController = {
             idCategory: req.body.category
         }
         DB.Product.create(newProduct)
-            .then(() => res.redirect('/categorias'));
+            .then(() => {
+                if (newProduct.idCategory == 1 || 2) {
+                    res.redirect('/productos/visores')
+                } else{
+                    res.redirect('/productos/aplicaciones')
+                }
+            });
     },
     edit: (req,res) => {
         let totalProducts = DB.Product.findByPk(req.params.id);
@@ -83,6 +89,15 @@ const productsController = {
             }
         })
             .then((products) => res.render('categories-visors', {products: products}))
+            .catch(error => console.log(error));
+    },
+    appsCategory: (req, res) => {
+        DB.Product.findAll({
+            where: {
+                idCategory: [3, 4]
+            }
+        })
+            .then((products) => res.render('apps-games', { products: products }))
             .catch(error => console.log(error));
     }
 }
