@@ -194,7 +194,10 @@ section .container .contactForm .formBox .inputBox.w100{
 }
 
 section .container .contactForm .formBox .inputBox input,
-section .container .contactForm .formBox .inputBox textarea{
+section .container .contactForm .formBox .inputBox textarea,
+section .container .contactForm .formBox .inputBox label,
+section .container .contactForm .formBox .inputBox select,
+section .container .contactForm .formBox .inputBox option{
     width: 100% !important;
     padding: 5px 0;
     resize: none;
@@ -206,7 +209,7 @@ section .container .contactForm .formBox .inputBox textarea{
     outline: none;
 }
 
-section .container .contactForm .formBox .inputBox textarea{
+section .container .contactForm .formBox .inputBox textarea label select option{
     min-height: 100px;
 }
 
@@ -239,9 +242,10 @@ section .container .contactForm .formBox .inputBox input[type="submit"]{
    background: black;
    color: #fff;
    border: none;
-   max-width: 150px;
-   padding: 12px;
+   /*max-width: 150px;
+   padding: 12px;*/
    border-radius: 20px;
+   margin-bottom: 20px;
 }
 
 section .container .contactForm .formBox .inputBox input[type="submit"]:hover{
