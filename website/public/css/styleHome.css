@@ -273,7 +273,7 @@ div .iconos i{
     margin-bottom: 0px;
 }
 .carouselContainer{
-    background-color: rgb(13, 77, 141);
+    background-color: grey;
     margin-bottom: 0px;
 }
 .carouselIndex{
@@ -282,7 +282,7 @@ div .iconos i{
     margin-right: auto;
 }
 .carousel-inner{
-    background-color: rgb(13, 77, 141);
+    background-color: #fff;
     border-radius: 20px;
 }
 .fa-star{
@@ -308,7 +308,8 @@ div .iconos i{
     text-align: center;
     font-weight: bold;
     color: black;
-    margin-bottom: 3%;
+    /*margin-bottom: 3%;*/
+    margin-bottom: 30px;
 }
 .contacto{
     text-align: left;
