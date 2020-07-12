@@ -324,6 +324,11 @@ div .iconos i{
     text-align: center;
 }
 
+/* Estilos de las fotos compatibles con */
+ .col-4{
+     object-fit: cover;
+     border-radius: 10px;
+ }
 
 
 .btn-mf {
