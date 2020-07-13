@@ -13,8 +13,8 @@ html{
 
 body{
     background: black;
-    /* background: url('../img/vr9.jpg'); */
-    /*background-size: 1400px;*/
+    background: url('../img/vr9.jpg');
+    background-size: 1400px;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -231,6 +231,7 @@ form{
     background-color: #fff;
     border-radius: 20px;
     box-shadow: 0 1px 1.5rem rgba(0, 0, 0, .1);
+    margin-top: 30%;
 }
 
 .input-group{
