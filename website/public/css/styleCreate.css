@@ -181,12 +181,8 @@ section .container .contactForm .formBox{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-<<<<<<< HEAD
-    padding-top: 40px;
-=======
     align-items: center;
     padding-top: 20px;
->>>>>>> c597cb1e3b894ae809fdf3b035607427701e1473
 }
 
 section .container .contactForm .formBox .inputBox{
@@ -204,11 +200,6 @@ section .container .contactForm .formBox .inputBox.w100{
 }
 
 section .container .contactForm .formBox .inputBox input,
-<<<<<<< HEAD
-section .container .contactForm .formBox .inputBox textarea,
-/*section .container .contactForm .formBox .inputBox label,*/
-=======
->>>>>>> c597cb1e3b894ae809fdf3b035607427701e1473
 section .container .contactForm .formBox .inputBox select,
 section .container .contactForm .formBox .inputBox option,
 section .container .contactForm .formBox .inputBox textarea{
