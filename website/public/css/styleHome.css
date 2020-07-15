@@ -10,6 +10,7 @@ body {
     background-color: black;
        font-family: 'Poppins', sans-serif;
 }
+
 html{
     font-size: 11px;
 }
@@ -23,6 +24,7 @@ html{
     color: white;
     font-size: 16px;
 }
+
 .cabecera a{
     color: white;
 }
@@ -35,15 +37,18 @@ html{
 .cabecera p{
     font-size: 28px;
 }
+
 .logo{
     margin-left: 10px;
 }
 .logo a{
     text-decoration: none;
 }
+
 .navegacion {
     display: flex;
 }
+
 .navegacion ul li{
     justify-content: center;
 }
@@ -86,14 +91,17 @@ div .iconos i{
 .mobile-header{
     display: none;
 }
+
 .mobileNavbar{
     background: black;
     font-size: 16px;
     font-weight: bolder;
 }
+
 .mobileNavbar a{
     color: white;
 }
+
 .navLogo{
     font-size: 28px;
     font-weight: bold;
@@ -102,24 +110,30 @@ div .iconos i{
     text-decoration: none;
     margin-left: 10px;
 }
+
 .navbar-nav{
     margin-left: 10px;
 }
+
 .navbar-toggler{
     margin-right: px;
 }
+
 .fa-bars{
     background: black;
     font-size: 25px;
     color: white;
 }
+
 .nav-items{
     display: flex;
     align-items: center;
 }
+
 .nav-items a{
     margin-left: 10px;
 }
+
 .nav-items i{
     color: white;
 }
@@ -143,10 +157,12 @@ div .iconos i{
     align-items: center;
     justify-content: space-between;
 }
+
 .iconoIg {
     height: 90px;
     width: 90px;
 }
+
 .tamano-container {
     background-color: white;
     border-radius: 20px;
@@ -156,13 +172,16 @@ div .iconos i{
     max-width: 100%;
     border-radius: 0px;
 }
+
 .tamano-container ul li{
     color: black;
 }
+
 .firstContainer{
    background: grey;
    padding-top: 15px;
 }
+
 .firstContainerRow{
     display: flex;
     flex-direction: row-reverse;
@@ -172,28 +191,34 @@ div .iconos i{
     align-content: center;
     height: 86vh;
 }
+
 .firstContainerInfo{
     width: 100vw;
 }
+
 .firstContainerImg{
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .firstContainerImg img{
     width: 100%;
 }
+
 .bannerIcon{
     color: white;
     margin-right: 20px;
     display: none !important;
 }
+
 .banner-txt {
     color: white;
     text-align: center;
     font-size: 1.8rem;
     width: 100vw;
 }
+
 .banner-title{
     text-align: center;
     font-weight: bold;
@@ -202,27 +227,32 @@ div .iconos i{
     color: white;
     text-shadow: 0 0 15px #0a0a0a;
 }
+
 .banner-mi{
     display: block;
     width: 100vw;
     font-size: 1.1rem;
     text-align: center;
 }
+
 .banner-mi-container{
     display: flex;
     flex-wrap: wrap;
     width: 100vw;
 }
+
 .banner-mi a{
     /* color: rgb(86, 158, 230); */
     color: rgb(21, 90, 160);
     font-weight: bold;
     width: 100vw;
 }
+
 .secondContainerInfo{
     display: flex;
     flex-wrap: wrap;
 }
+
 .producto-home-nom {
     text-align: right;
     font-size: 4rem; 
@@ -230,7 +260,10 @@ div .iconos i{
     font-weight: bold;
     /*margin-top: 20px;*/
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
 }
+
 .secondDescription{
     color: white;
     text-align: justify;
@@ -239,6 +272,7 @@ div .iconos i{
     flex-wrap: wrap;
     align-items: center;
 }
+
 .secondDescriptionContainers{
     display: flex;
     flex-wrap: wrap;
@@ -247,21 +281,25 @@ div .iconos i{
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
 .secondDescriptionTitles{
     color: white;
     text-align: center;
     font-weight: bold;
     font-size: 1.7rem;
 }
+
 .secondContainerIcons{
     border-radius: 50%;
     padding: 10px;
     border: 2px solid grey;
     display: flex;
 }
+
 .secondDescription p{
     color: white;
 }
+
 .producto-home-desc {
     color: black;
 }
@@ -272,37 +310,45 @@ div .iconos i{
     background: white;
     margin-bottom: 0px;
 }
+
 .carouselContainer{
     background-color: grey;
     margin-bottom: 0px;
 }
+
 .carouselIndex{
     width: 50vw;
     margin-left: auto;
     margin-right: auto;
 }
+
 .carousel-inner{
     background-color: #fff;
     border-radius: 20px;
 }
+
 .fa-star{
     color: white;
 }
+
 .carouselContainer .subH2{
     color: white;
     padding-top: 30px;
     width: 100%;
     text-shadow: 0 0 18px #0a0a0a;
 }
+
 .carousel-caption h2, .carousel-caption p{
     font-weight: bold;
     font-size: rem;
     color: black;
     background: rgba(255, 255, 255, 0.8);
 }
+
 .carousel-caption{
     margin-top: 60px;
 }
+
 .subH2 {
     font-size: 3.7rem;
     text-align: center;
@@ -312,15 +358,18 @@ div .iconos i{
     margin-bottom: 30px;
     padding-top: 20px;
 }
+
 .contacto{
     text-align: left;
     font-size: 2rem; 
     color: white;
     font-weight: bold;
 }
+
 .contactInfo{
     font-size: 1.3rem;
 }
+
 .producto-home-desc p {
     text-align: center;
 }
@@ -329,11 +378,11 @@ div .iconos i{
  .col-4{
      object-fit: cover;
      border-radius: 10px;
- }
+}
 
  .col-12{
      object-fit: contain;
- }
+}
 
 
 .btn-mf {
@@ -345,74 +394,91 @@ div .iconos i{
     align-items: center;
     align-content: center;
 }
+
 .btn-mi{
     font-size: 1.8rem;
     background: white;
     color: black;
     font-weight: bold;
     border: 1px solid black;
-        border-radius: 10px;
+    border-radius: 10px;
 }
+
 .btn-mi:hover{
     background: black;
     color: white;
     border: 1px solid black;
     transition: all 0.3s ease 0s;
 }
+
 .carousel-item{
     color: black;
 }
+
 .carousel-item img{
     height: 30vw;
 }
+
 .linkIg .fab{
     color: white;
     font-size: 3.5rem;
     margin-right:5px;
 }
+
+/* Medias Queries */
+
 @media (min-width: 320px){
     .subH2{
         font-size: 3rem;
     }
     .carouselContainer .subH2{
-        font-size: 2.7rem;
+        font-size: 20px;
     }
 }
-@media (max-width:337px){
+
+@media (max-width: 337px){
     .producto-home-nom {
         font-size: 3.75rem;
-    }
+        display: flex;
+        justify-content: center;
+    }   
     .secondDescription {
         font-size: 1.19rem;
     }
 }
+
 @media (max-width: 380px){
     .contactDiv {
         display: block;
         align-items: center;
     }
 }
+
 @media (min-width: 425px){
     .subH2{
         font-size: 4rem;
     }
     .carouselContainer .subH2{
-        font-size: 3.6rem;
+        font-size: 30px;
     }
 }
+
 @media (max-width: 450px){
     .carouselIndex{
         width: 90vw;
     }
     .carousel-item img{
         height: 50vh;
+        object-fit: contain;
     }
 }
+
 @media (min-width: 487px){
     .logo{
         margin-right: 3.7rem;
     }
 }
+
 @media (max-width: 750px){
     .carousel-item img{
     
@@ -427,6 +493,7 @@ div .iconos i{
         display: none!important;
     }
 }
+
 @media (min-width: 992px){
     .firstContainerRow{
         display: flex;
