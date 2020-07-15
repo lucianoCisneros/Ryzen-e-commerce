@@ -11,7 +11,7 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href='./css/styleRegister.css'>
+    <link rel="stylesheet" href='/css/styleCreate.css'>
     <title>RYZEN | Home</title>
 </head>
 
@@ -22,61 +22,62 @@
     <!-- /Header -->
 
     <!--home-->
-    <div class="wrap">
-        <div class="form-container">
-            <form action="/producto/crear" method="post" enctype="multipart/form-data">
-                <div class="input-group">
-                    <i class="fas fa-user"></i>
-                    <label for="name"></label>
-                    <input type="text" placeholder="Nombre" required id="name" name="name" value=''>
-                    <span class="bar"></span>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-user"></i>
-                    <label for="price"></label>
-                    <input type="number" placeholder="Precio" required id="price" name="price" value=''>
-                    <span class="bar"></span>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-user-tie"></i>
-                    <label for="description"></label>
-                    <input type="text" placeholder="Descripción" required id="description" name="description" value=''>
-                    <span class="bar"></span>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-birthday-cake"></i>
-                    <label for="brand"></label>
-                    <input type="text" placeholder="Marca" required id="brand" name="brand" value=''>
-                    <span class="bar"></span>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-envelope"></i>
-                    <label for="img"></label>
-                    <input type="file" placeholder="Foto" required id="img" name="img">
-                    <span class="bar"></span>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-lock"></i>
-                    <label for="category"></label>
-                    <select name="category" id="category">
-                        <option value="1">Visores</option>
-                        <option value="2">Accesorios</option>
-                        <option value="3">Aplicaciones</option>
-                        <option value="4">Juegos</option>
-                    </select>
-                    <span class="bar"></span>
-                </div>
-                <div class="input-group">
-                    <button type="submit">
-                        <i class="fas fa-user-circle"></i>
-                    </button>
-                </div>
-                <div class="switch-login">
-                    <p>¿Ya tienes una cuenta? <a href="/login"><span>Iniciar Sesión</span></a></p>
+    <section>
+        <div class="container">
+            <form action="/productos/crear" method="POST" enctype="multipart/form-data">
+                <div class="contactForm">
+                    <h2>Crear Producto</h2>
+                    <div class="formBox">
+                        <div class="inputBox w50">
+                            <label for="name"></label>
+                            <input type="text" placeholder="Nombre" required id="name" name="name" value=''>
+                            <!--<span>Nombre</span>-->
+                            <span class="bar"></span>
+                        </div>
+                        <div class="inputBox w50">
+                            <label for="price"></label>
+                            <input type="number" placeholder="Precio" required id="price " name="price" value=''>
+                            <!--<span>Precio</span>-->
+                            <span class="bar"></span>
+                        </div>
+                        <div class="inputBox w50">
+                            <label for="brand"></label>
+                            <input type="text" placeholder="Marca" required id="brand" name="brand" value=''>
+                            <!--<span>Marca</span>-->
+                            <span class="bar"></span>
+                        </div>
+                        <div class="inputBox w50">
+                            <label for="img"></label>
+                            <input type="file" required id="img" name="img" style="height: 38px;">
+                            <!--<span></span>-->
+                            <span class="bar"></span>
+                        </div>
+                        <div class="inputBox w50">
+                            <label for="description"></label>
+                            <textarea placeholder="Descripción" name="description" required id="description"></textarea>
+                            <!--<span>Descripción</span>-->
+                            <span class="bar"></span>
+                        </div>
+                        <div class="inputBox w50">
+                            <label for="category" style="height: 30px;">Categoria</label>
+                            <select name="category" id="category">
+                                <option value="1">Visores</option>
+                                <option value="2">Accesorios</option>
+                                <option value="3">Aplicaciones</option>
+                                <option value="4">Juegos</option>
+                            </select>
+                            <!--<textarea type="text" placeholder="Categorias" required id="categories" name="categories" value=''></textarea>-->
+                            <!--<span></span>-->
+                            <span class="bar"></span>
+                        </div>
+                        <div class="inputBox w100">
+                            <input type="submit" value="Crear">
+                        </div>
+                    </div>
                 </div>
             </form>
         </div>
-    </div>
+    </section>
     <!--footer--> <br>
     <%- include('partials/footer') %>
     <!-- Optional JavaScript -->

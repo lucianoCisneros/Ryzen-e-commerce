@@ -33,6 +33,6 @@ app.use("/quienes-somos", aboutUsRoutes)
 app.use("/login", loginRoutes);
 app.use("/registro", registerRoutes);
 app.use("/logout", logoutRoutes);
-app.use("/producto", productRoutes);
+app.use("/productos", productRoutes);
 app.use("/carrito", shopCartRoutes);
 app.use("/categorias", categoriesRouter);

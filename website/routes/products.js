@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const productsController = require('../controllers/productsController');
 const multer = require('multer');
 const path = require('path');
+const productsController = require('../controllers/productsController');
+const authMiddleware = require('../middlewares/authMiddleware')
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -28,13 +29,15 @@ var upload = multer({
 });
 
 router.get('/', productsController.index);
+router.get('/crear', authMiddleware, productsController.create);
+router.post('/crear', authMiddleware, upload.single('img'), productsController.store);
+router.get('/categorias', authMiddleware, productsController.category)
+router.post('/categorias', authMiddleware, productsController.createCategory);
+router.get('/visores', productsController.visorsCategory);
+router.get('/aplicaciones', productsController.appsCategory);
+router.get('/editar/:id', authMiddleware, productsController.edit);
+router.post('/editar/:id', authMiddleware, upload.single('img'), productsController.update);
+router.post('/editar/eliminar/:id', authMiddleware, productsController.delete);
 router.get('/:id', productsController.detail);
-router.get('/crear', productsController.create);
-router.post('/crear', upload.single('img'), productsController.store);
-router.get('/categorias', productsController.category)
-router.post('/categorias', productsController.createCategory);
-router.get('/editar/:id', productsController.edit);
-router.post('/editar/:id', productsController.update);
-router.post('/eliminar', productsController.delete);
 
 module.exports = router;

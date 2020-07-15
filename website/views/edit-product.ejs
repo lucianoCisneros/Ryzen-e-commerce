@@ -11,7 +11,7 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href='./css/styleRegister.css'>
+    <link rel="stylesheet" href='/css/styleCreate.css'>
     <title>RYZEN | Home</title>
 </head>
 
@@ -22,61 +22,69 @@
     <!-- /Header -->
 
     <!--home-->
-    <div class="wrap">
-        <div class="form-container">
-            <form action="/producto/editar/:id" method="post" enctype="multipart/form-data">
-                <div class="input-group">
-                    <i class="fas fa-user"></i>
-                    <label for="name"></label>
-                    <input type="text" placeholder="Nombre" required id="name" name="name" value='<%= producto.name %>'>
-                    <span class="bar"></span>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-user"></i>
-                    <label for="price"></label>
-                    <input type="number" placeholder="Precio" required id="price" name="price" value='<%= producto.price %>'>
-                    <span class="bar"></span>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-user-tie"></i>
-                    <label for="description"></label>
-                    <input type="text" placeholder="Descripción" required id="description" name="description" value='<%= producto.description %>'>
-                    <span class="bar"></span>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-birthday-cake"></i>
-                    <label for="brand"></label>
-                    <input type="text" placeholder="Marca" required id="brand" name="brand" value='<%= producto.brand %>'>
-                    <span class="bar"></span>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-envelope"></i>
-                    <label for="img"></label>
-                    <input type="file" placeholder="Foto" required id="img" name="img">
-                    <span class="bar"></span>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-lock"></i>
-                    <label for="category"></label>
-                    <select name="category" id="category" value="<%= producto.idCategory %>">
-                        <option value="1">Visores</option>
-                        <option value="2">Accesorios</option>
-                        <option value="3">Aplicaciones</option>
-                        <option value="4">Juegos</option>
-                    </select>
-                    <span class="bar"></span>
-                </div>
-                <div class="input-group">
-                    <button type="submit">
-                        <i class="fas fa-user-circle"></i>
-                    </button>
-                </div>
-                <div class="switch-login">
-                    <p>¿Ya tienes una cuenta? <a href="/login"><span>Iniciar Sesión</span></a></p>
+    <section>
+        <div class="container">
+            <form action="/productos/editar/<%= products.id %>" method="POST" enctype="multipart/form-data">
+                <div class="contactForm">
+                    <h2>Editar Producto</h2>
+                    <div class="formBox">
+                        <div class="inputBox w50">
+                            <label for="name"></label>
+                            <input type="text" placeholder="Nombre" required id="name" name="name" value='<%= products.name %>'>
+                            <!--<span>Nombre</span>-->
+                            <span class="bar"></span>
+                        </div>
+                        <div class="inputBox w50">
+                            <label for="price"></label>
+                            <input type="number" placeholder="Precio" required id="price " name="price" value='<%= products.price %>'>
+                            <!--<span>Precio</span>-->
+                            <span class="bar"></span>
+                        </div>
+                        <div class="inputBox w50">
+                            <label for="brand"></label>
+                            <input type="text" placeholder="Marca" required id="brand" name="brand" value='<%= products.brand %>'>
+                            <!--<span>Marca</span>-->
+                            <span class="bar"></span>
+                        </div>
+                        <div class="inputBox w50">
+                            <label for="img"></label>
+                            <input type="file" placeholder="" required id="img" name="img" value='<%= products.img %>' style="height: 38px;">
+                            <!--<span></span>-->
+                            <span class="bar"></span>
+                        </div>
+                        <div class="inputBox w50">
+                            <label for="description"></label>
+                            <textarea placeholder="Descripción" name="description" required id="description"><%= products.description %></textarea>
+                            <!--<span>Descripción</span>-->
+                            <span class="bar"></span>
+                        </div>
+                        <div class="inputBox w50">
+                            <label for="category" style="height: 30px;">Categoría</label>
+                            <select name="category" id="category" value="<%= products.idCategory %>">
+                                <% for (let i = 0; i < categories.length; i++) { %>
+                                    <% if (categories[i].id == products.idCategory) { %>
+                                        <option value="<%=categories[i].id%>" selected>
+                                            <%= categories[i].name %>
+                                        </option>
+                                    <% } else { %>
+                                        <option value="<%=categories[i].id%>">
+                                            <%= categories[i].name %>
+                                        </option>
+                                        <% } %>
+                                    <% } %>
+                            </select>
+                            <!--<span></span>-->
+                            <span class="bar"></span>
+                        </div>
+                        <div class="inputBox w100">
+                            <input type="submit" value="Editar Producto">
+                            <input type="submit" class="Borrar Producto" value="Borrar" formaction="/productos/editar/eliminar/<%= products.id %>">
+                        </div>
+                    </div>
                 </div>
             </form>
         </div>
-    </div>
+    </section>
     <!--footer--> <br>
     <%- include('partials/footer') %>
     <!-- Optional JavaScript -->
@@ -90,6 +98,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
-    <script src="./public/js/js.js"></script>
+    <script src="/js/js.js"></script>
 </body>
 </html>

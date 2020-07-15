@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     
-    <link rel="stylesheet" href="./css/styleSignin.css">
+    <link rel="stylesheet" href="/css/styleSignin.css">
     <title>RYZEN | Login</title>
 </head>
 <body>
@@ -37,11 +37,13 @@
                 <form action="/login" method="post">
                     <div class="input-group">
                         <i class="fas fa-user"></i>
+                        <label for="username"></label>
                         <input type="username" placeholder="Usuario" required name="username">
                         <span class="bar"></span>
                     </div>
                     <div class="input-group">
                         <i class="fas fa-lock"></i>
+                        <label for="password"></label>
                         <input type="password" placeholder="Contraseña" required name="password">
                         <span class="bar"></span>
                     </div>
