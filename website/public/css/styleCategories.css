@@ -172,7 +172,10 @@ div .iconos i{
     justify-content: center;
     background: black;
 }
-
+.product-box_image img{
+        width: 100%;
+        height: 98%;
+}
 .product-box_data {
     padding: 10px;
     position: relative;
@@ -273,18 +276,10 @@ h1{
         height: 300px;
         border-top: 1px solid black
     }
-    .product-box_image img{
-        width: 95%;
-        height: 95%;
-    }
 }
 @media (min-width:992px){
     .product-box_image {
         width: 100%;
         height: 255px;
-    }
-    .product-box_image img{
-        width: 100%;
-        height: 98%;
     }
 }
