@@ -181,7 +181,12 @@ section .container .contactForm .formBox{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+<<<<<<< HEAD
     padding-top: 40px;
+=======
+    align-items: center;
+    padding-top: 20px;
+>>>>>>> c597cb1e3b894ae809fdf3b035607427701e1473
 }
 
 section .container .contactForm .formBox .inputBox{
@@ -195,13 +200,18 @@ section .container .contactForm .formBox .inputBox.w50{
 
 section .container .contactForm .formBox .inputBox.w100{
     width: 100%;
+    margin-bottom: 0px;
 }
 
 section .container .contactForm .formBox .inputBox input,
+<<<<<<< HEAD
 section .container .contactForm .formBox .inputBox textarea,
 /*section .container .contactForm .formBox .inputBox label,*/
+=======
+>>>>>>> c597cb1e3b894ae809fdf3b035607427701e1473
 section .container .contactForm .formBox .inputBox select,
-section .container .contactForm .formBox .inputBox option{
+section .container .contactForm .formBox .inputBox option,
+section .container .contactForm .formBox .inputBox textarea{
     width: 100% !important;
     padding: 5px 0;
     resize: none;
@@ -211,6 +221,17 @@ section .container .contactForm .formBox .inputBox option{
     border: none;
     border-bottom: 1px solid black;
     outline: none;
+}
+
+section .container .contactForm .formBox .inputBox .categoryLabel{
+        width: 100% !important;
+        padding: 5px 0;
+        resize: none;
+        font-size: 18px;
+        /*font-weight: 300;*/
+        color: #333;
+        /* border-bottom: 1px solid black; */
+        outline: none;
 }
 
 section .container .contactForm .formBox .inputBox textarea label select option{

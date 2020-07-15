@@ -321,7 +321,9 @@ div .iconos i{
     margin-left: auto;
     margin-right: auto;
 }
-
+.carouselIndex .tamano-container{
+    padding-bottom: 0px;
+}
 .carousel-inner{
     background-color: #fff;
     border-radius: 20px;
@@ -459,7 +461,7 @@ div .iconos i{
         font-size: 4rem;
     }
     .carouselContainer .subH2{
-        font-size: 30px;
+        font-size: 29px;
     }
 }
 
@@ -469,7 +471,6 @@ div .iconos i{
     }
     .carousel-item img{
         height: 50vh;
-        object-fit: contain;
     }
 }
 
@@ -477,11 +478,13 @@ div .iconos i{
     .logo{
         margin-right: 3.7rem;
     }
+    .carouselContainer .subH2{
+        font-size: 30px;
+    }
 }
 
 @media (max-width: 750px){
     .carousel-item img{
-    
     width: 100vw;
 }
 }
