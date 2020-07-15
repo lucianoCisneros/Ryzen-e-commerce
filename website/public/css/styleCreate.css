@@ -136,7 +136,10 @@ div .iconos i{
 section{
     position: relative;
     display: flex;
-    /* background: #112d42; */
+    justify-content: center;
+    align-items: center;
+    /*min-height: 100vh;*/
+    /*background: #112d42;*/
 }
 
 section::before{
@@ -156,12 +159,13 @@ section .container{
 }
 
 section .container .contactForm{
-    /* position: absolute; */
-    padding: 40px 50px;
+    position: absolute;
+    padding: 50px 50px;
     background: #fff;
     /*margin-left: 150px;*/
     /*padding-left: 250px;*/
     /*width: calc(100% - 150px);*/
+    height: 100%;
     box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
 }
@@ -177,7 +181,7 @@ section .container .contactForm .formBox{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 section .container .contactForm .formBox .inputBox{
@@ -195,7 +199,7 @@ section .container .contactForm .formBox .inputBox.w100{
 
 section .container .contactForm .formBox .inputBox input,
 section .container .contactForm .formBox .inputBox textarea,
-section .container .contactForm .formBox .inputBox label,
+/*section .container .contactForm .formBox .inputBox label,*/
 section .container .contactForm .formBox .inputBox select,
 section .container .contactForm .formBox .inputBox option{
     width: 100% !important;
@@ -242,15 +246,16 @@ section .container .contactForm .formBox .inputBox input[type="submit"]{
    background: black;
    color: #fff;
    border: none;
-   /*max-width: 150px;
-   padding: 12px;*/
+   /*max-width: 150px;*/
+   /*padding: 12px;*/
    border-radius: 20px;
-   margin-bottom: 20px;
+   margin-top: 30px;
 }
 
 section .container .contactForm .formBox .inputBox input[type="submit"]:hover{
     background: black;
 }
+
 
 .contactContainer .row{
     width: 100vw;
