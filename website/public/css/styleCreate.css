@@ -69,7 +69,7 @@ body{
 
 div .dos{
     display: inline-flex;
-    margin-top: -15px;
+    margin-top: -11px;
     align-items: center;
 }
 
@@ -258,9 +258,9 @@ section .container .contactForm .formBox .inputBox input[type="submit"]{
    background: black;
    color: #fff;
    border: none;
-   /*max-width: 150px;*/
-   /*padding: 12px;*/
-   border-radius: 20px;
+   max-width: 150px;
+   padding: 12px;
+   /*border-radius: 20px;*/
    margin-top: 30px;
 }
 
@@ -330,8 +330,9 @@ section .container .contactForm .formBox .inputBox input[type="submit"]:hover{
         display: none!important;
     }
 }
-/*@media screen and (max-width: 700px){
-    section .container .contactForm{
-        width: 100%;
+
+@media screen and (max-width: 700px){
+    .contactForm .formBox{
+       width: 100%;
     }
-}*/
+}
