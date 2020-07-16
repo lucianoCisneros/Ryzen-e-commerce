@@ -41,7 +41,7 @@ module.exports = function (sequelize, dataTypes) {
     }
 
 
-    let Detail = sequelize.define(alias, cols, config);
+    let Detail = sequelize.define(alias, cols);
 
     
 
