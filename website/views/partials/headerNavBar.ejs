@@ -1,32 +1,42 @@
-<header class="desktop-header">
-    <div class="container col-xl-11 cabecera">
-        <nav class="row navbar navegacion">
-            
-            <span class="logo">
-                <p><a href="/">RYZEN</a></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="desktop-header">
+        <div class="container col-xl-11 cabecera"></div>
+            <nav class="row navbar navegacion navbar-dark">
+    
+                <span class="logo">
+                    <p><a href="/">RYZEN</a></p>
+                </span>
+                <ul>
+                    <li class="nav-item active"><a href="/productos/visores">VISORES</a></li>
+                    <li class="nav-item"><a href="/productos/aplicaciones">APPS Y JUEGOS</a></li>
+                    <li class="nav-item"><a href="/quienes-somos">QUIÉNES SOMOS</a></li>
+                </ul>
+            </nav>
+            <span class="dos">
+                <% if(locals.user){ %>
+                <span class="registro">
+                    <li><a href="/login" class="userLogged">¡Hola <%= locals.user.userName %></a>!</li>
+                    <li><a href="/logout">CERRAR SESIÓN</a></li>
+                </span>
+                <% } else { %>
+                <span class="registro">
+                    <li><a href="/login">LOGIN</a></li>
+                    <li><a href="/registro">REGISTRO</a></li>
+                </span>
+                <% } %>
+                <span class="iconos">
+                    <a href=""><i class="fas fa-search" disabled></i></a>
+                    <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+                </span>
             </span>
-            <ul>
-                <li class="nav-item active"><a href="/productos/visores">VISORES</a></li>
-                <li class="nav-item"><a href="/productos/aplicaciones">APPS Y JUEGOS</a></li>
-                <li class="nav-item"><a href="/quienes-somos">QUIÉNES SOMOS</a></li>
-            </ul>
-        </nav>
-        <span class="dos">
-            <% if(locals.user){ %>
-            <span class="registro">
-                <li><a href="/login" class="userLogged">¡Hola <%= locals.user.userName %></a>!</li>
-                <li><a href="/logout">CERRAR SESIÓN</a></li>
-            </span>
-            <% } else { %>
-            <span class="registro">
-                <li><a href="/login">LOGIN</a></li>
-                <li><a href="/registro">REGISTRO</a></li>
-            </span>
-            <% } %>
-            <span class="iconos">
-                <a href=""><i class="fas fa-search" disabled></i></a>
-                <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
-            </span>
-        </span>
-    </div>
-</header>
+        </div>
+    </header>
+</body>
+</html>
