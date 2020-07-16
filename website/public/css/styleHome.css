@@ -258,7 +258,7 @@ div .iconos i{
     font-size: 4rem; 
     color: white;
     font-weight: bold;
-    /*margin-top: 20px;*/
+    margin-top: 20px;
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
@@ -440,7 +440,7 @@ div .iconos i{
 
 @media (max-width: 337px){
     .producto-home-nom {
-        font-size: 3.75rem;
+        font-size: 3.5rem;
         display: flex;
         justify-content: center;
     }   
