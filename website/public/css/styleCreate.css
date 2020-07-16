@@ -69,7 +69,7 @@ body{
 
 div .dos{
     display: inline-flex;
-    margin-top: -15px;
+    margin-top: -11px;
     align-items: center;
 }
 
@@ -136,7 +136,10 @@ div .iconos i{
 section{
     position: relative;
     display: flex;
-    /* background: #112d42; */
+    justify-content: center;
+    align-items: center;
+    /*min-height: 100vh;*/
+    /*background: #112d42;*/
 }
 
 section::before{
@@ -156,12 +159,13 @@ section .container{
 }
 
 section .container .contactForm{
-    /* position: absolute; */
-    padding: 40px 50px;
+    position: absolute;
+    padding: 50px 50px;
     background: #fff;
     /*margin-left: 150px;*/
     /*padding-left: 250px;*/
     /*width: calc(100% - 150px);*/
+    height: 100%;
     box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
 }
@@ -254,15 +258,16 @@ section .container .contactForm .formBox .inputBox input[type="submit"]{
    background: black;
    color: #fff;
    border: none;
-   /*max-width: 150px;
-   padding: 12px;*/
-   border-radius: 20px;
-   margin-bottom: 20px;
+   max-width: 150px;
+   padding: 12px;
+   /*border-radius: 20px;*/
+   margin-top: 30px;
 }
 
 section .container .contactForm .formBox .inputBox input[type="submit"]:hover{
     background: black;
 }
+
 
 .contactContainer .row{
     width: 100vw;
@@ -325,8 +330,9 @@ section .container .contactForm .formBox .inputBox input[type="submit"]:hover{
         display: none!important;
     }
 }
-/*@media screen and (max-width: 700px){
-    section .container .contactForm{
-        width: 100%;
+
+@media screen and (max-width: 700px){
+    .contactForm .formBox{
+       width: 100%;
     }
-}*/
+}
