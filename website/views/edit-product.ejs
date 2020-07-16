@@ -59,7 +59,7 @@
                             <span class="bar"></span>
                         </div>
                         <div class="inputBox w50">
-                            <label for="category" style="height: 30px;">Categoría</label>
+                            <label for="category" class="categoryLabel" style="height: 30px;">Categoría:</label>
                             <select name="category" id="category" value="<%= products.idCategory %>">
                                 <% for (let i = 0; i < categories.length; i++) { %>
                                     <% if (categories[i].id == products.idCategory) { %>
