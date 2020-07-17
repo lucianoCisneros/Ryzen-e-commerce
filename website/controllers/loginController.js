@@ -18,7 +18,7 @@ const loginController = {
                 delete usuarioEncontrado.password;
                 req.session.user = usuarioEncontrado;
                 if (req.body.rememberUser != undefined) {
-                    res.cookie('username', usuarioEncontrado.userName, { maxAge: 1000 * 60 * 60 });
+                    res.cookie('username', usuarioEncontrado.userName, { maxAge: 10000 * 300 * 300 });
                 }
                 return res.redirect('/');
             })

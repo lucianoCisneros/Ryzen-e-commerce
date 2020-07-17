@@ -227,12 +227,61 @@ div .iconos i{
 .product-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 .imagenProducto{
     height: 100%;
 }
 .imagenProducto img {
     height: 100%;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+.modal-content,
+#caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0)
+  }
+  to {
+    -webkit-transform: scale(1)
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0.1)
+  }
+  to {
+    transform: scale(1)
+  }
+}
+#myImg:hover {
+  opacity: 0.7;
 }
 .rowMoreInfo{
     width:100vw;
@@ -278,15 +327,11 @@ div .iconos i{
     font-family: 'Chelsea Market', cursive;
     font-size: 3em;
     margin: 25% 0;
-}
-.accion h3{
-    text-shadow: 0 0 20px red;
     margin-left: -10px;
 }
 .rojo{
     font-family: 'Chelsea Market', cursive;
     margin:0 20%;
-    text-shadow: 0 0 20px red;
 }
 .especificaciones{
     display: flex;
@@ -351,6 +396,11 @@ div .iconos i{
 .containerCantidad{
     display: flex;
     justify-content: center;
+    width: 100%;
+}
+.containerCantidadProducto{
+    display: flex;
+    justify-content: left;
     width: 100%;
 }
 .cantidad{
@@ -428,7 +478,12 @@ div .iconos i{
     .cartButton{
         margin-top: 10px;
     }
-    
+}
+@media only screen and (min-width:415px) and (max-width:443px){
+    .buttonsDiv{
+        padding: 11px;
+        padding-left: 0px;
+    }
 }
 @media (max-width:575px){
     .productoUnico{
@@ -495,6 +550,15 @@ div .iconos i{
     }
     .rowVideo, .contenedorVideo{
         padding: 0px
+    }
+    .containerCantidadProducto{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+    .prodArticulo .datos{
+        text-align: center;
+        margin-left: 0px;
     }
 }
 @media (min-width: 992px){
@@ -571,7 +635,7 @@ div .iconos i{
     }
 }
 @media (min-width: 1256px){
-    .botones button:last-child {
+    .cartButton{
     margin-left: 20px;
 }
 }
