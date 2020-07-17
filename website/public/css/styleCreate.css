@@ -258,7 +258,8 @@ section .container .contactForm .formBox .inputBox input[type="submit"]{
    background: black;
    color: #fff;
    border: none;
-   max-width: 150px;
+   max-width: 166px;
+   margin-right: 20px;
    padding: 12px;
    /*border-radius: 20px;*/
    margin-top: 30px;
