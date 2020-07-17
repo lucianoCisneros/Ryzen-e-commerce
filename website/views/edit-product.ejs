@@ -19,7 +19,7 @@
     <!-- Header -->
     <%- include('partials/headerNavBar') %>
     <%- include('partials/mobileNavBar') %>
-    <!-- /Header -->
+    <!-- /Header -->  
 
     <!--home-->
     <section>
@@ -31,31 +31,26 @@
                         <div class="inputBox w50">
                             <label for="name"></label>
                             <input type="text" placeholder="Nombre" required id="name" name="name" value='<%= products.name %>'>
-                            <!--<span>Nombre</span>-->
                             <span class="bar"></span>
                         </div>
                         <div class="inputBox w50">
                             <label for="price"></label>
                             <input type="number" placeholder="Precio" required id="price " name="price" value='<%= products.price %>'>
-                            <!--<span>Precio</span>-->
                             <span class="bar"></span>
                         </div>
                         <div class="inputBox w50">
                             <label for="brand"></label>
                             <input type="text" placeholder="Marca" required id="brand" name="brand" value='<%= products.brand %>'>
-                            <!--<span>Marca</span>-->
                             <span class="bar"></span>
                         </div>
                         <div class="inputBox w50">
                             <label for="img"></label>
                             <input type="file" placeholder="" required id="img" name="img" value='<%= products.img %>' style="height: 38px;">
-                            <!--<span></span>-->
                             <span class="bar"></span>
                         </div>
                         <div class="inputBox w50">
                             <label for="description"></label>
                             <textarea placeholder="Descripción" name="description" required id="description"><%= products.description %></textarea>
-                            <!--<span>Descripción</span>-->
                             <span class="bar"></span>
                         </div>
                         <div class="inputBox w50">
@@ -73,7 +68,6 @@
                                         <% } %>
                                     <% } %>
                             </select>
-                            <!--<span></span>-->
                             <span class="bar"></span>
                         </div>
                         <div class="inputBox w100">
