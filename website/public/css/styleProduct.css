@@ -227,12 +227,60 @@ div .iconos i{
 .product-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 .imagenProducto{
     height: 100%;
 }
 .imagenProducto img {
     height: 100%;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  /* padding-top: 100px; */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+.modal-content,
+#caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0)
+  }
+  to {
+    -webkit-transform: scale(1)
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0.1)
+  }
+  to {
+    transform: scale(1)
+  }
+}
+#myImg:hover {
+  opacity: 0.7;
 }
 .rowMoreInfo{
     width:100vw;
@@ -424,7 +472,12 @@ div .iconos i{
     .cartButton{
         margin-top: 10px;
     }
-    
+}
+@media only screen and (min-width:415px) and (max-width:443px){
+    .buttonsDiv{
+        padding: 11px;
+        padding-left: 0px;
+    }
 }
 @media (max-width:575px){
     .productoUnico{

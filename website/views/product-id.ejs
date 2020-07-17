@@ -22,14 +22,17 @@
                 <section class="prodArticulo col-12">
                     <div class="product-container col-12">
                         <div class="block-container">
-                            <div class="block"><img src="/img/visor1.jpg" alt="imagen" srcset=""></div>
+                            <div class="block"><img src="/img/visor1.jpg" class="extra1" alt="imagen" srcset=""></div>
                             <div class="block"><img src="/img/visor3.webp" alt="imagen" srcset=""></div>
                             <div class="block"><img src="/img/visor4.jpg" alt="imagen" srcset=""></div>
                         </div>
                         <div class="col-12 col-lg-6">
                             <h3 class="detalle">Detalle del producto:<%= producto.id %></h3>
                             <figure class="imagenProducto">
-                                <img src="/img/products/<%= producto.img %>" alt='imagen de producto'>
+                                <img src="/img/products/<%= producto.img %>" id='myImg' class="productImg" alt='imagen de producto'>
+                                <div id="myModal" class="modal">
+                                    <img src="/img/products/<%= producto.img %>" class="modal-content" id="img01">
+                                </div>
                             </figure>
                         </div>
                         <article class="datos col-xl-4 col-lg-4 col-12">
@@ -42,8 +45,10 @@
                             </div>
                             <div class="botones">
                                 <p class="precio">$<%= parseFloat(producto.price) %></p>
-                                <button type="button" class="btn btn-outline-success btn-lg">Comprar</button>
-                                <a href="/carrito"><button type="button" class="btn btn-outline-warning btn-lg cartButton">Agregar al carro</button></a>
+                                <div class="buttonsDiv">
+                                    <a href="/productos/editar/<%= producto.id %>"><button type="button" class="btn btn-outline-success btn-lg">Editar</button></a>
+                                    <a href="/carrito"><button type="button" class="btn btn-outline-warning btn-lg cartButton">Agregar al carro</button></a>
+                                </div>
                             </div>
                         </article>
                     </div>
@@ -125,5 +130,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
+    <script src="/js/productJs.js"></script>
 </body>
 </html>
