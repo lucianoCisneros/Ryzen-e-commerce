@@ -398,6 +398,11 @@ div .iconos i{
     justify-content: center;
     width: 100%;
 }
+.containerCantidadProducto{
+    display: flex;
+    justify-content: left;
+    width: 100%;
+}
 .cantidad{
     display: flex;
     justify-content: center;
@@ -546,6 +551,15 @@ div .iconos i{
     .rowVideo, .contenedorVideo{
         padding: 0px
     }
+    .containerCantidadProducto{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+    .prodArticulo .datos{
+        text-align: center;
+        margin-left: 0px;
+    }
 }
 @media (min-width: 992px){
     /* Medidas PC */
@@ -621,7 +635,7 @@ div .iconos i{
     }
 }
 @media (min-width: 1256px){
-    .botones button:last-child {
+    .cartButton{
     margin-left: 20px;
 }
 }
