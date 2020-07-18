@@ -10,6 +10,7 @@ body {
     background-color: black;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    cursor: none;
 }
 
 html{
