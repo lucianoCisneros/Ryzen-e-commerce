@@ -1,7 +1,7 @@
-const shopCartController = {
+const shopCart = {
     index: (req, res) => {
         res.render("shopCart")
     }
 }
 
-module.exports = shopCartController;
+module.exports = shopCart;

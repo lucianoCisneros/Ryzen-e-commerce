@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const path = require('path');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const rememberUserMiddleware = require("./middlewares/rememberUserMiddleware");
