@@ -45,14 +45,14 @@ html{
     transition: .15s;
 }
 
-.container.tamano-container.compatibilidad:hover ~ .cursor{
+/*.container.tamano-container.compatibilidad:hover ~ .cursor{
     background-color: transparent;
     border-color: black;
 }    
 
 .container.tamano-container.compatibilidad:hover ~ .cursor2{
     background-color: black;
-}
+}*/
 
 
 
@@ -219,8 +219,8 @@ div .iconos i{
 }
 
 .firstContainer{
-   background: grey;
-   padding-top: 15px;
+    background: url('../img/NEWVR00.jpg');
+    padding-top: 15px;
 }
 
 .firstContainerRow{
@@ -289,6 +289,10 @@ div .iconos i{
     width: 100vw;
 }
 
+/*.secondContainer.container{
+    background: url('../img/FONDOVR1.jpg');
+}*/
+
 .secondContainerInfo{
     display: flex;
     flex-wrap: wrap;
@@ -350,6 +354,7 @@ div .iconos i{
     margin-top: 20px;
     background: white;
     margin-bottom: 0px;
+    background: dimgrey;
 }
 
 .carouselContainer{
