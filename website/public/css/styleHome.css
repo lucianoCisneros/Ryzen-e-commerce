@@ -23,7 +23,7 @@ html{
     position: fixed;
     width: 50px;
     height: 50px;
-    border: 2px solid black;
+    border: 2px solid #fff;
     border-radius: 50%;
     left: 0;
     top: 0;
@@ -36,7 +36,7 @@ html{
     position: fixed;
     width: 8px;
     height: 8px;
-    background-color: black;
+    background-color: #fff;
     border-radius: 50%;
     left: 0;
     top: 0;
@@ -45,14 +45,15 @@ html{
     transition: .15s;
 }
 
-.desktop-header:hover ~ .cursor{
+.container.tamano-container.compatibilidad:hover ~ .cursor{
     background-color: transparent;
-    border-color: white;
+    border-color: black;
 }    
 
-.desktop-header:hover ~ .cursor2{
-    background-color: white;
+.container.tamano-container.compatibilidad:hover ~ .cursor2{
+    background-color: black;
 }
+
 
 
 /* DESKTOP HEADER BEGINS */
