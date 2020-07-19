@@ -3,9 +3,11 @@
     margin: 0;
     padding: 0;
 }
+
 html{
     font-size: 11px;
 }
+
 body {
     background: black;
     color:white;
@@ -28,7 +30,9 @@ h2,h3,span,p{
 h3{
     font-size: 20px;
 }
+
 /* DESKTOP HEADER */
+
 .cabecera {
     display: flex;
     flex-wrap: wrap;
@@ -36,6 +40,7 @@ h3{
     font-weight: bold;
     font-size: 16px;
 }
+
 .cabecera a{
     color: white;
 }
@@ -47,13 +52,16 @@ h3{
 .cabecera p{
     font-size: 28px;
 }
+
 .logo{
     margin-left: 10px;
     margin-right: 3.7rem;
 }
+
 .logo a{
     text-decoration: none;
 }
+
 .navegacion {
     display: inline-flex;
 }
@@ -89,23 +97,29 @@ div .iconos i{
 .iconos i{
     color: white;
 }
+
 .userLogged{
     text-transform: uppercase;
 }
+
 /* DESKTOP HEADER ENDS */
 
 /* MOBILE HEADER */
+
 .mobile-header{
     display: none;
 }
+
 .mobileNavbar{
     background: black;
     font-size: 16px;
     font-weight: bolder;
 }
+
 .mobileNavbar a{
     color: white;
 }
+
 .navLogo{
     font-size: 28px;
     font-weight: bold;
@@ -114,27 +128,34 @@ div .iconos i{
     text-decoration: none;
     margin-left: 10px;
 }
+
 .navbar-nav{
     margin-left: 10px;
 }
+
 .navbar-toggler{
     margin-right: px;
 }
+
 .fa-bars{
     background: black;
     font-size: 25px;
     color: white;
 }
+
 .nav-items{
     display: flex;
     align-items: center;
 }
+
 .nav-items a{
     margin-left: 10px;
 }
+
 .nav-items i{
     color: white;
 }
+
 /* MOBILE HEADER ENDS */
 
 .producto {
@@ -229,12 +250,15 @@ div .iconos i{
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 .imagenProducto{
     height: 100%;
 }
+
 .imagenProducto img {
     height: 100%;
 }
+
 .modal {
   display: none;
   position: fixed;
@@ -249,12 +273,14 @@ div .iconos i{
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.9);
 }
+
 .modal-content {
   margin: auto;
   display: block;
   width: 80%;
   max-width: 700px;
 }
+
 .modal-content,
 #caption {
   -webkit-animation-name: zoom;
@@ -280,59 +306,73 @@ div .iconos i{
     transform: scale(1)
   }
 }
+
 #myImg:hover {
   opacity: 0.7;
 }
+
 .rowMoreInfo{
     width:100vw;
 }
+
 .moreInfo{
     display: flex;
     padding: 50px;
     font-size: 1.46rem;
     flex-wrap: wrap;
 }
+
 .moreInfo-box{
     display: flex;
     margin-top: 10px;
     justify-content: space-around;
 }
+
 .infoTitulo{
     font-weight: bold;
     font-size: 24px;
 }
+
 .infoImagen img{
     border-radius: 20px;
 }
+
 .infoContainer{
     display: flex;
     flex-wrap: wrap;
 }
+
 .moreInfoContainer{
     display: flex;
     margin-top: 10px;
     flex-wrap: wrap;
 }
+
 .video{
     display: flex;
 }
+
 .contenedorVideo{
     display: flex;
     flex-wrap: wrap;
 }
+
 .youtubeVideo{
     margin: 20px 0
 }
+
 .accion h3{
     font-family: 'Chelsea Market', cursive;
     font-size: 3em;
     margin: 25% 0;
     margin-left: -10px;
 }
+
 .rojo{
     font-family: 'Chelsea Market', cursive;
     margin:0 20%;
 }
+
 .especificaciones{
     display: flex;
     background: white;
@@ -340,10 +380,12 @@ div .iconos i{
     font-size: 1.46rem;
     flex-wrap: wrap;
 }
+
 .titulosEspecificaciones ul{
     display: flex;
     flex-wrap: wrap;
 }
+
 .titulosEspecificaciones ul li{
     color: black;
     list-style: none;
@@ -351,41 +393,50 @@ div .iconos i{
     margin-top: 10px;
     margin-right: 10px;
 }
+
 .titulosEspecificaciones a{
     color: black;
     text-decoration: none;
 }
+
 .titulosEspecificaciones ul li:nth-child(2) {
     border-left: solid 1px black;
     padding-left: 10px;
 }
+
 .titulosEspecificaciones ul li:nth-child(3) {
     border-left: solid 1px black;
     padding-left: 10px;
 }
+
 .especificacionesDetalles{
     color: black;
 }
+
 .carritoBox{
     display: flex;
     color: black;
     font-size: 1.2rem;
 }
+
 .prodCarrito{
     background: white;
     border-radius: 20px;
 }
+
 .prodCarrito img{
     width:80%;
     height: auto;
     display: block;
     margin: 0 10%;
 }
+
 .infoProdCarrito{
     text-align: center;
     padding: 10px;
     margin:0 10px;
 }
+
 .infoProdCarrito h3{
     font-weight: bold;
     margin-top: 5%;
@@ -393,61 +444,76 @@ div .iconos i{
     justify-content: center;
     width: 100%;
 }
+
 .containerCantidad{
     display: flex;
     justify-content: center;
     width: 100%;
 }
+
 .containerCantidadProducto{
     display: flex;
     justify-content: left;
     width: 100%;
 }
+
 .cantidad{
     display: flex;
     justify-content: center;
     align-items: center;
     border: solid 2px black;
 }
+
 .enCantidad{
     margin: 10px 20px;
     font-weight: bold;
 }
+
 .enCantidad p{
     font-family: 'Poppins', sans-serif;
 }
+
 .cantidad p{
     font-size: 20px;
 }
+
 .containerPrecio{
     margin-top: 4%;
 }
+
 .precioCarrito{
     font-family: 'Poppins', sans-serif;
     font-size: 2em;
 }
+
 .prodCarrito:not(:first-child){
     margin-top: 5%;
 }
+
 .botonesCarrito .btn{
     font-size: 1.46rem;
 }
+
 .botonesCarrito{
     width: 100%;
 }
+
 .botones button{
     font-size: 2rem;
 }
+
 .totalCompra{
     margin-top:15px;
     margin-bottom:15px;
 }
+
 .totalCompra h3{
     color: white;
     font-family: 'Poppins', sans-serif;
     font-size: 1.5em;
     font-weight: bold;
 }
+
 .comprar,.borrar{
     display: flex;
     justify-content: center;
@@ -458,11 +524,13 @@ div .iconos i{
 .carritoTitulo span {
     display: none;
 }
+
 .linkIg .fab{
     color: white;
     font-size: 3.5rem;
     margin-right:5px;
 }
+
 @media (max-width: 320px){
     .detalle{
         font-size: 1.3rem;
@@ -474,17 +542,20 @@ div .iconos i{
       font-size: 1.8rem;
   }
 }
+
 @media (max-width:443px){
     .cartButton{
         margin-top: 10px;
     }
 }
+
 @media only screen and (min-width:415px) and (max-width:443px){
     .buttonsDiv{
         padding: 11px;
         padding-left: 0px;
     }
 }
+
 @media (max-width:575px){
     .productoUnico{
         border-radius: 0px;
@@ -493,11 +564,13 @@ div .iconos i{
         border-radius: 0px;
     }
 }
+
 @media only screen and (max-width: 1075px) and (min-width: 992px) {  
   .youtubeVideo{
       width: 90%;
   }
 } 
+
 @media only screen and (max-width: 1199px) and (min-width: 992px) {  
   .botones button{
       font-size: 1.2rem;
@@ -505,7 +578,8 @@ div .iconos i{
   .cartButton{
       margin-left: 1rem;
   }
-}  
+}
+
 @media (max-width:991px){
     .mobile-header{
         display: inline!important;
@@ -561,6 +635,7 @@ div .iconos i{
         margin-left: 0px;
     }
 }
+
 @media (min-width: 992px){
     /* Medidas PC */
     .prodArticulo {
@@ -634,6 +709,7 @@ div .iconos i{
         max-width: 30%;
     }
 }
+
 @media (min-width: 1256px){
     .cartButton{
     margin-left: 20px;

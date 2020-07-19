@@ -8,6 +8,7 @@
 
 body {
     background-color: dimgrey;
+    
     font-family: 'Poppins', sans-serif;
 }
 html{
@@ -18,6 +19,7 @@ figure {
     margin: 0;
     padding: 0;
 }
+
 img{
     width: 100%;
 }
@@ -121,6 +123,7 @@ li:hover{
     color: white;
     font-size: 16px;
 }
+
 .cabecera a{
     color: white;
 }
@@ -133,15 +136,19 @@ li:hover{
 .cabecera p{
     font-size: 28px;
 }
+
 .logo{
     margin-left: 10px;
 }
+
 .logo a{
     text-decoration: none;
 }
+
 .navegacion {
     display: flex;
 }
+
 .navegacion ul li{
     justify-content: center;
 }
@@ -181,17 +188,21 @@ div .iconos i{
 /* DESKTOP HEADER ENDS */
 
 /* MOBILE HEADER */
+
 .mobile-header{
     display: none;
 }
+
 .mobileNavbar{
     background: black;
     font-size: 16px;
     font-weight: bolder;
 }
+
 .mobileNavbar a{
     color: white;
 }
+
 .navLogo{
     font-size: 28px;
     font-weight: bold;
@@ -200,42 +211,52 @@ div .iconos i{
     text-decoration: none;
     margin-left: 10px;
 }
+
 .navbar-nav{
     margin-left: 10px;
 }
+
 .navbar-toggler{
     margin-right: px;
 }
+
 .fa-bars{
     background: black;
     font-size: 25px;
     color: white;
 }
+
 .nav-items{
     display: flex;
     align-items: center;
 }
+
 .nav-items a{
     margin-left: 10px;
 }
+
 .nav-items i{
     color: white;
 }
+
 .userLogged{
     text-transform: uppercase;
 }
+
 /* MOBILE HEADER ENDS */
 
 /* PRODUCT */
 
 /* PRODUCT ENDS*/
+
 .divProduct{
     margin-left: auto;
     margin-right: auto;
 }
+
 .products-wrapper {
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 100px;
 }
 
 .products-title {
@@ -263,10 +284,12 @@ div .iconos i{
     justify-content: center;
     background: black;
 }
+
 .product-box_image img{
         width: 100%;
         height: 98%;
 }
+
 .product-box_data {
     padding: 10px;
     position: relative;
@@ -307,18 +330,22 @@ div .iconos i{
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     background: black;
 }
+
 .product-box:hover a{
     text-decoration: none;
 }
+
 .product-box:hover p {
     height: 40px;
     margin-top: 15px;
     color: white;
     font-weight: bold;
 }
+
 .product-box:hover h2{
     color: white;
 }
+
 /* FOOTER */
 .contactDiv {
     display: flex;
@@ -326,38 +353,46 @@ div .iconos i{
     align-items: center;
     justify-content: space-between;
 }
+
 .contactInfo{
     font-size: 1.3rem;
 }
+
 .contacto{
     text-align: left;
     font-size: 2rem; 
     color: white;
     font-weight: bold;
 }
+
 .linkIg .fab{
     color: white;
     font-size: 3.5rem;
     margin-right:5px;
 }
+
 /* FOOTER ENDS*/
+
 h1{
     color: white;
     text-align: center;
     margin-top: 50px;
     text-transform: uppercase;
 }
+
 @media (max-width: 380px){
     .contactDiv {
         display: block;
         align-items: center;
     }
 }
+
 @media (min-width: 487px){
     .logo{
         margin-right: 3.7rem;
     }
 }
+
 @media (max-width:991px){
     .mobile-header{
         display: inline!important;
@@ -370,6 +405,7 @@ h1{
         border-top: 1px solid black
     }
 }
+
 @media (min-width:992px){
     .product-box_image {
         width: 100%;
