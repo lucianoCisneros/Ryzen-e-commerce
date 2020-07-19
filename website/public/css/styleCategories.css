@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: dimgrey;
     font-family: 'Poppins', sans-serif;
 }
 html{
@@ -71,7 +71,7 @@ img{
 
 div .dos{
     display: inline-flex;
-    margin-top: -15px;
+    /*margin-top: -15px;*/
     align-items: center;
 }
 
@@ -253,6 +253,8 @@ div .iconos i{
 h1{
     color: white;
     text-align: center;
+    margin-top: 50px;
+    text-transform: uppercase;
 }
 @media (max-width: 380px){
     .contactDiv {

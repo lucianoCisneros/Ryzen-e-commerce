@@ -60,8 +60,31 @@ body {
 
 div .dos{
     display: inline-flex;
-    margin-top: -15px;
+    /*margin-top: -15px;*/
     align-items: center;
+}
+
+/*.infoPrimera.col-lg-7{
+    align-items: center;
+}*/
+
+li:hover{
+    animation: bounce 1s linear;
+}
+
+@keyframes bounce{
+    20%, 50%, 80%, to{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-30px);
+    }
+    70%{
+        transform: translateY(-15px);
+    }
+    90%{
+        transform: translateY(-4px);
+    }
 }
 
 div .iconos{
