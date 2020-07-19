@@ -22,7 +22,66 @@
     <!-- /Header -->
 
     <!--home-->
-    <section>
+    <div class="background">
+        <div class="container">
+            <div class="screen">
+    
+                <div class="scren-body">
+                    <div class="screen-body-item left">
+                        <div class="app-title">
+                            <span>CREAR</span>
+                            <span>PRODUCTO</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="screen-body-item">
+                    <div class="app-form">
+    
+                        <div class="app-form-group">
+                            <input class="app-form-control" type="text" name="name" placeholder="Nombre" required id="name"
+                                value="">
+                        </div>
+    
+                        <div class="app-form-group">
+                            <input class="app-form-control" type="number" name="price" placeholder="Precio" required
+                                id="price" value="">
+                        </div>
+    
+                        <div class="app-form-group">
+                            <input class="app-form-control" type="text" name="brand" placeholder="Marca" required
+                                id="brand">
+                        </div>
+    
+                        <div class="app-form-group">
+                            <input class="app-form-control" type="file" name="img" placeholder="" required id="img"
+                                value="">
+                        </div>
+    
+                        <div class="app-form-group">
+                            <textarea class="app-form-control" name="description" placeholder="Descripción" required
+                                id="description"></textarea>
+                        </div>
+    
+                        <div class="app-form-group">
+                            <label class="category" for="category">Categoria</label>
+                            <select class="select" name="category" id="category">
+                                <option value="1">Visores</option>
+                                <option value="2">Accesorios</option>
+                                <option value="3">Aplicaciones</option>
+                                <option value="4">Juegos</option>
+                            </select>
+                        </div>
+    
+                        <div class="app-form-group buttons">
+                            <button class="app-form-buttons">CREAR PRODUCTO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<section>
         <div class="container">
             <form action="/productos/crear" method="POST" enctype="multipart/form-data">
                 <div class="contactForm">
@@ -31,31 +90,26 @@
                         <div class="inputBox w50">
                             <label for="name"></label>
                             <input type="text" placeholder="Nombre" required id="name" name="name" value=''>
-                            <!--<span>Nombre</span>-->
                             <span class="bar"></span>
                         </div>
                         <div class="inputBox w50">
                             <label for="price"></label>
                             <input type="number" placeholder="Precio" required id="price " name="price" value=''>
-                            <!--<span>Precio</span>-->
                             <span class="bar"></span>
                         </div>
                         <div class="inputBox w50">
                             <label for="brand"></label>
                             <input type="text" placeholder="Marca" required id="brand" name="brand" value=''>
-                            <!--<span>Marca</span>-->
                             <span class="bar"></span>
                         </div>
                         <div class="inputBox w50">
                             <label for="img"></label>
                             <input type="file" required id="img" name="img" style="height: 38px;">
-                            <!--<span></span>-->
                             <span class="bar"></span>
                         </div>
                         <div class="inputBox w50">
                             <label for="description"></label>
                             <textarea placeholder="Descripción" name="description" required id="description"></textarea>
-                            <!--<span>Descripción</span>-->
                             <span class="bar"></span>
                         </div>
                         <div class="inputBox w50">
@@ -66,8 +120,6 @@
                                 <option value="3">Aplicaciones</option>
                                 <option value="4">Juegos</option>
                             </select>
-                            <!--<textarea type="text" placeholder="Categorias" required id="categories" name="categories" value=''></textarea>-->
-                            <!--<span></span>-->
                             <span class="bar"></span>
                         </div>
                         <div class="inputBox w100">
@@ -77,20 +129,23 @@
                 </div>
             </form>
         </div>
-    </section>
+    </section>-->
+
     <!--footer--> <br>
     <%- include('partials/footer') %>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
     <script src="./public/js/js.js"></script>
+
 </body>
 </html>

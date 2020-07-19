@@ -22,8 +22,78 @@
     <!-- /Header -->  
 
     <!--home-->
-    <section>
-        <div class="container">
+    <form action="/productos/editar/<%= products.id %>" method="POST" enctype="multipart/form-data">
+        <div class="background">
+            <div class="container">
+                <div class="screen">
+        
+                    <div class="scren-body">
+                        <div class="screen-body-item left">
+                            <div class="app-title">
+                                <span>EDITAR</span>
+                                <span>PRODUCTO</span>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="screen-body-item">
+                        <div class="app-form">
+        
+                            <div class="app-form-group">
+                                <input class="app-form-control" type="text" name="name" placeholder="Nombre" required id="name"
+                                    value="" value='<%= products.name %>'>
+                            </div>
+        
+                            <div class="app-form-group">
+                                <input class="app-form-control" type="number" name="price" placeholder="Precio" required
+                                    id="price" value='<%= products.price %>'>
+                            </div>
+        
+                            <div class="app-form-group">
+                                <input class="app-form-control" type="text" name="brand" placeholder="Marca" required
+                                    id="brand" value='<%= products.brand %>'>
+                            </div>
+        
+                            <div class="app-form-group">
+                                <input class="app-form-control" type="file" name="img" placeholder="" required id="img"
+                                    value='<%= products.img %>'>
+                            </div>
+        
+                            <div class="app-form-group">
+                                <textarea class="app-form-control" name="description" placeholder="Descripción" required
+                                    id="description"><%= products.description %></textarea>
+                            </div>
+        
+                            <div class="app-form-group">
+                                <label for="category" class="categoryLabel">Categoría:</label>
+                                <select name="category" id="category" value="<%= products.idCategory %>">
+                                    <% for (let i = 0; i < categories.length; i++) { %>
+                                        <% if (categories[i].id == products.idCategory) { %>
+                                            <option value="<%=categories[i].id%>" selected">
+                                                <%= categories[i].name %>
+                                            </option>
+                                        <% } else { %>
+                                            <option value="<%=categories[i].id%>">
+                                                <%= categories[i].name %>
+                                            </option>
+                                        <% } %>
+                                    <% } %>
+                                </select>
+                            </div>
+        
+                            <div class="app-form-group buttons">
+                                <button type="submit" class="app-form-buttons" value="Editar Producto">EDITAR PRODUCTO</button>
+                                <button type="submit" class="app-form-buttons" class="delete Borrar Producto" value="Borrar" formaction="/productos/editar/eliminar/<%= products.id %>">BORRAR PRODUCTO</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+    <!--<section>
+        <<div class="container">
             <form action="/productos/editar/<%= products.id %>" method="POST" enctype="multipart/form-data">
                 <div class="contactForm">
                     <h2>Editar Producto</h2>
@@ -65,8 +135,8 @@
                                         <option value="<%=categories[i].id%>">
                                             <%= categories[i].name %>
                                         </option>
-                                        <% } %>
                                     <% } %>
+                                <% } %>
                             </select>
                             <span class="bar"></span>
                         </div>
@@ -78,20 +148,23 @@
                 </div>
             </form>
         </div>
-    </section>
+    </section>-->
+
     <!--footer--> <br>
     <%- include('partials/footer') %>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
     <script src="/js/js.js"></script>
+
 </body>
 </html>
