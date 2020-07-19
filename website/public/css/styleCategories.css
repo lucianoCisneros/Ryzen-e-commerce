@@ -21,6 +21,35 @@ figure {
 img{
     width: 100%;
 }
+
+/* Categorias */
+
+.inner{
+    overflow: hidden;
+}
+
+.text-center{
+    background: dimgray;
+    font-size: 25px;
+}
+
+.card-title{
+    font-size: 20px;
+}
+
+.btn-success{
+    font-size: 15px;
+}
+
+/*.inner img{
+
+}*/
+
+.col-md-3{
+    margin-top: 30px;
+    margin-right: 80px;
+}
+
 /* DESKTOP HEADER BEGINS */
 .cabecera {
     display: flex;
