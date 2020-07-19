@@ -18,6 +18,7 @@ body{
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    /*cursor: none;*/
 }
 
 /*nav{
@@ -35,6 +36,34 @@ body{
 
 .nav-item{
     color: black;
+}*/
+
+/* Cursor Estiles */
+
+/*.cursor{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: .1s;
+}
+
+.cursor2{
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: .15s;
 }*/
 
 /* DESKTOP HEADER */
@@ -156,8 +185,17 @@ div .iconos i{
 
 .registerErrors{
     color: white;
-    margin-top: 10px;
+    margin-top: 5%;
     flex-wrap: wrap;
+    padding: 0;
+}
+
+.errorsTitle.col-12{
+    padding: 0;
+}
+
+.errorList.col-12{
+    padding: 0;
 }
 
 .errorsTitle{
@@ -171,7 +209,7 @@ div .iconos i{
     font-size: 1.4rem;
     margin-left: auto;
     margin-right: auto;
-    list-style: none;
+    /*list-style: none;*/
 }
 
 /*#wrapper{
@@ -231,7 +269,7 @@ form{
     background-color: #fff;
     border-radius: 20px;
     box-shadow: 0 1px 1.5rem rgba(0, 0, 0, .1);
-    margin-top: 20%;
+    margin-top: 2%;
 }
 
 .input-group{
@@ -376,7 +414,7 @@ form{
         font-size: 25px;
         text-transform: uppercase;
         font-weight: bold;
-        letter-spacing: 2px;
+        /*letter-spacing: 2px;*/
     }
     .errorList{
         display: flex;
