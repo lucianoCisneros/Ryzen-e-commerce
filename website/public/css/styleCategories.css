@@ -50,6 +50,22 @@ img{
     margin-right: 80px;
 }
 
+@media (min-width: 768px){
+    /*.col-md-3{
+        max-width: 40%;
+    }*/
+}
+
+@media (min-width: 320px){
+    /*.col-md-3{
+        display: contents;
+    }*/
+    .redesData{
+        margin-bottom: 10px;
+    }
+}
+
+
 /* DESKTOP HEADER BEGINS */
 .cabecera {
     display: flex;
