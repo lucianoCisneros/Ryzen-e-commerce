@@ -1,0 +1,427 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 11px;
+}
+body {
+    background: black;
+    color:white;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+h2,h3,span,p{
+    font-family: 'Poppins', sans-serif;
+}
+
+h3{
+    font-size: 20px;
+}
+.cabecera {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 16px;
+}
+.cabecera a{
+    color: white;
+}
+
+.cabecera p,li{
+    font-family: 'Poppins', sans-serif;
+}
+
+.cabecera p{
+    font-size: 28px;
+}
+.logo{
+    margin-left: 10px;
+    margin-right: 3.7rem;
+}
+.logo a{
+    text-decoration: none;
+}
+.navegacion {
+    display: inline-flex;
+}
+
+.navegacion li{
+    list-style: none;
+    display: inline;
+    padding: 8px;
+
+}
+
+.registro li{
+    list-style: none;
+    display: inline-flex;
+    padding: 8px;
+}
+
+div .dos{
+    display: inline-flex;
+    margin-top: -15px;
+    align-items: center;
+}
+
+div .iconos{
+    border-left: 2px solid white;
+    margin-left: 10px;
+}
+
+div .iconos i{
+    margin-left: 10px;
+}
+
+.iconos i{
+    color: white;
+}
+
+.producto {
+    display: flex;
+    font-size: 1.46rem;
+}
+
+.productoUnico {
+    display: block;
+    background: white;
+    border-radius: 20px;
+    color: black;
+}
+
+.detalle{
+    margin-top: -20px;
+    font-weight: bold;
+}
+
+.prodArticulo {
+    display: flex;
+    /* height: 75vh; */
+    padding: 30px;
+    flex-direction: column;
+}
+.carritoTitulo{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+.carritoTitulo h2{
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+}
+
+.copyContainer{
+    display: flex;
+
+}
+.datosProducto .nombre{
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.prodArticulo .datos{
+    display: flex;
+    width: 100%;
+    margin-left: 30px;
+    justify-content: space-between;
+    flex-direction: column;
+    /* padding: 40px 0; */
+    padding-top: 40px;
+}
+
+.block-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.block {
+    border: 1px solid black;
+    width: 75px;
+    height: 75px;
+}
+
+.block img{
+    width: 100%;
+    height: 100%;
+}
+
+.block:nth-child(2) {
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.precio{
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.copy-container {
+    display: flex;
+    flex-direction: column;
+    color: #28a745;
+    font-size: 18px;
+}
+
+.product-container {
+    display: flex;
+}
+.imagenProducto img {
+    object-fit: contain;
+
+}
+
+.botones button:last-child {
+    margin-left: 20px;
+}
+.moreInfo{
+    display: flex;
+    padding: 50px;
+    font-size: 1.46rem;
+    flex-wrap: wrap;
+}
+.moreInfo-box{
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-around;
+}
+.infoTitulo{
+    font-weight: bold;
+    font-size: 24px;
+}
+.subInfoTitulo{
+    font-weight: bold;
+}
+.infoImagen img{
+    border-radius: 20px;
+}
+.infoContainer{
+    display: flex;
+}
+.moreInfoContainer{
+    display: flex;
+    margin-top: 10px;
+}
+.video{
+    display: flex;
+}
+.contenedorVideo{
+    display: flex;
+}
+.youtubeVideo{
+    margin: 20px 0
+}
+.accion h3{
+    font-family: 'Chelsea Market', cursive;
+    font-size: 3em;
+    margin: 25% 0;
+}
+.rojo{
+    font-family: 'Chelsea Market', cursive;
+    margin:0 20%;
+}
+.especificaciones{
+    display: flex;
+    background: white;
+    border-radius: 20px;
+    font-size: 1.46rem;
+}
+.titulosEspecificaciones ul{
+    display: flex;
+}
+.titulosEspecificaciones ul li{
+    color: black;
+    list-style: none;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.titulosEspecificaciones a{
+    color: black;
+    text-decoration: none;
+}
+.titulosEspecificaciones ul li:nth-child(2) {
+    border-left: solid 1px black;
+    padding-left: 10px;
+}
+.titulosEspecificaciones ul li:nth-child(3) {
+    border-left: solid 1px black;
+    padding-left: 10px;
+}
+.especificacionesDetalles{
+    color: black;
+}
+.carritoBox{
+    display: flex;
+    color: black;
+    font-size: 1.2rem;
+}
+.prodCarrito{
+    background: white;
+    border-radius: 20px;
+}
+.prodCarrito img{
+    width:80%;
+    height: auto;
+    display: block;
+    margin: 0 10%;
+}
+.infoProdCarrito{
+    text-align: center;
+    padding: 10px;
+    margin:0 10px;
+}
+.infoProdCarrito h3{
+    font-weight: bold;
+    margin-top: 5%;
+    font-size: 2em;
+    justify-content: center;
+    width: 100%;
+}
+.containerCantidad{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.cantidad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px black;
+}
+.enCantidad{
+    margin: 10px 20px;
+    font-weight: bold;
+}
+.enCantidad p{
+    font-family: 'Poppins', sans-serif;
+}
+.cantidad p{
+    font-size: 20px;
+}
+.containerPrecio{
+    margin-top: 4%;
+}
+.precioCarrito{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2em;
+}
+.prodCarrito:not(:first-child){
+    margin-top: 5%;
+}
+.botonesCarrito .btn{
+    font-size: 1.46rem;
+}
+.botonesCarrito{
+    width: 100%;
+}
+.botones button{
+    font-size: 2rem;
+}
+.totalCompra{
+    margin-top:15px;
+    margin-bottom:15px;
+}
+.totalCompra h3{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.comprar,.borrar{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.carritoTitulo span {
+    display: none;
+}
+
+@media (min-width: 992px){
+    /* Medidas PC */
+    .carritoTitulo {
+        justify-content: flex-start;
+        margin-bottom: 2rem;
+    }
+
+    .carritoTitulo span {
+        display: inline-block;
+        margin-left: 2rem;
+    }
+
+    .prodCarrito {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .imgCarrito{
+        height: 100%;
+    }
+
+    .infoProdCarrito {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .containerPrecio {
+        margin-top: 0;
+    }
+
+    .infoProdCarrito h3 {
+        width: auto;
+        margin-top: 0;
+    }
+
+    .wrapperCantidad {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .containerCantidad {
+        width: auto;
+    }
+
+    .totalCompra {
+        margin-top: 3rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: right;
+    }
+
+    .totalCompra span {
+        padding-left: 1rem;
+        font-weight: 400;
+        font-size: 32px;
+    }
+
+    .botonesCarrito{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-bottom: 5rem;
+    }
+
+    .botonesCarrito > div {
+        max-width: 30%;
+    }
+}
