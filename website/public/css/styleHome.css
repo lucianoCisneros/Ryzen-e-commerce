@@ -11,7 +11,7 @@ body {
     background-attachment: fixed;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
-    cursor: none;
+    /*cursor: none;*/
 }
 
 html{
@@ -36,7 +36,7 @@ html{
     width: 100%;
     height: 100%;
     background: #333;
-    z-index: 1;
+    /* z-index: 1; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,7 +58,8 @@ html{
 }
 
 .card .imgBx img{
-    max-width: 600px;
+    width: 100%;
+    height: 100%;
 }
 
 /*.card .content{
@@ -101,10 +102,6 @@ html{
        width: 100%;
        height: 200px;
        left: 0;
-   }
-   .card .imgBx,
-   .card:hover .imgBx img{
-       max-width: 100px;
    }
    .container .card .content{
       position: relative;
@@ -312,7 +309,9 @@ div .iconos i{
     align-items: center;
     justify-content: space-between;
 }
-
+.contactContainer{
+    padding-top:10px;
+}
 .iconoIg {
     height: 90px;
     width: 90px;
@@ -334,6 +333,9 @@ div .iconos i{
 
 .firstContainer{
     background: url('../img/NEWVR00.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
     padding-top: 15px;
 }
 
@@ -468,7 +470,10 @@ div .iconos i{
 }
 
 .carouselContainer{
-    background: grey;
+    background: url('../img/background7.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
     margin-bottom: 0px;
 }
 
@@ -591,7 +596,7 @@ div .iconos i{
         font-size: 3rem;
     }
     .carouselContainer .subH2{
-        font-size: 20px;
+        font-size: 19px;
     }
 }
 
@@ -618,7 +623,7 @@ div .iconos i{
         font-size: 4rem;
     }
     .carouselContainer .subH2{
-        font-size: 29px;
+        font-size: 26px;
     }
 }
 
@@ -644,6 +649,13 @@ div .iconos i{
     .carousel-item img{
     width: 100vw;
 }
+    .content-1{
+    align-items: center;
+    flex-direction: column;
+}
+    .card .imgBx img {
+        width: 100%;
+    }
 }
 @media (max-width:991px){
     .mobile-header{
@@ -660,7 +672,7 @@ div .iconos i{
         flex-direction: initial;
         flex-wrap: initial;
         width: 100vw;
-        height: 82vh;
+        height: 89vh;
     }
     .firstContainer row{
         margin-left: auto;

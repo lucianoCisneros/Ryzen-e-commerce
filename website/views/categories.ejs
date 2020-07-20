@@ -7,6 +7,7 @@
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/d92a2a2802.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styleCategories.css">
     <title>RYZEN | Categorías</title>
@@ -273,5 +274,31 @@
             cursor.style.cssText = cursor2.style.cssText = 'left: ' + e.clientX + 'px; top: ' + e.clientY + 'px;'
         })
     </script>
+
+    <script text="text/javascript">
+
+        TweenMax.from('.container.col-xl-11.cabecera', 2, {
+            delay: 0.5,
+            opacity: 0,
+            scale: 0,
+            ease: Power3.easeInOut
+        });
+
+        TweenMax.from('.categorieProductsTitle', 2, {
+            delay: 0.5,
+            opacity: 0,
+            scale: 0,
+            ease: Power3.easeInOut
+            });
+        
+        TweenMax.from('.col-md-3', 3, {
+            delay: 0.8,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+        });
+    
+    </script>    
+
 </body>
 </html>
