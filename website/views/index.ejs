@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
     <link rel="stylesheet" href="./css/styleHome.css">
     <title>RYZEN | Home</title>
 </head>
@@ -176,6 +176,47 @@
         document.addEventListener('mousemove', function (e) {
             cursor.style.cssText = cursor2.style.cssText = 'left: ' + e.clientX + 'px; top: ' + e.clientY + 'px;'
         })
+    </script>
+
+    <script text="text/javascript">
+
+        TweenMax.from('.container.col-xl-11.cabecera', 2, {
+            delay: 0.5,
+            opacity: 0,
+            scale: 0,
+            ease: Power3.easeInOut
+        });
+
+        TweenMax.from('.banner-title', 3, {
+            delay: 0.8,
+            // opacity: 0,
+            // x: -20,
+            //width: 0,
+            scale: 0,
+            ease: Power3.easeInOut
+        });
+
+        TweenMax.from('.col-12.col-lg-12.banner-txt', 2, {
+            delay: 0.8,
+            opacity: 0,
+            y: -20,
+            ease: Expo.easeInOut
+        });
+
+        TweenMax.from('.banner-mi.col-6', 2, {
+            delay: 0.8,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+        });
+
+        /*TweenMax.from('.producto-home-nom.col-12', 2, {
+            delay: 0.8,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+        });*/
+        
     </script>
 
 </body>
