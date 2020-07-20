@@ -11,7 +11,7 @@ body {
     background-attachment: fixed;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
-    cursor: none;
+    /*cursor: none;*/
 }
 
 html{

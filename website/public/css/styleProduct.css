@@ -197,11 +197,11 @@ html, body{
     background: #e0e0e0;
 }
 
-.logo, .next{
+/*.logo, .next{
     line-height: 80px;
     position: absolute;
     padding: 10px;
-}
+}*/
 
 .watch, .cart{
     line-height: 80px;
@@ -210,10 +210,10 @@ html, body{
     right: 0;
 }
 
-.logo{
+/*logo{
     padding: 10px 80px 10px 60px;
     background: #e0e0e0;
-}
+}*/
 
 .next{
     left: 280px;
