@@ -152,7 +152,7 @@ div .iconos i{
 
 /* CURSOR*/
 
-.cursor{
+/*.cursor{
     position: fixed;
     width: 50px;
     height: 50px;
@@ -176,7 +176,7 @@ div .iconos i{
     pointer-events: none;
     transform: translate(-50%, -50%);
     transition: .15s;
-}
+}*/
 
 /* NEW STYLES FORMS */
 

@@ -8,9 +8,9 @@
     <!-- Bootstrap CSS -->
     <script src="https://kit.fontawesome.com/d92a2a2802.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
     <link rel="stylesheet" href='/css/styleCreate.css'>
     <title>RYZEN | Home</title>
 </head>
@@ -146,6 +146,26 @@
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
     crossorigin="anonymous"></script>
     <script src="./public/js/js.js"></script>
+
+    <script text="text/javascript">
+        var cursor = document.querySelector('.cursor')
+        var cursor2 = document.querySelector('.cursor2')
+
+        document.addEventListener('mousemove', function (e) {
+            cursor.style.cssText = cursor2.style.cssText = 'left: ' + e.clientX + 'px; top: ' + e.clientY + 'px;'
+        })
+    </script>
+
+    <script text="text/javascript">
+
+        TweenMax.from('.container', 2, {
+            delay: 0.8,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+        });
+
+    </script>
 
 </body>
 </html>
