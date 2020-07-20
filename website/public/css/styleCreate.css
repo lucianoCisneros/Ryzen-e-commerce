@@ -240,11 +240,7 @@ div .iconos i{
 
 .screen-body-item{
     flex: 1;
-<<<<<<< HEAD
-    padding: 20px;
-=======
     padding: 30px 30px 0px 30px;
->>>>>>> 76fd1376214dfd541db692e09aa083dafbaa7ad6
 }
 
 .screen-body-item.left{
