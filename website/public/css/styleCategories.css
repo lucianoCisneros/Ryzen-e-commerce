@@ -7,9 +7,13 @@
 }
 
 body {
-    background-color: dimgrey;
-    
+    background-color: black;
+    background: url('../img/background9.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
     font-family: 'Poppins', sans-serif;
+    height: 100%;
 }
 html{
     font-size: 11px;
@@ -287,7 +291,9 @@ div .iconos i{
 
 .product-box_image img{
         width: 100%;
-        height: 98%;
+        height: 100%;
+        padding:3px;
+        /* border: 2px solid grey; */
 }
 
 .product-box_data {
@@ -299,6 +305,9 @@ div .iconos i{
     flex-wrap: wrap;
     text-align: center;
     justify-content: space-around;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
 }
 
 .product-box_data h2 {
@@ -327,8 +336,8 @@ div .iconos i{
 }
 
 .product-box:hover {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    background: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 1);
 }
 
 .product-box:hover a{

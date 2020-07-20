@@ -9,6 +9,12 @@ html{
 }
 
 body {
+    /* background: black; */
+    /* background: url('../img/background9.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color:white; */
     background: #fff;
     /*color:white;*/
 }
