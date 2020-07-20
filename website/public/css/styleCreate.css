@@ -150,6 +150,34 @@ div .iconos i{
 
 /* MOBILE HEADER ENDS */
 
+/* CURSOR*/
+
+.cursor{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: .1s;
+}
+
+.cursor2{
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: .15s;
+}
+
 /* NEW STYLES FORMS */
 
 body, button, input{
@@ -160,11 +188,12 @@ body, button, input{
 
 .background{
     display: flex;
-    min-height: 100vh;
+    min-height: 80vh;
+    background: dimgray;
 }
 
 .container{
-    flex: 0 1 700px;
+    flex: 0 1 800px;
     margin: auto;
     padding: 10px;
 }
