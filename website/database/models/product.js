@@ -29,6 +29,21 @@ module.exports = function (sequelize, dataTypes) {
             type: dataTypes.INTEGER,
             unsigned: true,
             allowNull: false
+        },
+        createdAt: {
+            type: 'TIMESTAMP',
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+            allowNull: false
+        },
+        updatedAt: {
+            type: 'TIMESTAMP',
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+            allowNull: false
+        },
+        deletedAt: {
+            type: 'TIMESTAMP',
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+            allowNull: false
         }
     }
 
@@ -37,7 +52,8 @@ module.exports = function (sequelize, dataTypes) {
     Product.associate = function (modelos) {
         Product.belongsTo(modelos.Category, {
             foreignKey: 'idCategory',
-            as: 'category'
+            as: 'categories',
+            constraints: false
         })
     }
 

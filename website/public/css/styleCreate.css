@@ -215,12 +215,13 @@ body, button, input{
 
 .screen-body-item{
     flex: 1;
-    padding: 30px;
+    padding: 20px;
 }
 
 .screen-body-item.left{
     display: flex;
     flex-direction: column;
+    padding-bottom: 0px;
 }
 
 .app-title{

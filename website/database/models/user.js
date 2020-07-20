@@ -36,6 +36,21 @@ module.exports = function(sequelize, dataTypes){
         rol: {
             type: dataTypes.NUMBER,
             defaultValue: 0
+        },
+        createdAt: {
+            type: 'TIMESTAMP',
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+            allowNull: false
+        },
+        updatedAt: {
+            type: 'TIMESTAMP',
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+            allowNull: false
+        },
+        deletedAt: {
+            type: 'TIMESTAMP',
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+            allowNull: false
         }
     }
 
@@ -44,11 +59,11 @@ module.exports = function(sequelize, dataTypes){
     User.associate = function (modelos) {
         User.hasMany(modelos.Item, {
             foreignKey: 'idUser',
-            as: 'item'
+            as: 'items'
         });
         User.hasMany(modelos.Cart, {
             foreignKey: 'idUser',
-            as: 'cart'
+            as: 'carts'
         });
     }
 
