@@ -35,7 +35,7 @@
                     </div>
                 </div>
                 <div class="firstContainerImg">
-                <img class="banner-img col-12 " src="./img/gearvrblack3.webp" alt="">
+                <img class="banner-img col-12 " /*src="./img/gearvrblack3.webp"*/ alt="">
                 </div>
             </div>
         </div>
@@ -70,13 +70,30 @@
     <section class="container tamano-container compatibilidad">
         <div class="compatibleContainer">
             <div>
-                <h2 class="subH2">Compatible con</h2>
+                <h2 class="subH2">Compatibles con</h2>
             </div>
-            <div class="row compatible">
+            <div class="content-1">
+                <div class="card">
+                    <div class="imgBx" data-text="PC">
+                        <img src="./img/AMD.webp">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx" data-text="PC">
+                        <img src="./img/xboxfront1.jpg">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx" data-text="PC">
+                        <img src="./img/NEWPS4.jpg">
+                    </div>
+                </div>
+            </div>
+            <!--<div class="row compatible">
                 <img class="col-4" src="./img/ps11.jpg" alt="">
                 <img class="col-4" src="./img/xbox11.jpg" alt="">
                 <img class="col-4" src="./img/pc11.jpeg" alt="" class="pc">
-            </div>
+            </div>-->
         </div>
     </section>
     
@@ -131,7 +148,17 @@
             </div>
         </div>
     </section>
+<<<<<<< HEAD
     <!--footer-->
+=======
+
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+
+
+    <!--footer--> <br>
+>>>>>>> 0111edeed1e7d343a5cbe772b5ee2bb846b8d2ea
     <%- include('partials/footer') %>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -145,6 +172,15 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
     <script src="./public/js/js.js"></script>
-</body>
 
+    <script text="text/javascript">
+        var cursor = document.querySelector('.cursor')
+        var cursor2 = document.querySelector('.cursor2')
+
+        document.addEventListener('mousemove', function (e) {
+            cursor.style.cssText = cursor2.style.cssText = 'left: ' + e.clientX + 'px; top: ' + e.clientY + 'px;'
+        })
+    </script>
+
+</body>
 </html>

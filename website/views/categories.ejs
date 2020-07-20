@@ -20,7 +20,117 @@
         <h1>Productos de la categoría:</h1>
     </div>
     <div class="container products-wrapper">
-        <div class="row">
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <div class="card shadow" style="width: 30rem;">
+                    <div class="inner">
+                        <img src="./img/10.jpg" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Samsung Gear VR</h5>
+                        <p class="card-text">$15.000</p>
+                        <a href="#" class="btn btn-success">Agregar al Carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow" style="width: 30rem;">
+                    <div class="inner">
+                        <img src="./img/HTC2.jpg" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">HTC Vive Pro</h5>
+                        <p class="card-text">$10.000</p>
+                        <a href="#" class="btn btn-success">Agregar al Carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow" style="width: 30rem;">
+                    <div class="inner">
+                        <img src="./img/13.png" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Play Station VR + Beat Saber</h5>
+                        <p class="card-text">$49.999</p>
+                        <a href="#" class="btn btn-success">Agregar al Carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow" style="width: 30rem;">
+                    <div class="inner">
+                        <img src="./img/valveindex.png" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Valve Index</h5>
+                        <p class="card-text">$159.000</p>
+                        <a href="#" class="btn btn-success">Agregar al Carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow" style="width: 30rem;">
+                    <div class="inner">
+                        <img src="./img/15.jpg" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Oculus Quest</h5>
+                        <p class="card-text">$40.000</p>
+                        <a href="#" class="btn btn-success">Agregar al Carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow" style="width: 30rem;">
+                    <div class="inner">
+                        <img src="./img/16-2.png" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Google Day Dream View</h5>
+                        <p class="card-text">$25.000</p>
+                        <a href="#" class="btn btn-success">Agregar al Carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow" style="width: 30rem;">
+                    <div class="inner">
+                        <img src="./img/OT2.jpg" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Joystick Oculus Touch</h5>
+                        <p class="card-text">$40.000</p>
+                        <a href="#" class="btn btn-success">Agregar al Carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow" style="width: 30rem;">
+                    <div class="inner">
+                        <img src="./img/18.jpg" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Oculus Rift S</h5>
+                        <p class="card-text">$89.000</p>
+                        <a href="#" class="btn btn-success">Agregar al Carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card shadow" style="width: 30rem;">
+                    <div class="inner">
+                        <img src="./img/OG1.jpg" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Oculus Go</h5>
+                        <p class="card-text">$45.000</p>
+                        <a href="#" class="btn btn-success">Agregar al Carrito</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--div class="row">
             <div class="divProduct col-12 col-sm-6 col-lg-3">
                 <section class="product-box">
                     <a href="/productos">
@@ -133,8 +243,13 @@
                     </a>
                 </section>
             </div>
-        </div>
+        </div>-->
     </div>
+
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+
     <!--footer--> <br>
     <%- include('partials/footer') %>
     <!-- Optional JavaScript -->
@@ -149,5 +264,14 @@
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
     crossorigin="anonymous"></script>
     <script src="/public/js/js.js"></script>
+
+    <script text="text/javascript">
+        var cursor = document.querySelector('.cursor')
+        var cursor2 = document.querySelector('.cursor2')
+
+        document.addEventListener('mousemove', function (e) {
+            cursor.style.cssText = cursor2.style.cssText = 'left: ' + e.clientX + 'px; top: ' + e.clientY + 'px;'
+        })
+    </script>
 </body>
 </html>

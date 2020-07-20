@@ -1,11 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const registerController = require('../controllers/registerController');
-let {check, validationResult, body} = require('express-validator')
+const usersController = require('../controllers/usersController');
 const registerMiddleware = require('../middlewares/registerMiddleware');
-const guestMiddleware = require('../middlewares/guestMiddleware')
+const guestMiddleware = require('../middlewares/guestMiddleware');
 
-router.get('/', guestMiddleware, registerController.index);
-router.post('/', registerMiddleware, registerController.register);
+router.get('/', guestMiddleware, usersController.indexRegister);
+router.post('/', registerMiddleware, usersController.register);
 
 module.exports = router;

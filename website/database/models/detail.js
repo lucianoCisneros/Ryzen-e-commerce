@@ -9,16 +9,22 @@ module.exports = function (sequelize, dataTypes) {
             unsigned: true
         },
         title: {
-            type: dataTypes.TEXT
+            type: dataTypes.STRING
         },
         secondaryTitle: {
-            type: dataTypes.TEXT
+            type: dataTypes.STRING
         },
         description: {
             type: dataTypes.TEXT
         },
         secDescription: {
             type: dataTypes.TEXT
+        },
+        img: {
+            type: dataTypes.STRING
+        },
+        secImg: {
+            type: dataTypes.STRING
         },
         video: {
             type: dataTypes.INTEGER
@@ -43,7 +49,7 @@ module.exports = function (sequelize, dataTypes) {
 
     let Detail = sequelize.define(alias, cols);
 
-    
+    //Relacion??
 
     return Detail;
 }
