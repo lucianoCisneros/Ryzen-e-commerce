@@ -150,7 +150,6 @@ div .iconos i{
     width: 100vw;
 }
 .tamano-container {
-    margin-bottom: 20px;
     padding-top: 15px;
     padding-bottom: 15px;
     font-size: 1.46rem;
@@ -217,11 +216,19 @@ img {
     display: block;
     width: 100vw;
 }
+.mapDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .contactDiv {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+}
+.contactContainer{
+    padding-top:10px;
 }
 .contacto{
     text-align: left;
@@ -233,8 +240,8 @@ img {
     font-size: 1.3rem;
 }
 .googleMap {
-    width: 170px;
-    height: 170px;
+    width: 220px;
+    height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -258,15 +265,21 @@ img {
         height: 75px;
     }
 }
+@media (max-width: 424px){
+    .googleMap {
+        width: 300px;
+        height: 250px;
+    }
+}
 @media (min-width: 425px){
     .googleMap {
-        width: 220px;
-        height: 220px;
+        width: 400px;
+        height: 300px;
     }
 }
 @media (min-width: 768px){
     .googleMap {
-        width: 300px;
+        width: 500px;
         height: 300px;
     }
 }
@@ -290,11 +303,24 @@ img {
         width: 100vw;
         border-radius: 0px;
         background: none;
+        display: flex;
     }
     .contactos{
         color: white;
     }
     .contactos .titulos{
         color: white;
+    }
+    .informacion .container {
+        height: 80vh;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .infoContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 }
