@@ -7,16 +7,11 @@
 }
 
 body {
-<<<<<<< HEAD
     background-color: black;
     background: url('../img/background9.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-=======
-    background-color: dimgrey;
-    
->>>>>>> 0111edeed1e7d343a5cbe772b5ee2bb846b8d2ea
     font-family: 'Poppins', sans-serif;
     height: 100%;
 }

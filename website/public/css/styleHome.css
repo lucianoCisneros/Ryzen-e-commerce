@@ -7,20 +7,11 @@
 }
 
 body {
-<<<<<<< HEAD
-    background-color: black;
-    /* background: url('../img/background9.jpg');
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover; */
-    font-family: 'Poppins', sans-serif;
-=======
     background: black;
     background-attachment: fixed;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
     cursor: none;
->>>>>>> 0111edeed1e7d343a5cbe772b5ee2bb846b8d2ea
 }
 
 html{
@@ -344,15 +335,11 @@ div .iconos i{
 }
 
 .firstContainer{
-<<<<<<< HEAD
-    background: url('../img/background9.jpg');
+    background: url('../img/NEWVR00.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-=======
-    background: url('../img/NEWVR00.jpg');
     padding-top: 15px;
->>>>>>> 0111edeed1e7d343a5cbe772b5ee2bb846b8d2ea
 }
 
 .firstContainerRow{
@@ -486,14 +473,10 @@ div .iconos i{
 }
 
 .carouselContainer{
-<<<<<<< HEAD
     background: url('../img/background7.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-=======
-    background: grey;
->>>>>>> 0111edeed1e7d343a5cbe772b5ee2bb846b8d2ea
     margin-bottom: 0px;
 }
 
@@ -616,7 +599,7 @@ div .iconos i{
         font-size: 3rem;
     }
     .carouselContainer .subH2{
-        font-size: 20px;
+        font-size: 19px;
     }
 }
 
@@ -643,7 +626,7 @@ div .iconos i{
         font-size: 4rem;
     }
     .carouselContainer .subH2{
-        font-size: 29px;
+        font-size: 26px;
     }
 }
 
