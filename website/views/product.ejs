@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/styleProduct.css">
-    <script src="https://kit.fontawesome.com/d92a2a2802.js" crossorigin="anonymous"></script>
+    <!--<script src="https://kit.fontawesome.com/d92a2a2802.js" crossorigin="anonymous"></script>-->
     <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
     <title>RYZEN | Samsung GEAR VR</title>
 </head>
 <body>
@@ -16,46 +17,42 @@
     <%- include('partials/headerNavbar') %>
     <%- include('partials/mobileNavBar') %>
     <!-- /Header -->
-    
-    <!--<section>
+
         <div class="container">
             <div class="left"></div>
             <div class="right"></div>
-        
             <div class="right-sidebar">
-        
                 <ul>
                     <li class="title">Shop</li>
-                    <li>Drones</li>
-                    <li>Cameras</li>
-                    <li>Lenses</li>
-                    <li>Accessories</li>
-                    <li>View All</li>
+                    <li>Controladores</li>
+                    <li>Óptica</li>
+                    <li>Audio</li>
+                    <li>Almacenamiento</li>
+                    <li>Seguimiento</li>
                 </ul>
-        
             </div>
-        
             <div class="left-sidebar">
-        
-                <h1 class="product-title">Mavic Pro Platinum</h1>
-        
-                <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                <h1 class="product-title">Samsung Gear VR</h1>
+                <ul class="specs">
+                    <li>Dimensiones: 207,8 x 122,5 x 98,6 mm.</li>
+                    <li>Peso: 345 g.</li>
+                    <li>Angulo de visión de 101º.</li>
+                    <li>Sensores: giroscopio, acelerómetro, de proximidad y geomagnético.</li>
+                    <li>Batería: Batería AAA * 2 ea (1,000 mAh, con un promedio de 2 h de uso diario durará 40 días).</li>
+                    <li>Control: Touchpad (Clicable), Trigger, Tecla de inicio, Tecla de retroceso, Tecla de volumen.</li>
+                    <li>Compatibilidad: Galaxy S7, S7 edge, Note5, S6 edge+, S6, S6 edge.</li>
+                </ul>
+                <!--<p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Eveniet, recusandae reprehenderit? Recusandae fuga quia neque nobis
                     temporibus soluta sint expedita
-                    vel fugit laborum! In, et! Earum illo dolor impedit cum.</p>
-        
+                    vel fugit laborum! In, et! Earum illo dolor impedit cum.</p>-->
                 <p id="price">Price: USD 600</p>
-        
-                <button class="btn">BUY NOW</button>
-        
+                <button class="btn">AGREGAR AL CARRITO</button>
             </div>
-        
             <div class="product" id="product">
-                <img src="img/drone.png" alt="drone">
+                <img src="./img/KKK4.png" alt="">
             </div>
-        
         </div>
-    </section>-->
     
     <!--<div class="container col-xl-11 producto">
         <div class="row productoUnico">
@@ -159,19 +156,9 @@
     </div>
     <br>-->
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"></script>
+    <script type="text/javascript">
 
-    <!--<script type="text/javascript">
-
-        TweenMax.from('.right', 1.6, {
+        TweenMax.from('.right', 1, {
             delay: 0.6,
             // opacity: 0,
             // x: -20,
@@ -214,7 +201,7 @@
             ease: Expo.easeInOut
         });
 
-        TweenMax.from('.desc', 2, {
+        TweenMax.from('.specs', 2, {
             delay: 1.8,
             opacity: 0,
             y: 20,
@@ -273,7 +260,18 @@
         });
 
 
-    </script>-->
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
 
 </body>
 </html>

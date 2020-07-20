@@ -755,3 +755,15 @@ div .iconos i{
         font-size: 1.6rem;
     }
 }
+
+@media (max-width: 320px){
+    .content-1{
+        flex-direction: column;
+    }
+}
+
+/*@media (max-width: 1440px){
+    .firstContainer{
+        background-size: 100%;
+    }
+}*/
