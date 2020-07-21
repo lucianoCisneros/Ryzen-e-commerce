@@ -42,7 +42,7 @@
                         <div class="line line-right"></div>
                     </div>-->
                 <div class="single-animations">
-                    <h5>Tus juegos favoritos hechos realidad</h5>
+                    <h5 class="last-title">Tus juegos favoritos hechos realidad</h5>
                     <a href="#" class="btn cta-btn">Más Información</a>
                 </div>
             </div>
@@ -390,6 +390,13 @@
             ease: Power3.easeInOut
         });
 
+        TweenMax.from('.headline', 2, {
+            delay: 0.8,
+            opacity: 0,
+            x: 50,
+            ease: Expo.easeInOut
+        })
+
         TweenMax.from('.sub-headline', 2, {
             delay: 0.8,
             // opacity: 0,
@@ -398,6 +405,13 @@
             scale: 0,
             ease: Power3.easeInOut
         });
+
+        TweenMax.from('.btn.cta-btn', 2, {
+            delay: 0.5,
+            opacity: 0,
+            scale: 0,
+            ease: Power3.easeInOut
+        })
 
         TweenMax.from('.col-12.col-lg-12.banner-txt', 2, {
             delay: 0.8,
@@ -412,6 +426,13 @@
             y: 20,
             ease: Expo.easeInOut
         });
+
+        TweenMax.from('.last-title', 2, {
+            delay: 0.8,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+        })
 
         /*TweenMax.from('.producto-home-nom.col-12', 2, {
             delay: 0.8,

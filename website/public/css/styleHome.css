@@ -995,7 +995,7 @@ p{
     font-weight: 900;
     letter-spacing: .5rem;
     margin-right: -.5rem;
-    animation: scale .5s forwards;
+    /*animation: scale .5s forwards;*/
 }
 
 .separator{
@@ -1427,7 +1427,7 @@ footer{
     }
 }
 
-@keyframes scale {
+/*@keyframes scale {
     0%{
         transform: scale(2);
     }
@@ -1436,7 +1436,7 @@ footer{
         opacity: 1;
         transform: scale(1);
     }
-}
+}*/
 
 @keyframes grow {
     0%{
