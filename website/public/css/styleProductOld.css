@@ -7,7 +7,11 @@ html{
     font-size: 11px;
 }
 body {
-    background: black;
+    /* background: black; */
+    background: url('../img/background9.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
     color:white;
 }
 
@@ -28,6 +32,7 @@ h2,h3,span,p{
 h3{
     font-size: 20px;
 }
+/* DESKTOP HEADER */
 .cabecera {
     display: flex;
     flex-wrap: wrap;
@@ -88,10 +93,58 @@ div .iconos i{
 .iconos i{
     color: white;
 }
+.userLogged{
+    text-transform: uppercase;
+}
+/* DESKTOP HEADER ENDS */
+
+/* MOBILE HEADER */
+.mobile-header{
+    display: none;
+}
+.mobileNavbar{
+    background: black;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.mobileNavbar a{
+    color: white;
+}
+.navLogo{
+    font-size: 28px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.navbar-nav{
+    margin-left: 10px;
+}
+.navbar-toggler{
+    margin-right: px;
+}
+.fa-bars{
+    background: black;
+    font-size: 25px;
+    color: white;
+}
+.nav-items{
+    display: flex;
+    align-items: center;
+}
+.nav-items a{
+    margin-left: 10px;
+}
+.nav-items i{
+    color: white;
+}
+/* MOBILE HEADER ENDS */
 
 .producto {
     display: flex;
     font-size: 1.46rem;
+    flex-wrap: wrap;
 }
 
 .productoUnico {
@@ -108,7 +161,6 @@ div .iconos i{
 
 .prodArticulo {
     display: flex;
-    /* height: 75vh; */
     padding: 30px;
     flex-direction: column;
 }
@@ -165,7 +217,7 @@ div .iconos i{
 }
 
 .precio{
-    font-size: 2em;
+    font-size: 2.6em;
     font-weight: 400;
 }
 
@@ -178,14 +230,65 @@ div .iconos i{
 
 .product-container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.imagenProducto{
+    height: 100%;
 }
 .imagenProducto img {
-    object-fit: contain;
-
+    height: 100%;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+.modal-content,
+#caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
 }
 
-.botones button:last-child {
-    margin-left: 20px;
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0)
+  }
+  to {
+    -webkit-transform: scale(1)
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0.1)
+  }
+  to {
+    transform: scale(1)
+  }
+}
+#myImg:hover {
+  opacity: 0.7;
+}
+.rowMoreInfo{
+    width:100vw;
 }
 .moreInfo{
     display: flex;
@@ -202,24 +305,24 @@ div .iconos i{
     font-weight: bold;
     font-size: 24px;
 }
-.subInfoTitulo{
-    font-weight: bold;
-}
 .infoImagen img{
     border-radius: 20px;
 }
 .infoContainer{
     display: flex;
+    flex-wrap: wrap;
 }
 .moreInfoContainer{
     display: flex;
     margin-top: 10px;
+    flex-wrap: wrap;
 }
 .video{
     display: flex;
 }
 .contenedorVideo{
     display: flex;
+    flex-wrap: wrap;
 }
 .youtubeVideo{
     margin: 20px 0
@@ -228,6 +331,7 @@ div .iconos i{
     font-family: 'Chelsea Market', cursive;
     font-size: 3em;
     margin: 25% 0;
+    margin-left: -10px;
 }
 .rojo{
     font-family: 'Chelsea Market', cursive;
@@ -238,9 +342,11 @@ div .iconos i{
     background: white;
     border-radius: 20px;
     font-size: 1.46rem;
+    flex-wrap: wrap;
 }
 .titulosEspecificaciones ul{
     display: flex;
+    flex-wrap: wrap;
 }
 .titulosEspecificaciones ul li{
     color: black;
@@ -294,6 +400,11 @@ div .iconos i{
 .containerCantidad{
     display: flex;
     justify-content: center;
+    width: 100%;
+}
+.containerCantidadProducto{
+    display: flex;
+    justify-content: left;
     width: 100%;
 }
 .cantidad{
@@ -351,19 +462,122 @@ div .iconos i{
 .carritoTitulo span {
     display: none;
 }
-
+.linkIg .fab{
+    color: white;
+    font-size: 3.5rem;
+    margin-right:5px;
+}
+@media (max-width: 320px){
+    .detalle{
+        font-size: 1.3rem;
+    }
+    .prodArticulo .datos{
+        margin-left: 0px;
+    }
+    .botones button{
+      font-size: 1.8rem;
+  }
+}
+@media (max-width:443px){
+    .cartButton{
+        margin-top: 10px;
+    }
+}
+@media only screen and (min-width:415px) and (max-width:443px){
+    .buttonsDiv{
+        padding: 11px;
+        padding-left: 0px;
+    }
+}
+@media (max-width:575px){
+    .productoUnico{
+        border-radius: 0px;
+    }
+    .especificaciones{
+        border-radius: 0px;
+    }
+}
+@media only screen and (max-width: 1075px) and (min-width: 992px) {  
+  .youtubeVideo{
+      width: 90%;
+  }
+} 
+@media only screen and (max-width: 1199px) and (min-width: 992px) {  
+  .botones button{
+      font-size: 1.2rem;
+  }
+  .cartButton{
+      margin-left: 1rem;
+  }
+}  
+@media (max-width:991px){
+    .mobile-header{
+        display: inline!important;
+    }
+    .desktop-header{
+        display: none!important;
+    }
+    .block-container{
+        display: none;
+    }
+    .accion{
+        display: none;
+    }
+    .youtubeContainer .youtubeVideo{
+        width: 80vw;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+    .moreInfo{
+        padding: 0px;
+    }
+    .infoPrimera, .infoSegunda{
+        text-align: center;
+    }
+    .infoPrimera img, .infoSegunda img{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .infoImagen, .infoImagenSegunda{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .rowMoreInfo{
+        width: 100vw;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .rowVideo{
+        width: 100vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .rowVideo, .contenedorVideo{
+        padding: 0px
+    }
+    .containerCantidadProducto{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+    .prodArticulo .datos{
+        text-align: center;
+        margin-left: 0px;
+    }
+}
 @media (min-width: 992px){
     /* Medidas PC */
+    .prodArticulo {
+        height: 65vh;
+    }
     .carritoTitulo {
         justify-content: flex-start;
         margin-bottom: 2rem;
     }
-
     .carritoTitulo span {
         display: inline-block;
         margin-left: 2rem;
     }
-
     .prodCarrito {
         display: flex;
         flex-direction: row;
@@ -413,7 +627,6 @@ div .iconos i{
         font-weight: 400;
         font-size: 32px;
     }
-
     .botonesCarrito{
         display: flex;
         flex-direction: row-reverse;
@@ -424,4 +637,9 @@ div .iconos i{
     .botonesCarrito > div {
         max-width: 30%;
     }
+}
+@media (min-width: 1256px){
+    .cartButton{
+    margin-left: 20px;
+}
 }

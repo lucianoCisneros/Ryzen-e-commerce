@@ -90,7 +90,8 @@ html{
 
 @media (max-width: 768px){
    .card{
-       max-width: 300px;
+       /* max-width: 300px; */
+       width: 100%;
        flex-direction: column;
        height: auto;
    }
@@ -466,6 +467,8 @@ div .iconos i{
     margin-top: 20px;
     background: white;
     margin-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
     background: dimgrey;
 }
 
@@ -530,9 +533,9 @@ div .iconos i{
     font-weight: bold;
 }
 
-.contactInfo{
+/* .contactInfo{
     font-size: 1.3rem;
-}
+} */
 
 .producto-home-desc p {
     text-align: center;
@@ -609,8 +612,18 @@ div .iconos i{
     .secondDescription {
         font-size: 1.19rem;
     }
+    .banner-mi{
+        font-size: 0.93rem;
+    }
 }
-
+@media (min-width:350px){
+    .banner-title{
+        font-size: 3rem;   
+    }
+    .banner-mi{
+        font-size: 1.19rem;
+    }
+}
 @media (max-width: 380px){
     .contactDiv {
         display: block;
@@ -620,7 +633,7 @@ div .iconos i{
 
 @media (min-width: 425px){
     .subH2{
-        font-size: 4rem;
+        font-size: 3rem;
     }
     .carouselContainer .subH2{
         font-size: 26px;

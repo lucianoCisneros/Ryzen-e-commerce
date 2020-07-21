@@ -19,6 +19,21 @@ module.exports = function (sequelize, dataTypes) {
         total: {
             type: dataTypes.INTEGER,
             defaultValue: 0
+        },
+        createdAt: {
+            type: 'TIMESTAMP',
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+            allowNull: false
+        },
+        updatedAt: {
+            type: 'TIMESTAMP',
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+            allowNull: false
+        },
+        deletedAt: {
+            type: 'TIMESTAMP',
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+            allowNull: false
         }
     }
 
@@ -27,11 +42,11 @@ module.exports = function (sequelize, dataTypes) {
     Cart.associate = function (modelos){
         Cart.belongsTo(modelos.User, {
             foreignKey: 'idUser',
-            as: 'user'
+            as: 'users'
         });
         Cart.hasMany(modelos.Item, {
             foreignKey: 'idCart',
-            as: 'item'
+            as: 'items'
         })
     }
 

@@ -30,6 +30,24 @@ module.exports = function (sequelize, dataTypes) {
             type: dataTypes.INTEGER,
             unsigned: true,
             allowNull: true
+        },
+        idProduct: {
+                type: dataTypes.INTEGER
+        },
+        createdAt: {
+            type: 'TIMESTAMP',
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+            allowNull: false
+        },
+        updatedAt: {
+            type: 'TIMESTAMP',
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+            allowNull: false
+        },
+        deletedAt: {
+            type: 'TIMESTAMP',
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+            allowNull: false
         }
     }
 
@@ -42,7 +60,11 @@ module.exports = function (sequelize, dataTypes) {
         })
         Item.belongsTo(modelos.Cart, {
             foreignKey: 'idCart',
-            as: 'cart'
+            as: 'carts'
+        })
+        Item.belongsTo(modelos.Product, {
+            as: 'products',
+            foreignKey: 'idProduct'
         })
     }
 

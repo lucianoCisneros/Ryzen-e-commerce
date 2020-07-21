@@ -7,7 +7,7 @@ const productsController = {
     },
     detail: (req,res) => {
         DB.Product.findByPk(req.params.id, {
-            include: [{ association: "category" }]
+            include: [{ association: "categories" }]
         })
             .then(producto => {
                 console.log(req.params.id)
@@ -27,6 +27,7 @@ const productsController = {
             img: req.file.filename,
             idCategory: req.body.category
         }
+        console.log(newProduct)
         DB.Product.create(newProduct)
             .then(() => {
                 if (newProduct.idCategory == 1 || 2) {
