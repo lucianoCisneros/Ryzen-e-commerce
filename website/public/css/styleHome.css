@@ -112,7 +112,7 @@ html{
 
 /* Cursor Estiles */
 
-.cursor{
+/*.cursor{
     position: fixed;
     width: 50px;
     height: 50px;
@@ -136,7 +136,7 @@ html{
     pointer-events: none;
     transform: translate(-50%, -50%);
     transition: .15s;
-}
+}*/
 
 /*.container.tamano-container.compatibilidad:hover ~ .cursor{
     background-color: transparent;
@@ -1108,7 +1108,7 @@ p{
 
 .global-headline .sub-headline{
     letter-spacing: -1px;
-    /*line-height: .7;*/
+    line-height: .7;
 }
 
 .restaurant-info{
@@ -1341,9 +1341,9 @@ footer{
         bottom: -3px;
     }
 
-    .sub-headline{
+    /*.sub-headline{
         font-size: 10rem;
-    }
+    }*/
 
     /*.first-letter{
         font-size: 12.2rem;
