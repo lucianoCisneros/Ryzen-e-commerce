@@ -22,66 +22,70 @@
     <!-- /Header -->
 
     <!--home-->
-    <!-- <div class="background">
-        <div class="container">
-            <div class="screen">
-    
-                <div class="scren-body">
-                    <div class="screen-body-item left">
-                        <div class="app-title">
-                            <span>CREAR</span>
-                            <span>PRODUCTO</span>
+    <form action="/productos/crear" method="POST" enctype="multipart/form-data">
+        <div class="background">
+            <div class="container">
+                <div class="screen">
+        
+                    <div class="scren-body">
+                        <div class="screen-body-item left">
+                            <div class="app-title">
+                                <span>CREAR</span>
+                                <span>PRODUCTO</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-    
-                <div class="screen-body-item">
-                    <div class="app-form">
-    
-                        <div class="app-form-group">
-                            <input class="app-form-control" type="text" name="name" placeholder="Nombre" required id="name"
-                                value="">
-                        </div>
-    
-                        <div class="app-form-group">
-                            <input class="app-form-control" type="number" name="price" placeholder="Precio" required
-                                id="price" value="">
-                        </div>
-    
-                        <div class="app-form-group">
-                            <input class="app-form-control" type="text" name="brand" placeholder="Marca" required
-                                id="brand">
-                        </div>
-    
-                        <div class="app-form-group">
-                            <input class="app-form-control" type="file" name="img" placeholder="" required id="img"
-                                value="">
-                        </div>
-    
-                        <div class="app-form-group">
-                            <textarea class="app-form-control" name="description" placeholder="Descripción" required
-                                id="description"></textarea>
-                        </div>
-    
-                        <div class="app-form-group">
-                            <label class="category" for="category">Categoría:</label>
-                            <select class="select" name="category" id="category">
-                                <option value="1">Visores</option>
-                                <option value="2">Accesorios</option>
-                                <option value="3">Aplicaciones</option>
-                                <option value="4">Juegos</option>
-                            </select>
-                        </div>
-    
-                        <div class="app-form-group buttons">
-                            <button class="app-form-buttons">CREAR PRODUCTO</button>
+        
+                    <div class="screen-body-item">
+                        <div class="app-form">
+        
+                            <div class="app-form-group">
+                                <input class="app-form-control" type="text" name="name" placeholder="Nombre" required id="name"
+                                    value="">
+                            </div>
+        
+                            <div class="app-form-group">
+                                <input class="app-form-control" type="number" name="price" placeholder="Precio" required
+                                    id="price" value="">
+                            </div>
+        
+                            <div class="app-form-group">
+                                <input class="app-form-control" type="text" name="brand" placeholder="Marca" required
+                                    id="brand">
+                            </div>
+        
+                            <div class="app-form-group">
+                                <input class="app-form-control" type="file" name="img" placeholder="" required id="img"
+                                    value="">
+                            </div>
+        
+                            <div class="app-form-group">
+                                <textarea class="app-form-control" name="description" placeholder="Descripción" required
+                                    id="description"></textarea>
+                            </div>
+        
+                            <div class="app-form-group">
+                                <label class="category" for="category">Categoría:</label>
+                                <select class="select" name="category" id="category">
+                                    <% for (let i = 0; i < categories.length; i++) { %>
+                                        <option value="<%=categories[i].id%>">
+                                            <%= categories[i].name %>
+                                        </option>
+                                    <% } %>
+                                </select>
+                            </div>
+        
+                            <div class="app-form-group buttons">
+                                <button type="submit" value="Crear" class="app-form-buttons">CREAR PRODUCTO</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div> -->
-    <section>
+    </form>
+
+    <!--<section>
         <div class="container">
             <form action="/productos/crear" method="POST" enctype="multipart/form-data">
                 <div class="contactForm">
@@ -130,7 +134,7 @@
                 </div>
             </form>
         </div>
-    </section>
+    </section>-->
 
     <!--footer--><br>
     <%- include('partials/footer') %>
