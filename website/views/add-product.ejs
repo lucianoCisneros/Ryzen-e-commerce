@@ -115,10 +115,11 @@
                         <div class="inputBox w50">
                             <label for="category" class="categoryLabel" style="height: 30px;">Categoria:</label>
                             <select name="category" id="category">
-                                <option value="1">Visores</option>
-                                <option value="2">Accesorios</option>
-                                <option value="3">Aplicaciones</option>
-                                <option value="4">Juegos</option>
+                                <% for (let i = 0; i < categories.length; i++) { %>
+                                        <option value="<%=categories[i].id%>">
+                                            <%= categories[i].name %>
+                                        </option>
+                                <% } %>
                             </select>
                             <span class="bar"></span>
                         </div>

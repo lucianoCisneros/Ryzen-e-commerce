@@ -63,7 +63,7 @@ module.exports = function (sequelize, dataTypes) {
             as: 'carts'
         })
         Item.belongsTo(modelos.Product, {
-            as: 'products',
+            as: 'product',
             foreignKey: 'idProduct'
         })
     }

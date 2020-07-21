@@ -16,7 +16,13 @@ const productsController = {
             .catch(error => console.log(error));
     },
     create: (req,res) =>{
-        res.render("add-product")
+        let totalCategories = DB.Category.findAll();
+
+        Promise.all([totalCategories])
+            .then(function ([categories]) {
+                res.render('add-product', { categories: categories });
+            })
+            .catch(error => console.log(error));
     },
     store: (req,res) => {
         let newProduct = {
@@ -30,7 +36,7 @@ const productsController = {
         console.log(newProduct)
         DB.Product.create(newProduct)
             .then(() => {
-                if (newProduct.idCategory == 1 || 2) {
+                if (newProduct.idCategory == 1 || newProduct.idCategory == 2) {
                     res.redirect('/productos/visores')
                 } else{
                     res.redirect('/productos/aplicaciones')
