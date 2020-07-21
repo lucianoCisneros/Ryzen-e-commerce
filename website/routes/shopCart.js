@@ -3,7 +3,10 @@ const router = express.Router();
 const shopCartController = require('../controllers/shopCartController');
 const cartMiddleware = require('../middlewares/cartMiddleware');
 
-router.get('/', cartMiddleware, shopCartController.index);
-router.get('/', shopCartController.addToCart)
+
+router.post('/agregar', cartMiddleware, shopCartController.addToCart);
+router.post('/eliminarItem', cartMiddleware, shopCartController.deleteFromCart);
+router.get('/', cartMiddleware, shopCartController.cart);
+
 
 module.exports = router;
