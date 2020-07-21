@@ -28,7 +28,7 @@ const categoriesRouter = require("./routes/categories");
 
 app.use(rememberUserMiddleware);
 app.use("/", homeRoutes);
-app.use("/quienes-somos", aboutUsRoutes)
+app.use("/quienes-somos", aboutUsRoutes);
 app.use("/login", loginRoutes);
 app.use("/registro", registerRoutes);
 app.use("/logout", logoutRoutes);
