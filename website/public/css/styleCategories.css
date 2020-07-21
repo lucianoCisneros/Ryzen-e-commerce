@@ -305,9 +305,9 @@ div .iconos i{
     flex-wrap: wrap;
     text-align: center;
     justify-content: space-around;
-    border-left: 3px solid black;
+    /* border-left: 3px solid black;
     border-right: 3px solid black;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid black; */
 }
 
 .product-box_data h2 {
@@ -337,7 +337,7 @@ div .iconos i{
 
 .product-box:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    background: rgba(0, 0, 0, 1);
+    background: black;
 }
 
 .product-box:hover a{
@@ -354,7 +354,9 @@ div .iconos i{
 .product-box:hover h2{
     color: white;
 }
-
+.product-box:hover .product-box_image{
+    background: black;
+}
 /* FOOTER */
 .contactDiv {
     display: flex;
