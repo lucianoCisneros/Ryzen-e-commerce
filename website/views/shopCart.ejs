@@ -42,7 +42,7 @@
                                             </div>
                                         </div>
                                         <div class="containerPrecio">
-                                            <span class="precioCarrito"> U$D <%= item.product.price %>  </span>
+                                            <span class="precioCarrito"> U$D <%= item.subTotal %>  </span>
                                         </div>
                                     </div>
                                     <form action="/carrito/eliminarItem" method="POST" enctype="application/x-www-form-urlencoded">
@@ -56,13 +56,15 @@
                         </div>
                         <% }) %>
                         <div class="totalCompra">
-                            <h3>TOTAL: <span>$<%= total %> </span></h3>
+                            <h3>TOTAL:<span>$<%= total %></span></h3>
                         </div>
                         <div class="botonesCarrito">
-                            <div class="comprar">
-                                <input type="hidden" name="idItem" id="<%= locals.user.id %>">
-                                <button type="submit" class="btn btn-outline-success btn-lg btn-block">Comprar ahora</button>
-                            </div>
+                            <form action="/carrito/comprar" method="POST" enctype="application/x-www-form-urlencoded">
+                                <div class="comprar">
+                                    <input type="hidden" name="idItem" id="<%= locals.user.id %>">
+                                    <button type="submit" class="btn btn-outline-success btn-lg btn-block">Comprar ahora</button>
+                                </div>
+                            </form>
                         </div>
                        
                     </section> 
