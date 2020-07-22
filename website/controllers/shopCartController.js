@@ -1,49 +1,47 @@
 const DB = require('../database/models');
 
 const shopCart = {
-    index: (req, res) => {
-        res.render("shopCart");
-    },
-    addToCart: (req, res) => {
-        DB.Product.findByPk(req.body.productId)
-            .then(product => {
-
-                let item = {
-                    price: DB.Product.price,
-                    quantity: req.body.quantity,
-                    totalPrice: DB.Product.price * req.body.quantity,
-                    status: 1,
-                    idUser: req.session.user.id,
-                    idCart: null,
-                    idProduct: DB.Product.id
-                }
-
-                DB.Item.create(item)
-                    .then(item => {
-                        return res.redirect('/carrito');
-                    })
-            })
-    },
     cart: (req, res) => {
         DB.Item.findAll({
             where: {
-                idUser: req.session.id,
+                idUser: req.session.user.id,
                 status: 1
             },
             include: ['product']
         })
             .then(items => {
 
-                let total = DB.Item.reduce((total, item) => total = total + DB.Item.totalPrice, 0);
+                let total = items.reduce((total, item) => total = total + item.subTotal, 0);
 
-                return res.render('/carrito', { items, total });
+                return res.render('shopCart', { items, total });
+            })
+    },
+    addToCart: (req, res) => {
+        DB.Product.findByPk(req.body.productId)
+            .then(product => {
+
+                let item = {
+                    name: product.name,
+                    price: product.price,
+                    quantity: req.body.quantity,
+                    subTotal: product.price * req.body.quantity,
+                    status: 1,
+                    idUser: req.session.user.id,
+                    idCart: null,
+                    idProduct: product.id
+                }
+                console.log(item)
+                DB.Item.create(item)
+                    .then(item => {
+                        return res.redirect('/carrito');
+                    })
             })
     },
     deleteFromCart: (req, res) => {
         DB.Item.destroy({
             where: {
-                //idItem tiene que estar en la vista
-                id: req.body.idItem
+                id: req.body.idItem,
+                idUser: req.session.user.id,
             },
             force: true
         })
@@ -75,7 +73,7 @@ const shopCart = {
             .then(cart => {
                 let newCart = {
                     cartNumber: cart ? DB.Cart.cartNumber + 1 : 0,
-                    total: DB.Item.reduce((total, item) => total += DB.Item.totalPrice, 0),
+                    total: DB.Item.reduce((total, item) => total += DB.Item.subTotal, 0),
                     idUser: req.session.user.id
                 }
 

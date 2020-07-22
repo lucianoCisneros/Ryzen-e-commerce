@@ -8,6 +8,11 @@ module.exports = function (sequelize, dataTypes) {
             autoIncrement: true,
             unsigned: true
         },
+        name: {
+            type: dataTypes.INTEGER,
+            allowNull: false,
+            unsigned: false
+        },
         idUser: {
             type: dataTypes.INTEGER,
             unsigned: true,
@@ -19,7 +24,7 @@ module.exports = function (sequelize, dataTypes) {
         quantity: {
             type: dataTypes.INTEGER
         },
-        totalPrice: {
+        subTotal: {
             type: dataTypes.DECIMAL
         },
         status: {
