@@ -1,5 +1,6 @@
 const DB = require('../database/models');
 let { check, validationResult, body } = require("express-validator");
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productsController = {
     index: (req, res) => {
@@ -11,7 +12,7 @@ const productsController = {
         })
             .then(producto => {
                 console.log(req.params.id)
-                res.render('product-id', { producto: producto })
+                res.render('product-id', { producto: producto, toThousand })
             })
             .catch(error => console.log(error));
     },
@@ -95,7 +96,7 @@ const productsController = {
                 idCategory: 1
             }
         })
-            .then((products) => res.render('categories-visors', {products: products}))
+            .then((products) => res.render('categories-visors', {products: products, toThousand}))
             .catch(error => console.log(error));
     },
     appsCategory: (req, res) => {
@@ -104,7 +105,7 @@ const productsController = {
                 idCategory: [3, 4]
             }
         })
-            .then((products) => res.render('apps-games', { products: products }))
+            .then((products) => res.render('apps-games', { products: products, toThousand }))
             .catch(error => console.log(error));
     }
 }

@@ -27,61 +27,62 @@
                     <div class="carritoTitulo col-lg-12">
                         <h2><i class="fas fa-shopping-cart"></i><span>Carrito</span></h2>
                     </div>
-                    <% items.forEach(item => { %>
                     <div class="carros">
                         <div class="prodCarrito col-lg-12">
                             <div class="imgCarrito col-lg-2">
-                                <img src="/img/products/<%= item.product.img %>" alt="Producto del carrito">
+                                <img src="./img/visor1.jpg" alt="Producto del carrito">
                             </div>
                             <div class="infoProdCarrito">
-                                <div class="wrapperProducto">
-                                    <h3> <%= item.product.name %> </h3>
-                                    <form action="/carrito/eliminarItem" method="POST"
-                                        enctype="application/x-www-form-urlencoded">
-                                        <div class="borrar">
-                                            <input type="hidden" name="idUser" value="<%= item.id %>">
-                                            <button type="submit"
-                                                class="btn btn-outline-danger btn-lg btn-block">Eliminar</button>
-                                        </div>
-                                    </form>
-                                </div>
+                                <h3>GEAR VR</h3>
+                                <p>Color: Blanco</p>
                                 <div class="wrapperCantidad">
                                     <div class="containerCantidad">
-                                        <div class="cartQuantity">
-                                            <p class="quantityAmount">Cantidad: <%= item.quantity %></p>
+                                        <div class="cantidad">
+                                            <i class="enCantidad fas fa-minus"></i>
+                                            <p class="enCantidad">1</p>
+                                            <i class="fas fa-plus enCantidad"></i>
                                         </div>
                                     </div>
                                     <div class="containerPrecio">
-                                        <% if (item.price !== '0') { %>
-                                        <span class="precioCarrito"> $<%= toThousand(item.subTotal) %> </span>
-                                        <%} else { %>
-                                        <span class="precioCarrito" style="color:green; font-size: 2.4rem;">Gratis</span>
-                                        <%} %>
+                                        <span class="precioCarrito">U$D300</span>
                                     </div>
                                 </div>
-                                <!-- <form action="/carrito/eliminarItem" method="POST" enctype="application/x-www-form-urlencoded">
-                                        <div class="borrar">
-                                            <input type="hidden" name="idUser" value="<%= item.id %>">
-                                            <button type="submit" class="btn btn-outline-danger btn-lg btn-block">Eliminar</button>
+                            </div>
+                        </div>
+                        <div class="prodCarrito col-lg-12">
+                            <div class="imgCarrito col-lg-2">
+                                <img src="./img/mandosOculus.jpg" alt="Producto del carrito">
+                            </div>
+                            <div class="infoProdCarrito">
+                                <h3>Mandos Oculus Rift</h3>
+                                <p>Color: Negro</p>
+                                <div class="wrapperCantidad">
+                                    <div class="containerCantidad">
+                                        <div class="cantidad">
+                                            <i class="enCantidad fas fa-minus"></i>
+                                            <p class="enCantidad">1</p>
+                                            <i class="fas fa-plus enCantidad"></i>
                                         </div>
-                                    </form> -->
+                                    </div>
+                                    <div class="containerPrecio">
+                                        <span class="precioCarrito">U$D100</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <% }) %>
                     <div class="totalCompra">
-                        <h3>TOTAL: <span>$<%= toThousand(total) %></span></h3>
+                        <h3>TOTAL: <span>U$D400</span></h3>
                     </div>
                     <div class="botonesCarrito">
-                        <form action="/carrito/comprar" method="POST" enctype="application/x-www-form-urlencoded">
                         <div class="comprar">
-                            <input type="hidden" name="idItem" id="<%= locals.user.id %>">
-                            <button type="submit" class="btn btn-outline-success btn-lg btn-block">Comprar
+                            <button type="button" class="btn btn-outline-success btn-lg btn-block">Comprar
                                 ahora</button>
                         </div>
-                        </form>
+                        <div class="borrar">
+                            <button type="button" class="btn btn-outline-danger btn-lg btn-block">Borrar todo</button>
+                        </div>
                     </div>
-
                 </section>
             </div>
         </div>

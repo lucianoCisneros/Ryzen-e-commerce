@@ -271,7 +271,7 @@ div .iconos i{
 
 .product-box {
     background-color: white;
-    border-radius: 0 0 20px 20px;
+    border-radius: 20px;
     overflow: hidden;
     transition: 300ms;
     margin: 20px 0;
@@ -286,13 +286,13 @@ div .iconos i{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: black;
+    /* background: black; */
 }
 
 .product-box_image img{
         width: 100%;
         height: 100%;
-        padding:3px;
+        /* padding:3px; */
         /* border: 2px solid grey; */
 }
 
@@ -311,7 +311,7 @@ div .iconos i{
 }
 
 .product-box_data h2 {
-    font-size: 2.4em;
+    font-size: 2.2em;
     font-weight: 300;
     margin: 0;
     color: black;
@@ -320,19 +320,20 @@ div .iconos i{
 }
 
 .product-box_data span {
-    font-size: 1.4em;
+    font-size: 1.3em;
     font-weight: bold;
     color: green;
 }
 
 .product-box_data p {
-    font-size: 1.5rem;
+    font-size: 2rem;
     width: 100%;
     color: black;
     font-weight: bold;
     margin: 0;
     transition: 300ms;
     height: 30px;
+    margin-bottom: 5px;
 }
 
 .product-box:hover {
@@ -354,9 +355,10 @@ div .iconos i{
 .product-box:hover h2{
     color: white;
 }
-.product-box:hover .product-box_image{
+/* .product-box:hover .product-box_image{
     background: black;
-}
+    transition: all 0.3s ease 0s;
+} */
 /* FOOTER */
 .contactDiv {
     display: flex;
@@ -413,7 +415,6 @@ h1{
     }
     .product-box_image {
         height: 300px;
-        border-top: 1px solid black
     }
 }
 

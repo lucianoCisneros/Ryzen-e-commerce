@@ -1,49 +1,48 @@
 const DB = require('../database/models');
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const shopCart = {
-    index: (req, res) => {
-        res.render("shopCart");
-    },
-    addToCart: (req, res) => {
-        DB.Product.findByPk(req.body.productId)
-            .then(product => {
-
-                let item = {
-                    price: DB.Product.price,
-                    quantity: req.body.quantity,
-                    totalPrice: DB.Product.price * req.body.quantity,
-                    status: 1,
-                    idUser: req.session.user.id,
-                    idCart: null,
-                    idProduct: DB.Product.id
-                }
-
-                DB.Item.create(item)
-                    .then(item => {
-                        return res.redirect('/carrito');
-                    })
-            })
-    },
     cart: (req, res) => {
         DB.Item.findAll({
             where: {
-                idUser: req.session.id,
+                idUser: req.session.user.id,
                 status: 1
             },
             include: ['product']
         })
             .then(items => {
 
-                let total = DB.Item.reduce((total, item) => total = total + DB.Item.totalPrice, 0);
+                let total = items.reduce((total, item) => total += item.subTotal, 0);
 
-                return res.render('/carrito', { items, total });
+                return res.render('shopCart', { items, total, toThousand });
+            })
+    },
+    addToCart: (req, res) => {
+        DB.Product.findByPk(req.body.productId)
+            .then(product => {
+
+                let item = {
+                    name: product.name,
+                    price: product.price,
+                    quantity: req.body.quantity,
+                    subTotal: product.price * req.body.quantity,
+                    status: 1,
+                    idUser: req.session.user.id,
+                    idCart: null,
+                    idProduct: product.id
+                }
+                console.log(item)
+                DB.Item.create(item)
+                    .then(item => {
+                        return res.redirect('/carrito');
+                    })
             })
     },
     deleteFromCart: (req, res) => {
         DB.Item.destroy({
             where: {
-                //idItem tiene que estar en la vista
-                id: req.body.idItem
+                id: req.body.idUser,
+                idUser: req.session.user.id,
             },
             force: true
         })
@@ -57,13 +56,13 @@ const shopCart = {
         DB.Item.findAll({
             where: {
                 idUser: req.session.user.id,
-                state: 1
+                status: 1
             }
         })
             .then(itemsLocalizados => {
                 items = itemsLocalizados;
 
-                DB.sequelize.query(`UPDATE items SET state = 0 WHERE userId = ${req.session.user.id} AND state = 1`);
+                DB.sequelize.query(`UPDATE items SET status = 0 WHERE idUser = ${req.session.user.id} AND status = 1`);
             })
             .then(() => {
                 return DB.Cart.findOne({
@@ -74,18 +73,18 @@ const shopCart = {
             })
             .then(cart => {
                 let newCart = {
-                    cartNumber: cart ? DB.Cart.cartNumber + 1 : 0,
-                    total: DB.Item.reduce((total, item) => total += DB.Item.totalPrice, 0),
+                    cartNumber: cart ? cart.cartNumber + 1 : 0,
+                    total: items.reduce((total, item) => total += item.subTotal, 0),
                     idUser: req.session.user.id
                 }
 
                 return DB.Cart.create(newCart);
             })
             .then(cart => {
-                return DB.sequelize.query(`UPDATE items SET idCart = ${DB.Cart.id} WHERE idUser = ${req.session.user.id} AND idCart IS NULL`);
+                return DB.sequelize.query(`UPDATE items SET idCart = ${cart.id} WHERE idUser = ${req.session.user.id} AND idCart IS NULL`);
             })
             .then(() => {
-                return res.redirect('/historial');
+                return res.redirect('/');
             })
     },
     history: (req, res) => {
@@ -99,7 +98,7 @@ const shopCart = {
             }
         })
             .then(carts => {
-                return res.render('/historial');
+                return res.render('/historial', {toThousand});
             })
     }
 }
