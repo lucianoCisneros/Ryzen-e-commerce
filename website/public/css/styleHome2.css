@@ -438,6 +438,9 @@ div .iconos i{
     margin-top: 5px;
     margin-bottom: 5px;
 }
+.secondDescriptionContainers p{
+    margin-bottom: 0px;
+}
 
 .secondDescriptionTitles{
     color: white;
@@ -675,6 +678,10 @@ div .iconos i{
     }
     .desktop-header{
         display: none!important;
+    }
+    .secondDescriptionContainers{
+    margin-top: 10px;
+    margin-bottom: 10px;
     }
 }
 

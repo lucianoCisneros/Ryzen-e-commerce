@@ -151,6 +151,7 @@ div .iconos i{
     background: white;
     border-radius: 20px;
     color: black;
+    width: 100%;
 }
 
 .detalle{
@@ -338,7 +339,7 @@ div .iconos i{
 }
 .especificaciones{
     display: flex;
-    background: white;
+    background: rgba(255,255,255,0.4);
     border-radius: 20px;
     font-size: 1.46rem;
     flex-wrap: wrap;
@@ -434,6 +435,9 @@ div .iconos i{
     margin: 10px 20px;
     font-weight: bold;
 }
+.productPrice{
+        font-size: 1.7rem;
+}
 .enCantidad p{
     font-family: 'Poppins', sans-serif;
 }
@@ -442,6 +446,7 @@ div .iconos i{
 }
 .quantityAmount {
     font-size: 20px;
+    margin-bottom: 0px;
 }
 .containerPrecio{
     margin-top: 4%;
@@ -610,7 +615,10 @@ div .iconos i{
 @media (min-width: 992px){
     /* Medidas PC */
     .prodArticulo {
-        height: 65vh;
+        height: 67vh;
+    }
+    .video{
+        margin-top: 20px;
     }
     .carritoTitulo {
         justify-content: flex-start;
@@ -626,7 +634,6 @@ div .iconos i{
         align-items: center;
         height: 150px;
     }
-
     .imgCarrito{
         height: 100%;
         padding-left: 0px;
@@ -649,6 +656,9 @@ div .iconos i{
         justify-content: space-between;
         flex-wrap: wrap;
     }
+    .productPrice{
+        text-align: left;
+    }
     .containerPrecio {
         margin-top: 0;
     }
@@ -656,9 +666,6 @@ div .iconos i{
     .infoProdCarrito h3 {
         width: auto;
         margin-top: 0;
-    }
-    .quantityAmount{
-        margin-bottom: 0px;
     }
     .wrapperCantidad {
         display: flex;
