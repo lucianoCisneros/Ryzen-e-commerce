@@ -1,77 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/d92a2a2802.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styleProductOld.css">
     <title>RYZEN | Carrito</title>
 </head>
+
 <body>
-    
+
     <!-- Header -->
     <%- include('partials/headerNavbar') %>
     <%- include('partials/mobileNavBar') %>
     <!-- /Header -->
-    
+
     <div class="container carritoBox">
         <div class="row carritoRow">
             <div class="col-12">
-                    <section class="carritoSection">
-                        <div class="carritoTitulo col-lg-12">
-                            <h2><i class="fas fa-shopping-cart"></i><span>Carrito</span></h2>
-                        </div>
-                        <% items.forEach(item => { %>
-                            <% if(items.length != 0){ %> 
-                                <div class="carros">
-                                    <div class="prodCarrito col-lg-12">
-                                        <div class="imgCarrito col-lg-2">
-                                            <img src="../public/img/products/<% item.product.img %> " alt="Producto del carrito">
+                <section class="carritoSection">
+                    <div class="carritoTitulo col-lg-12">
+                        <h2><i class="fas fa-shopping-cart"></i><span>Carrito</span></h2>
+                    </div>
+                    <% items.forEach(item => { %>
+                    <div class="carros">
+                        <div class="prodCarrito col-lg-12">
+                            <div class="imgCarrito col-lg-2">
+                                <img src="/img/products/<%= item.product.img %>" alt="Producto del carrito">
+                            </div>
+                            <div class="infoProdCarrito">
+                                <div>
+                                    <h3> <%= item.product.name %> </h3>
+                                    <form action="/carrito/eliminarItem" method="POST"
+                                        enctype="application/x-www-form-urlencoded">
+                                        <div class="borrar">
+                                            <input type="hidden" name="idUser" value="<%= item.id %>">
+                                            <button type="submit"
+                                                class="btn btn-outline-danger btn-lg btn-block">Eliminar</button>
                                         </div>
-                                        <div class="infoProdCarrito"> 
-                                            <h3> <%= item.product.name %> </h3>
-                                            <div class="wrapperCantidad">
-                                                <div class="containerCantidad">
-                                                    <div class="cantidad">
-                                                        <i class="enCantidad fas fa-minus"></i>
-                                                        <p class="enCantidad"><%= item.quantity %>></p>
-                                                        <i class="fas fa-plus enCantidad"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="containerPrecio">
-                                                    <span class="precioCarrito"> U$D <%= item.subTotal %>  </span>
-                                                </div>
-                                            </div>
-                                            <form action="/carrito/eliminarItem" method="POST" enctype="application/x-www-form-urlencoded">
-                                                <div class="borrar">
-                                                    <input type="hidden" name="idUser" value="<%= item.id %>">
-                                                    <button type="submit" class="btn btn-outline-danger btn-lg btn-block">Eliminar<button>
-                                                </div>
-                                            </form>
+                                    </form>
+                                </div>
+                                <div class="wrapperCantidad">
+                                    <div class="containerCantidad">
+                                        <div class="cartQuantity">
+                                            <p class="quantityAmount">Cantidad: <%= item.quantity %></p>
                                         </div>
                                     </div>
+                                    <div class="containerPrecio">
+                                        <% if (item.price !== '0') { %>
+                                        <span class="precioCarrito"> $<%= item.subTotal %> </span>
+                                        <%} else { %>
+                                        <span class="precioCarrito" style="color:green; font-size: 2.4rem;">Gratis</span>
+                                        <%} %>
+                                    </div>
                                 </div>
-                            <% } else { %> 
-                                <h2>No hay productos en el carrito</h2>
-                            <% } %> 
-                        <% }) %>
-                        <div class="totalCompra">
-                            <h3>TOTAL:<span>$<%= total %></span></h3>
+                                <!-- <form action="/carrito/eliminarItem" method="POST" enctype="application/x-www-form-urlencoded">
+                                        <div class="borrar">
+                                            <input type="hidden" name="idUser" value="<%= item.id %>">
+                                            <button type="submit" class="btn btn-outline-danger btn-lg btn-block">Eliminar</button>
+                                        </div>
+                                    </form> -->
+                            </div>
                         </div>
-                        <div class="botonesCarrito">
-                            <form action="/carrito/comprar" method="POST" enctype="application/x-www-form-urlencoded">
-                                <div class="comprar">
-                                    <input type="hidden" name="idItem" id="<%= locals.user.id %>">
-                                    <button type="submit" class="btn btn-outline-success btn-lg btn-block">Comprar ahora</button>
-                                </div>
-                            </form>
+                    </div>
+                    <% }) %>
+                    <div class="totalCompra">
+                        <h3>TOTAL: <span>$<%= total %></span></h3>
+                    </div>
+                    <div class="botonesCarrito">
+                        <div class="comprar">
+                            <input type="hidden" name="idItem" id="<%= locals.user.id %>">
+                            <button type="submit" class="btn btn-outline-success btn-lg btn-block">Comprar
+                                ahora</button>
                         </div>
-                       
-                    </section> 
+                    </div>
+
+                </section>
             </div>
         </div>
     </div>
@@ -80,15 +89,16 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"></script>
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
     <script src="./public/js/js.js"></script>
 
 </body>
+
 </html>
