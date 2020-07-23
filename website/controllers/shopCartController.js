@@ -11,7 +11,7 @@ const shopCart = {
         })
             .then(items => {
 
-                let total = items.reduce((total, item) => total = total + item.subTotal, 0);
+                let total = items.reduce((total, item) => total += item.subTotal, 0);
 
                 return res.render('shopCart', { items, total });
             })
@@ -55,13 +55,13 @@ const shopCart = {
         DB.Item.findAll({
             where: {
                 idUser: req.session.user.id,
-                state: 1
+                status: 1
             }
         })
             .then(itemsLocalizados => {
                 items = itemsLocalizados;
 
-                DB.sequelize.query(`UPDATE items SET state = 0 WHERE userId = ${req.session.user.id} AND state = 1`);
+                DB.sequelize.query(`UPDATE items SET status = 0 WHERE idUser = ${req.session.user.id} AND status = 1`);
             })
             .then(() => {
                 return DB.Cart.findOne({
@@ -72,19 +72,19 @@ const shopCart = {
             })
             .then(cart => {
                 let newCart = {
-                    cartNumber: cart ? DB.Cart.cartNumber + 1 : 0,
-                    total: DB.Item.reduce((total, item) => total += DB.Item.subTotal, 0),
+                    cartNumber: cart ? cart.cartNumber + 1 : 0,
+                    total: items.reduce((total, item) => total += item.subTotal, 0),
                     idUser: req.session.user.id
                 }
 
                 return DB.Cart.create(newCart);
             })
             .then(cart => {
-                return DB.sequelize.query(`UPDATE items SET idCart = ${DB.Cart.id} WHERE idUser = ${req.session.user.id} AND idCart IS NULL`);
+                return DB.sequelize.query(`UPDATE items SET idCart = ${cart.id} WHERE idUser = ${req.session.user.id} AND idCart IS NULL`);
             })
-            .then(() => {
-                return res.redirect('/historial');
-            })
+            //.then(() => {
+                //return res.redirect('/historial');
+            //})
     },
     history: (req, res) => {
         DB.Cart.findAll({
