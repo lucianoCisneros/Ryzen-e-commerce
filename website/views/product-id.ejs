@@ -64,7 +64,7 @@
                                     <% if (producto.price == 0) { %>
                                     <h2 class="precio" style="color:green; font-size: 3rem; margin: 10px 0px;">Gratis</h2>
                                     <% } else { %>
-                                    <p class="precio">$<%= producto.price %></p>
+                                    <p class="precio">$<%= toThousand(producto.price) %></p>
                                     <%}%>
                                     <div class="buttonsDiv">
                                         <a href="/productos/editar/<%= producto.id %>"><button type="button" class="btn btn-outline-success btn-lg">Editar</button></a>

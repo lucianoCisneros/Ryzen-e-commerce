@@ -30,7 +30,7 @@
                                 <img src="/img/products/<%= products[i].img %>" alt="imagen de producto">
                             </figure>
                             <article class="product-box_data">
-                                <h2>$<%= products[i].price %></h2>
+                                <h2>$<%= toThousand(products[i].price) %></h2>
                                 <p><%= products[i].name %></p>
                                 <span class="col-12">ENVÍO GRATIS</span>
                             </article>

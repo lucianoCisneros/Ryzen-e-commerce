@@ -34,7 +34,7 @@
                                 <img src="/img/products/<%= item.product.img %>" alt="Producto del carrito">
                             </div>
                             <div class="infoProdCarrito">
-                                <div>
+                                <div class="wrapperProducto">
                                     <h3> <%= item.product.name %> </h3>
                                     <form action="/carrito/eliminarItem" method="POST"
                                         enctype="application/x-www-form-urlencoded">
@@ -53,7 +53,7 @@
                                     </div>
                                     <div class="containerPrecio">
                                         <% if (item.price !== '0') { %>
-                                        <span class="precioCarrito"> $<%= item.subTotal %> </span>
+                                        <span class="precioCarrito"> $<%= toThousand(item.subTotal) %> </span>
                                         <%} else { %>
                                         <span class="precioCarrito" style="color:green; font-size: 2.4rem;">Gratis</span>
                                         <%} %>
@@ -70,14 +70,16 @@
                     </div>
                     <% }) %>
                     <div class="totalCompra">
-                        <h3>TOTAL: <span>$<%= total %></span></h3>
+                        <h3>TOTAL: <span>$<%= toThousand(total) %></span></h3>
                     </div>
                     <div class="botonesCarrito">
+                        <form action="/carrito/comprar" method="POST" enctype="application/x-www-form-urlencoded">
                         <div class="comprar">
                             <input type="hidden" name="idItem" id="<%= locals.user.id %>">
                             <button type="submit" class="btn btn-outline-success btn-lg btn-block">Comprar
                                 ahora</button>
                         </div>
+                        </form>
                     </div>
 
                 </section>

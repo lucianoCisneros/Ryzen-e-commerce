@@ -474,8 +474,8 @@ div .iconos i{
 }
 .comprar,.borrar{
     display: flex;
-    justify-content: center;
-    margin-top: 10px;
+    /* justify-content: center;
+    margin-top: 10px; */
     width: 100%;
 }
 .carros{
@@ -589,10 +589,23 @@ div .iconos i{
         margin-bottom: 20px;
         justify-content: center;
     }
+    .wrapperCantidad{
+        margin-top: 5px;
+    }
+    .containerCantidad{
+        align-items: center;
+    }
+    .containerPrecio{
+        margin-top: 0px;
+    }
     .prodArticulo .datos{
         text-align: center;
         margin-left: 0px;
     }
+    .comprar,.borrar{
+    justify-content: center;
+    margin-top: 10px;
+}
 }
 @media (min-width: 992px){
     /* Medidas PC */
@@ -611,6 +624,7 @@ div .iconos i{
         display: flex;
         flex-direction: row;
         align-items: center;
+        height: 150px;
     }
 
     .imgCarrito{
@@ -618,14 +632,23 @@ div .iconos i{
         padding-left: 0px;
         padding-right: 0px;
     }
-
+    .imgCarrito img{
+        height: 100%;
+    }
     .infoProdCarrito {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        /* align-items: flex-start; */
         width: 100%;
+        justify-content: space-around;
+        height: 100%;
     }
-
+    .wrapperProducto{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
     .containerPrecio {
         margin-top: 0;
     }
@@ -634,12 +657,15 @@ div .iconos i{
         width: auto;
         margin-top: 0;
     }
-
+    .quantityAmount{
+        margin-bottom: 0px;
+    }
     .wrapperCantidad {
         display: flex;
         width: 100%;
         justify-content: space-between;
         align-items: center;
+        margin-top: 5px;
     }
 
     .containerCantidad {

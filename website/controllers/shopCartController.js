@@ -1,4 +1,5 @@
 const DB = require('../database/models');
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const shopCart = {
     cart: (req, res) => {
@@ -13,7 +14,7 @@ const shopCart = {
 
                 let total = items.reduce((total, item) => total += item.subTotal, 0);
 
-                return res.render('shopCart', { items, total });
+                return res.render('shopCart', { items, total, toThousand });
             })
     },
     addToCart: (req, res) => {
@@ -82,9 +83,9 @@ const shopCart = {
             .then(cart => {
                 return DB.sequelize.query(`UPDATE items SET idCart = ${cart.id} WHERE idUser = ${req.session.user.id} AND idCart IS NULL`);
             })
-            //.then(() => {
-                //return res.redirect('/historial');
-            //})
+            .then(() => {
+                return res.redirect('/');
+            })
     },
     history: (req, res) => {
         DB.Cart.findAll({
@@ -97,7 +98,7 @@ const shopCart = {
             }
         })
             .then(carts => {
-                return res.render('/historial');
+                return res.render('/historial', {toThousand});
             })
     }
 }
