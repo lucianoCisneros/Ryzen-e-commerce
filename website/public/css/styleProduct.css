@@ -1,4 +1,4 @@
-* {
+*{
     box-sizing: border-box;
     /*margin: 0;
     padding: 0;*/
@@ -167,17 +167,17 @@ div .iconos i{
 /* NEW ANIMATION PRODUCT */
 
 html, body{
-    /*margin: 0;*/
-    /*padding: 0;*/
-    /*width: 100%;*/
+    /*margin: 0;
+    padding: 0;
+    width: 100%;*/
     /*height: 100vh;*/
     font-family: 'Poppins', sans-serif !important;
 }
 
 .container{
-    /*width: 100%;*/
+    width: 100%;
     /*height: 100vh;*/
-    /* margin: 0; */
+    margin: 0;
     padding: 0;
     background: black;
 }
@@ -185,18 +185,19 @@ html, body{
 .left, .right{
     position: absolute;
     height: 100%;
-    width: 50%;
+    /*width: 50%;*/
 }
 
 .left{
     background: #ffffff;
     width: 100%;
+    left: 0;
 }
 
-/*.right{
+.right{
     left: 50%;
     background: #e0e0e0;
-}*/
+}
 
 /*.logo, .next{
     line-height: 80px;
@@ -254,10 +255,12 @@ h1{
     margin-bottom: 20px;
 }
 
-/*ul{
-    list-style: none;
+ul{
+    /*list-style: none;*/
     padding: 0;
-}*/
+    /*font-size: 16px;*/
+    /*padding: 0;*/
+}
 
 .right-sidebar li:not(:first-child){
     /*padding: 6px 0;*/
