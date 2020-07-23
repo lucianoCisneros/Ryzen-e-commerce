@@ -29,6 +29,9 @@ module.exports = function (sequelize, dataTypes) {
         video: {
             type: dataTypes.INTEGER
         },
+        idProduct: {
+            type: dataTypes.INTEGER
+        },
         createdAt: {
             type: 'TIMESTAMP',
             defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
