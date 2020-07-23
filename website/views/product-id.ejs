@@ -26,7 +26,7 @@
                             <div class="block"><img src="/img/visor3.webp" alt="imagen" srcset=""></div>
                             <div class="block"><img src="/img/visor4.jpg" alt="imagen" srcset=""></div>
                         </div>
-                        <div class="col-12 col-lg-6">
+                        <div class="col-12 col-lg-6 imageDiv">
                             <figure class="imagenProducto">
                                 <img src="/img/products/<%= producto.img %>" id='myImg' class="productImg" alt='imagen de producto'>
                                 <div id="myModal" class="modal">
@@ -51,18 +51,21 @@
                             </div> -->
                             <form action="/carrito/agregar" method="POST" enctype="application/x-www-form-urlencoded">
                             <div class="containerCantidadProducto">
+                                <% if (producto.price !== '0') { %>
                                 <div class="cantidad">
-<<<<<<< HEAD
-                                    <label for="quantity">Cantidad:</label>
-                                    <input type="number" name="quantity" id="quantity" value="1">
-=======
                                     <label class="quantity" for="quantity">Cantidad:</label>
-                                    <input type="number" name="quantity" id="quantity">
->>>>>>> 68d60b3b87f4520952644dab3e67928c6bb039e0
+                                    <input type="number" name="quantity" id="quantity" value="1">
                                 </div>
+                                <%} else { %>
+                                    <br> 
+                                <%} %>
                             </div>
                                 <div class="botones">
-                                    <p class="precio">$<%= parseFloat(producto.price) %></p>
+                                    <% if (producto.price == 0) { %>
+                                    <h2 class="precio" style="color:green; font-size: 3rem; margin: 10px 0px;">Gratis</h2>
+                                    <% } else { %>
+                                    <p class="precio">$<%= producto.price %></p>
+                                    <%}%>
                                     <div class="buttonsDiv">
                                         <a href="/productos/editar/<%= producto.id %>"><button type="button" class="btn btn-outline-success btn-lg">Editar</button></a>
                                         <input type="hidden" name="productId" value="<%= producto.id %>">

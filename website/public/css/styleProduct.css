@@ -621,12 +621,12 @@ h1{
     border-radius: 20px;
 }
 
-.prodCarrito img{
+/* .prodCarrito img{
     width:80%;
     height: auto;
     display: block;
     margin: 0 10%;
-}
+} */
 
 .infoProdCarrito{
     text-align: center;

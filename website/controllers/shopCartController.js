@@ -40,7 +40,7 @@ const shopCart = {
     deleteFromCart: (req, res) => {
         DB.Item.destroy({
             where: {
-                id: req.body.idItem,
+                id: req.body.idUser,
                 idUser: req.session.user.id,
             },
             force: true

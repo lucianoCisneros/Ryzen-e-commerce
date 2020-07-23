@@ -286,7 +286,7 @@ div .iconos i{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: black;
+    /* background: black; */
 }
 
 .product-box_image img{
@@ -415,7 +415,6 @@ h1{
     }
     .product-box_image {
         height: 300px;
-        border-top: 1px solid black
     }
 }
 

@@ -29,34 +29,40 @@
                         <div class="carros">
                             <div class="prodCarrito col-lg-12">
                                 <div class="imgCarrito col-lg-2">
-                                    <img src="../public/img/products/<% item.product.img %> " alt="Producto del carrito">
+                                    <img src="/img/products/<%= item.product.img %>" alt="Producto del carrito">
                                 </div>
-                                <div class="infoProdCarrito"> 
+                                <div class="infoProdCarrito">
+                                    <div>
                                     <h3> <%= item.product.name %> </h3>
-                                    <div class="wrapperCantidad">
-                                        <div class="containerCantidad">
-                                            <div class="cantidad">
-                                                <i class="enCantidad fas fa-minus"></i>
-                                                <p class="enCantidad"><%= item.quantity %>></p>
-                                                <i class="fas fa-plus enCantidad"></i>
-                                            </div>
-                                        </div>
-                                        <div class="containerPrecio">
-                                            <span class="precioCarrito"> U$D <%= item.product.price %>  </span>
-                                        </div>
-                                    </div>
                                     <form action="/carrito/eliminarItem" method="POST" enctype="application/x-www-form-urlencoded">
                                         <div class="borrar">
                                             <input type="hidden" name="idUser" value="<%= item.id %>">
-                                            <button type="submit" class="btn btn-outline-danger btn-lg btn-block">Eliminar<button>
+                                            <button type="submit" class="btn btn-outline-danger btn-lg btn-block">Eliminar</button>
                                         </div>
                                     </form>
+                                    </div>
+                                    <div class="wrapperCantidad">
+                                        <div class="containerCantidad">
+                                            <div class="cartQuantity">
+                                                <p class="quantityAmount">Cantidad: <%= item.quantity %></p>
+                                            </div>
+                                        </div>
+                                        <div class="containerPrecio">
+                                            <span class="precioCarrito"> $<%= item.subTotal %>  </span>
+                                        </div>
+                                    </div>
+                                    <!-- <form action="/carrito/eliminarItem" method="POST" enctype="application/x-www-form-urlencoded">
+                                        <div class="borrar">
+                                            <input type="hidden" name="idUser" value="<%= item.id %>">
+                                            <button type="submit" class="btn btn-outline-danger btn-lg btn-block">Eliminar</button>
+                                        </div>
+                                    </form> -->
                                 </div>
                             </div>
                         </div>
                         <% }) %>
                         <div class="totalCompra">
-                            <h3>TOTAL: <span>$<%= total %> </span></h3>
+                            <h3>TOTAL: <span>$<%= total %></span></h3>
                         </div>
                         <div class="botonesCarrito">
                             <div class="comprar">
