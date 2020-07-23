@@ -12,7 +12,7 @@ const shopCart = {
         })
             .then(items => {
 
-                let total = items.reduce((total, item) => total += item.subTotal, 0);
+                let total = items.reduce((total, item) => total += parseInt(item.subTotal), 0);
 
                 return res.render('shopCart', { items, total, toThousand });
             })
@@ -74,7 +74,7 @@ const shopCart = {
             .then(cart => {
                 let newCart = {
                     cartNumber: cart ? cart.cartNumber + 1 : 0,
-                    total: items.reduce((total, item) => total += item.subTotal, 0),
+                    total: items.reduce((total, item) => total += parseInt(item.subTotal), 0),
                     idUser: req.session.user.id
                 }
 
