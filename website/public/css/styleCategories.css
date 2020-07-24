@@ -305,7 +305,7 @@ div .iconos i{
     position: fixed;
     top: -84px; 
     width: 100%;
-    background-color: black;
+    background-color: rgb(100, 111, 129);;
     padding: 20px;
     z-index: 9;
     transition: all 600ms;
@@ -331,7 +331,7 @@ div .iconos i{
     transform: translateX(-21%);
     width: 1150px;
     z-index: 8;
-    background-color: black;
+    background-color: rgb(100, 111, 129);;
     display: none;
 }
 

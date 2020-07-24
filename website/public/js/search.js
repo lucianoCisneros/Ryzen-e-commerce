@@ -11,15 +11,18 @@ function mostrar_buscador (){
     bars_search.style.top = '50px';
     cover_container_search.style.display = 'block';
     input_search.focus();
+    bars_search.style.position = 'absolute';
+    box_search.style.position = 'absolute'
 
     if (input_search.value === '') {
-        box_search.style.display = 'none'
+        box_search.style.display = 'none';
     }
 }
 
 //Funcion para ocultar buscador
 
 function ocultar_buscador(){
+    bars_search.style.position = 'fixed';
     bars_search.style.top = '-84px';
     cover_container_search.style.display = 'none';
     input_search.value = '';
