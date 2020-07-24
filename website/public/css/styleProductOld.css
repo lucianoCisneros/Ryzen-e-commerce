@@ -144,6 +144,7 @@ div .iconos i{
     display: flex;
     font-size: 1.46rem;
     flex-wrap: wrap;
+    margin-top: 5px;
 }
 
 .productoUnico {
@@ -151,7 +152,6 @@ div .iconos i{
     background: white;
     border-radius: 20px;
     color: black;
-    width: 100%;
 }
 
 .detalle{
@@ -169,10 +169,23 @@ div .iconos i{
     justify-content: center;
     margin: 10px 0;
 }
+.carroDiv{
+    background: rgba(255,255,255,0.4);
+    border-radius: 20px;
+    padding:25px;
+    margin-top: 20px;
+}
+.carroDiv:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.carroDiv .carros:last-child{
+    margin-bottom: 0px;
+}
 .carritoTitulo h2{
     font-size: 3em;
     font-weight: bold;
     color: white;
+    text-shadow: 0 0 6px #0a0a0a;
 }
 
 .copyContainer{
@@ -444,7 +457,7 @@ div .iconos i{
 .cantidad p{
     font-size: 20px;
 }
-.quantityAmount {
+.cartQuantity p{
     font-size: 20px;
     margin-bottom: 0px;
 }
@@ -476,6 +489,7 @@ div .iconos i{
     font-family: 'Poppins', sans-serif;
     font-size: 1.5em;
     font-weight: bold;
+    text-shadow: 0 0 6px #0a0a0a;
 }
 .comprar,.borrar{
     display: flex;
@@ -610,7 +624,14 @@ div .iconos i{
     .comprar,.borrar{
     justify-content: center;
     margin-top: 10px;
-}
+    }
+    .totalCompra h3{
+        padding: 5px 0;
+        font-size: 2.3em;
+    }
+    .carroDiv{
+        margin-top: 30px;
+    }
 }
 @media (min-width: 992px){
     /* Medidas PC */
@@ -633,7 +654,11 @@ div .iconos i{
         flex-direction: row;
         align-items: center;
         height: 150px;
+        padding: 7px;
     }
+    .prodCarrito:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    } 
     .imgCarrito{
         height: 100%;
         padding-left: 0px;
@@ -696,7 +721,7 @@ div .iconos i{
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
-        margin-bottom: 5rem;
+        /* margin-bottom: 5rem; */
     }
 
     .botonesCarrito > div {

@@ -193,7 +193,35 @@ html{
     padding: 8px;
     text-align: center;
 }
-
+.underbar{
+  width: 0;
+  height: 2px;
+  background: rgba(100,100,200,0);
+  /* //left: -50px; */
+  top: 40px;
+  position: absolute;
+  -webkit-transition: 0.5s ease;
+}
+.navegacion ul .nav-item:nth-of-type(1):hover ~ .underbar{
+    /* left: 167px; */
+    left: 162px;
+    width: 65px;
+    background: rgb(17, 228, 105);
+    box-shadow: 0 0 15px white;
+  }
+.navegacion ul .nav-item:nth-of-type(2):hover ~ .underbar{
+    left: 270px;
+    width: 80px;
+    background: rgba(200,100,100,1);
+    box-shadow: 0 0 10px rgba(220,100,100,1);
+  }
+.navegacion ul .nav-item:nth-of-type(3):hover ~ .underbar{
+    left: 408px;
+    width: 95px;
+    /* height: 1px; */
+    background: rgba(150,250,250,0.5);
+    box-shadow: 0 0 10px rgba(70,250,250,1);
+  }
 li:hover{
     animation: bounce 1s linear;
 }
@@ -733,9 +761,12 @@ div .iconos i{
         line-height: 2.5rem;
     }
     .secondDescriptionContainers:hover {
-    text-shadow: 0 0 7px white;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
+   
+    background: rgba(255, 255, 255, 0.09);
+    border-radius: 5px;
+    }
+    .secondDescriptionContainers:hover p{
+    text-shadow: 0 0 5px white;
     }
     .producto-home-nom{
         font-size: 4.7rem;
