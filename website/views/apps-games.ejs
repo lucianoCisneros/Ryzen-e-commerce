@@ -32,7 +32,7 @@
                             <% if (products[i].price == 0) { %>
                             <h2 class="price" style="color:green; font-weight: bold;">Gratis</h2>
                             <% } else { %>
-                            <h2 class="price">$<%= products[i].price %></h2>
+                            <h2 class="price">$<%= toThousand(products[i].price) %></h2>
                             <%}%>
                             <p><%= products[i].name %></p>
                         </article>

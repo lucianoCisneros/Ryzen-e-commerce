@@ -24,65 +24,70 @@
         <div class="row carritoRow">
             <div class="col-12">
                 <section class="carritoSection">
-                    <div class="carritoTitulo col-lg-12">
-                        <h2><i class="fas fa-shopping-cart"></i><span>Carrito</span></h2>
-                    </div>
+                    
+                    <div class="carroDiv">
+                        <div class="carritoTitulo col-lg-12">
+                            <h2><i class="fas fa-shopping-cart"></i><span>Carrito</span></h2>
+                        </div>
+                    <% if (items.name !== '') { %>
+                        <div>
                     <% items.forEach(item => { %>
-                    <div class="carros">
-                        <div class="prodCarrito col-lg-12">
-                            <div class="imgCarrito col-lg-2">
-                                <img src="/img/products/<%= item.product.img %>" alt="Producto del carrito">
-                            </div>
-                            <div class="infoProdCarrito">
-                                <div class="wrapperProducto">
-                                    <h3> <%= item.product.name %> </h3>
-                                    <form action="/carrito/eliminarItem" method="POST"
-                                        enctype="application/x-www-form-urlencoded">
-                                        <div class="borrar">
-                                            <input type="hidden" name="idUser" value="<%= item.id %>">
-                                            <button type="submit"
-                                                class="btn btn-outline-danger btn-lg btn-block">Eliminar</button>
-                                        </div>
-                                    </form>
+                        <div class="carros">
+                            <div class="prodCarrito col-lg-12">
+                                <div class="imgCarrito col-lg-2">
+                                    <img src="/img/products/<%= item.product.img %>" alt="Producto del carrito">
                                 </div>
-                                <p class="productPrice">Precio: $<%= toThousand(item.price) %></p>
-                                <div class="wrapperCantidad">
-                                    <div class="containerCantidad">
-                                        <div class="cartQuantity">
-                                            <p class="quantityAmount">Cantidad: <%= item.quantity %></p>
+                                <div class="infoProdCarrito">
+                                    <div class="wrapperProducto">
+                                        <h3> <%= item.product.name %> </h3>
+                                        <form action="/carrito/eliminarItem" method="POST"
+                                            enctype="application/x-www-form-urlencoded">
+                                            <div class="borrar">
+                                                <input type="hidden" name="idUser" value="<%= item.id %>">
+                                                <button type="submit"
+                                                    class="btn btn-outline-danger btn-lg btn-block">Eliminar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <p class="productPrice">Precio: $<%= toThousand(item.price) %></p>
+                                    <div class="wrapperCantidad">
+                                        <div class="containerCantidad">
+                                            <div class="cartQuantity">
+                                                <p class="quantityAmount">Cantidad: <%= item.quantity %></p>
+                                            </div>
+                                        </div>
+                                        <div class="containerPrecio">
+                                            <% if (item.price !== '0') { %>
+                                            <span class="precioCarrito"> $<%= toThousand(item.subTotal) %> </span>
+                                            <%} else { %>
+                                            <span class="precioCarrito" style="color:green; font-size: 2.4rem;">Gratis</span>
+                                            <%} %>
                                         </div>
                                     </div>
-                                    <div class="containerPrecio">
-                                        <% if (item.price !== '0') { %>
-                                        <span class="precioCarrito"> $<%= toThousand(item.subTotal) %> </span>
-                                        <%} else { %>
-                                        <span class="precioCarrito" style="color:green; font-size: 2.4rem;">Gratis</span>
-                                        <%} %>
-                                    </div>
+                                    <!-- <form action="/carrito/eliminarItem" method="POST" enctype="application/x-www-form-urlencoded">
+                                            <div class="borrar">
+                                                <input type="hidden" name="idUser" value="<%= item.id %>">
+                                                <button type="submit" class="btn btn-outline-danger btn-lg btn-block">Eliminar</button>
+                                            </div>
+                                        </form> -->
                                 </div>
-                                <!-- <form action="/carrito/eliminarItem" method="POST" enctype="application/x-www-form-urlencoded">
-                                        <div class="borrar">
-                                            <input type="hidden" name="idUser" value="<%= item.id %>">
-                                            <button type="submit" class="btn btn-outline-danger btn-lg btn-block">Eliminar</button>
-                                        </div>
-                                    </form> -->
                             </div>
                         </div>
-                    </div>
-                    <% }) %>
-                    <div class="totalCompra">
-                        <h3>TOTAL: <span>$<%= toThousand(total) %></span></h3>
-                    </div>
-                    <div class="botonesCarrito">
-                        <form action="/carrito/comprar" method="POST" enctype="application/x-www-form-urlencoded">
-                        <div class="comprar">
-                            <input type="hidden" name="idItem" id="<%= locals.user.id %>">
-                            <button type="submit" class="btn btn-outline-success btn-lg btn-block">Comprar
-                                ahora</button>
+                        <% })} %>
                         </div>
-                        </form>
+                        <div class="totalCompra">
+                            <h3>TOTAL: <span>$<%= toThousand(total) %></span></h3>
+                        </div>
+                        <div class="botonesCarrito">
+                            <form action="/carrito/comprar" method="POST" enctype="application/x-www-form-urlencoded">
+                            <div class="comprar">
+                                <input type="hidden" name="idItem" id="<%= locals.user.id %>">
+                                <button type="submit" class="btn btn-outline-success btn-lg btn-block">Comprar
+                                    ahora</button>
+                            </div>
+                            </form>
+                        </div>
                     </div>
-
                 </section>
             </div>
         </div>

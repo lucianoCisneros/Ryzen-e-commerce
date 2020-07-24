@@ -780,9 +780,12 @@ div .iconos i{
         line-height: 2.5rem;
     }
     .secondDescriptionContainers:hover {
-    text-shadow: 0 0 7px white;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
+   
+    background: rgba(255, 255, 255, 0.09);
+    border-radius: 5px;
+    }
+    .secondDescriptionContainers:hover p{
+    text-shadow: 0 0 5px white;
     }
     .producto-home-nom{
         font-size: 4.7rem;

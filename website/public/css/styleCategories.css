@@ -29,7 +29,60 @@ img{
 }
 
 /* Categorias */
-
+/* .navegacion a:hover{
+    .over {
+        &:before,
+        &:after {
+          width: 100%;
+          opacity: 1;
+        }
+        &.hover-3,
+        &.hover-4 {
+          &:before,
+          &:after {
+            width: 50%;
+          }
+        }
+      }
+} */
+.underbar{
+  width: 0;
+  height: 2px;
+  background: rgba(100,100,200,0);
+  /* //left: -50px; */
+  top: 40px;
+  position: absolute;
+  -webkit-transition: 0.5s ease;
+}
+.navegacion ul .nav-item:nth-of-type(1):hover ~ .underbar{
+    /* left: 167px; */
+    left: 162px;
+    width: 63px;
+    background: rgb(17, 228, 105);
+    box-shadow: 0 0 10px white;
+  }
+.navegacion ul .nav-item:nth-of-type(2):hover ~ .underbar{
+    left: 270px;
+    width: 80px;
+    height: 3px;
+    background: rgb(243, 91, 91);
+    box-shadow: 0 0 10px white;/* 0 0 10px rgba(220,100,100,1); */
+  }
+.navegacion ul .nav-item:nth-of-type(3):hover ~ .underbar{
+    left: 408px;
+    width: 95px;
+    height: 4px;
+    /* height: 1px; */
+    background: rgba(150,250,250,0.5);
+    box-shadow: 0 0 10px rgba(70,250,250,1);
+  }
+/* .navegacion ul .nav-item a:nth-of-type(4):hover ~ .underbar{
+    left: 150px;
+    width: 50px;
+    height: 1px;
+    background: rgba(150,250,250,0.5);
+    box-shadow: 0 0 10px rgba(70,250,250,1);
+  } */
 .inner{
     overflow: hidden;
 }
@@ -71,7 +124,7 @@ img{
     }
 }
 
-li:hover{
+.registro li:hover{
     animation: bounce 1s linear;
 }
 
@@ -161,10 +214,11 @@ li:hover{
     list-style: none;
     display: inline;
     padding: 8px;
-    
     text-align: center;
 }
-
+.navegacion a, .dos a{
+    text-decoration: none;
+}
 .registro li{
     list-style: none;
     display: inline-flex;
@@ -320,6 +374,7 @@ div .iconos i{
 .products-wrapper {
     margin-top: 30px;
     margin-bottom: 100px;
+    background: rgba(255,255,255,0.4);
 }
 
 .products-title {
@@ -396,7 +451,7 @@ div .iconos i{
 }
 
 .product-box:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
     background: black;
 }
 
@@ -448,7 +503,7 @@ div .iconos i{
 h1{
     color: white;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 35px;
     text-transform: uppercase;
 }
 
@@ -481,5 +536,11 @@ h1{
     .product-box_image {
         width: 100%;
         height: 255px;
+    }
+    .products-wrapper {
+        border-radius: 20px;
+    }
+    .products-wrapper:hover{
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
 }
