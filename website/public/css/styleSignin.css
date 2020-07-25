@@ -176,7 +176,7 @@ div .iconos i{
     position: fixed;
     top: -84px; 
     width: 100%;
-    background-color: black;
+    background-color: rgb(152, 164, 164);
     padding: 20px;
     z-index: 9;
     transition: all 600ms;
@@ -184,7 +184,7 @@ div .iconos i{
 
 #container-search input{
     display: block;
-    width: 1150px;
+    width: 100%;
     margin: auto;
     padding: 10px;
     font-size: 12px;
@@ -198,17 +198,15 @@ div .iconos i{
 #box-search{
     position: fixed;
     top: 130px;
-    left: 25%;
-    transform: translateX(-21%);
-    width: 1150px;
+    width: 100%;
     z-index: 8;
-    background-color: black;
+    background-color: rgb(152, 164, 164);
     display: none;
 }
 
 #box-search li a{
     display: block;
-    width: 1150px;
+    width: 100%;
     color: white;
     padding: 12px 20px;
 }
@@ -230,6 +228,7 @@ div .iconos i{
     z-index: 7;
     display: none;
 }
+
 /* MOBILE HEADER ENDS */
 .userLogged{
     text-transform: uppercase;

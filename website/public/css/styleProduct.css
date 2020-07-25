@@ -112,7 +112,7 @@ div .iconos i{
     position: fixed;
     top: -84px; 
     width: 100%;
-    background-color: rgb(100, 111, 129);;
+    background-color: rgb(100, 111, 129);
     padding: 20px;
     z-index: 9;
     transition: all 600ms;
@@ -120,7 +120,7 @@ div .iconos i{
 
 #container-search input{
     display: block;
-    width: 1150px;
+    width: 100%;
     margin: auto;
     padding: 10px;
     font-size: 12px;
@@ -134,17 +134,15 @@ div .iconos i{
 #box-search{
     position: fixed;
     top: 130px;
-    left: 25%;
-    transform: translateX(-21%);
-    width: 1150px;
+    width: 100%;
     z-index: 8;
-    background-color: rgb(100, 111, 129);;
+    background-color: rgb(100, 111, 129);
     display: none;
 }
 
 #box-search li a{
     display: block;
-    width: 1150px;
+    width: 100%;
     color: white;
     padding: 12px 20px;
 }
