@@ -6,6 +6,10 @@
     color: black;
 }
 
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
 body {
     background: black;
     background-attachment: fixed;
@@ -196,53 +200,6 @@ html{
     padding: 8px;
     text-align: center;
 }
-.underbar{
-  width: 0;
-  height: 2px;
-  background: rgba(100,100,200,0);
-  /* //left: -50px; */
-  top: 40px;
-  position: absolute;
-  -webkit-transition: 0.5s ease;
-}
-.navegacion ul .nav-item:nth-of-type(1):hover ~ .underbar{
-    /* left: 167px; */
-    left: 162px;
-    width: 65px;
-    background: rgb(17, 228, 105);
-    box-shadow: 0 0 15px white;
-  }
-.navegacion ul .nav-item:nth-of-type(2):hover ~ .underbar{
-    left: 270px;
-    width: 80px;
-    background: rgba(200,100,100,1);
-    box-shadow: 0 0 10px rgba(220,100,100,1);
-  }
-.navegacion ul .nav-item:nth-of-type(3):hover ~ .underbar{
-    left: 408px;
-    width: 95px;
-    /* height: 1px; */
-    background: rgba(150,250,250,0.5);
-    box-shadow: 0 0 10px rgba(70,250,250,1);
-  }
-li:hover{
-    animation: bounce 1s linear;
-}
-
-@keyframes bounce{
-    20%, 50%, 80%, to{
-        transform: translateY(0);
-    }
-    40%{
-        transform: translateY(-30px);
-    }
-    70%{
-        transform: translateY(-15px);
-    }
-    90%{
-        transform: translateY(-4px);
-    }
-}
 
 .registro li{
     list-style: none;
@@ -268,6 +225,67 @@ div .iconos i{
 .iconos i{
     color: white;
 }
+
+/*Buscador*/
+
+#container-search{
+    position: fixed;
+    top: -84px; 
+    width: 100%;
+    background-color: black;
+    padding: 20px;
+    z-index: 9;
+    transition: all 600ms;
+}
+
+#container-search input{
+    display: block;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    font-size: 12px;
+    outline: 0;
+}
+
+#icon-search{
+    cursor: pointer;
+}
+
+#box-search{
+    position: fixed;
+    top: 130px;
+    width: 100%;
+    z-index: 8;
+    background-color: black;
+    display: none;
+}
+
+#box-search li a{
+    display: block;
+    width: 100%;
+    color: white;
+    padding: 12px 20px;
+}
+
+#box-search li a:hover{
+    background-color: grey;
+}
+
+#box-search li a i{
+    margin-right: 5px;
+}
+
+#cover-container-search{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 7;
+    display: none;
+}
+
+
 /* DESKTOP HEADER ENDS */
 
 /* MOBILE HEADER */
