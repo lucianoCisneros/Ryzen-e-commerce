@@ -37,6 +37,8 @@ body{
 
 .cabecera a{
     color: white;
+    text-decoration: none;
+    position: relative;
 }
 
 .cabecera p,li{
@@ -59,7 +61,32 @@ body{
 .navegacion {
     display: inline-flex;
 }
-
+.navegacion li a::after, .navegacion li a::before {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        width: 0;
+        height: 2px;
+        margin: 5px 0 0;
+        transition: all 0.2s ease-in-out;
+        transition-duration: 0.5s;
+        opacity: 0;
+        background: rgba(255,255,255,0.9);
+}
+.navegacion li a::after {
+        right: 0;
+}
+.navegacion li a::before {
+        left: 0;
+}
+.navegacion li a:hover::before{
+        width: 50%;
+        opacity: 1;
+}
+.navegacion li a:hover::after{
+        width: 50%;
+        opacity: 1;
+}
 .navegacion li{
     list-style: none;
     display: inline;

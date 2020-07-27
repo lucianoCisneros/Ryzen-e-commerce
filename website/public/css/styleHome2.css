@@ -167,6 +167,7 @@ html{
 
 .cabecera a{
     color: white;
+    position: relative;
 }
 
 .cabecera p,li{
@@ -193,7 +194,32 @@ html{
 .navegacion ul li{
     justify-content: center;
 }
-
+.navegacion li a::after, .navegacion li a::before {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        width: 0;
+        height: 2px;
+        margin: 5px 0 0;
+        transition: all 0.2s ease-in-out;
+        transition-duration: 0.5s;
+        opacity: 0;
+        background: rgba(255,255,255,0.9);
+}
+.navegacion li a::after {
+        right: 0;
+}
+.navegacion li a::before {
+        left: 0;
+}
+.navegacion li a:hover::before{
+        width: 50%;
+        opacity: 1;
+}
+.navegacion li a:hover::after{
+        width: 50%;
+        opacity: 1;
+}
 .navegacion li{
     list-style: none;
     display: inline;
@@ -502,7 +528,7 @@ div .iconos i{
 .secondContainerIcons{
     border-radius: 50%;
     padding: 10px;
-    border: 2px solid grey;
+    /* border: 2px solid grey; */
     display: flex;
 }
 
@@ -735,6 +761,9 @@ div .iconos i{
     margin-top: 10px;
     margin-bottom: 10px;
     }
+    .secondContainerIcons{
+        padding: 0px;
+    }
 }
 
 @media (min-width: 992px){
@@ -826,6 +855,7 @@ div .iconos i{
     .producto-home-nom{
         text-align: right;
         margin-bottom: 20px;
+        font-size: 5.7rem;
         display: flex;
         justify-content: center;
     }
