@@ -71,7 +71,7 @@ h3{
         position: absolute;
         bottom: -3px;
         width: 0;
-        height: 3px;
+        height: 1.25px;
         margin: 5px 0 0;
         transition: all 0.2s ease-in-out;
         transition-duration: 0.5s;
@@ -482,8 +482,12 @@ div .iconos i{
 }
 .carritoBox{
     display: flex;
+    justify-content: center;
     color: black;
     font-size: 1.2rem;
+}
+.carritoRow{
+    width: 100%;
 }
 .prodCarrito{
     background: white;
@@ -605,6 +609,10 @@ div .iconos i{
 .carritoTitulo span {
     display: none;
 }
+.noCart{
+    text-align: center;
+    font-size: 28px;
+}
 .linkIg .fab{
     color: white;
     font-size: 3.5rem;
@@ -621,6 +629,11 @@ div .iconos i{
       font-size: 1.8rem;
   }
 }
+@media (max-width: 369px){
+    .noCart{
+        font-size: 22px;
+    }
+}
 @media (max-width:443px){
     .cartButton{
         margin-top: 10px;
@@ -629,9 +642,9 @@ div .iconos i{
         padding-left: 0px;
         padding-right: 0px;
     }
-    .imagenProducto{
+    /* .imagenProducto{
         height: 250px;
-    }
+    } */
 }
 @media only screen and (min-width:415px) and (max-width:443px){
     .buttonsDiv{
@@ -672,6 +685,11 @@ div .iconos i{
     }
     .accion{
         display: none;
+    }
+    .youtubeContainer{
+        padding-left: 0px;
+        padding-right: 0px;
+        display: flex;
     }
     .youtubeContainer .youtubeVideo{
         width: 80vw;
@@ -722,6 +740,14 @@ div .iconos i{
     }
     .containerPrecio{
         margin-top: 0px;
+    }
+    .prodArticulo{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .product-container{
+        padding-left: 0px;
+        padding-right: 0px;
     }
     .prodArticulo .datos{
         text-align: center;
