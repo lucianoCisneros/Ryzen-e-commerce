@@ -15,7 +15,7 @@
         <span class="dos">
             <% if(locals.user){ %>
             <span class="registro">
-                <li><a href="/login" class="userLogged">¡Hola <%= locals.user.userName %></a>!</li>
+                <li><a href="/perfil" class="userLogged">¡Hola <%= locals.user.userName %></a>!</li>
                 <li><a href="/logout">CERRAR SESIÓN</a></li>
             </span>
             <% } else { %>
@@ -33,7 +33,7 @@
 </header>
 
 <div id="container-search">
-    <input type="text" id="input-search" placeholder="¿Que estas buscando?">
+    <input type="text" id="input-search" placeholder="¿Qué estás buscando?">
 </div>
 
 <div id="box-search">

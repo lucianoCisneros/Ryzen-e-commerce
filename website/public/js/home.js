@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-    let container = document.querySelector('.secondContainer,.row')
+    let container = document.querySelector('.secondContainer .row')
     let firstContainer = document.querySelector('.firstContainer')
 
     window.addEventListener('scroll', function(e){

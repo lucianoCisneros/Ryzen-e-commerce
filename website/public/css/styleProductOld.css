@@ -33,6 +33,9 @@ h3{
     font-size: 20px;
 }
 /* DESKTOP HEADER */
+.desktop-header{
+    background: black;
+}
 .cabecera {
     display: flex;
     flex-wrap: wrap;
@@ -202,7 +205,6 @@ div .iconos i{
     display: flex;
     font-size: 1.46rem;
     flex-wrap: wrap;
-    margin-top: 5px;
 }
 
 .productoUnico {
@@ -210,6 +212,7 @@ div .iconos i{
     background: white;
     border-radius: 20px;
     color: black;
+    flex-grow: 1;
 }
 
 .detalle{
@@ -403,10 +406,12 @@ div .iconos i{
     font-size: 3em;
     margin: 25% 0;
     margin-left: -10px;
+    text-shadow: 0 0 10px black;
+    text-align: center;
 }
 .rojo{
     font-family: 'Chelsea Market', cursive;
-    margin:0 20%;
+    
 }
 .especificaciones{
     display: flex;
@@ -693,6 +698,9 @@ div .iconos i{
 }
 @media (min-width: 992px){
     /* Medidas PC */
+    .producto{
+        margin-top: 30px;
+    }
     .prodArticulo {
         height: 67vh;
     }

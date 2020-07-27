@@ -25,6 +25,7 @@ const productRoutes = require("./routes/products");
 const shopCartRoutes = require("./routes/shopCart");
 const aboutUsRoutes = require("./routes/aboutUs");
 const categoriesRouter = require("./routes/categories");
+const profileRoutes = require("./routes/profileRoutes");
 
 app.use(rememberUserMiddleware);
 app.use("/", homeRoutes);
@@ -35,3 +36,4 @@ app.use("/logout", logoutRoutes);
 app.use("/productos", productRoutes);
 app.use("/carrito", shopCartRoutes);
 app.use("/categorias", categoriesRouter);
+app.use("/perfil", profileRoutes);

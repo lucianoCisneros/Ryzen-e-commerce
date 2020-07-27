@@ -338,11 +338,12 @@ div .iconos i{
 .nav-items i{
     color: white;
 }
-/* MOBILE HEADER ENDS */
 
 .userLogged{
     text-transform: uppercase;
 }
+/* MOBILE HEADER ENDS */
+
 
 /* .contactContainer{
     margin-top: 20px;
@@ -520,7 +521,8 @@ div .iconos i{
     margin-bottom: 0px;
     padding-left: 0px;
     padding-right: 0px;
-    background: dimgrey;
+    background: URL('../img/background11.jpg');
+    background-size: cover;
 }
 
 .carouselContainer{
@@ -570,10 +572,11 @@ div .iconos i{
     font-size: 3.7rem;
     text-align: center;
     font-weight: bold;
-    color: black;
+    color: silver;
     margin-bottom: 3%;
     margin-bottom: 30px;
     padding-top: 20px;
+    text-shadow: 0 0 10px black;
     text-transform: uppercase;
 }
 

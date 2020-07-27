@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styleProductOld.css">
-    <title>RYZEN | </title>
+    <title>RYZEN | <%= producto.name %></title>
 </head>
 <body>
     <!-- Header -->
@@ -21,13 +21,13 @@
             <div class="col-12 divProductoUnico">
                 <section class="prodArticulo col-12">
                     <div class="product-container col-12">
-                        <% if (producto.idCategory == '1' || producto.idCategory == '2') { %>
+                        <!-- <% if (producto.idCategory == '1' || producto.idCategory == '2') { %>
                         <div class="block-container">
                             <div class="block"><img src="/img/visor1.jpg" class="extra1" alt="imagen" srcset=""></div>
                             <div class="block"><img src="/img/visor3.webp" alt="imagen" srcset=""></div>
                             <div class="block"><img src="/img/visor4.jpg" alt="imagen" srcset=""></div>
                         </div>             
-                        <%} %>
+                        <%} %> -->
                         <div class="col-12 col-lg-6 imageDiv">
                             <figure class="imagenProducto">
                                 <img src="/img/products/<%= producto.img %>" id='myImg' class="productImg" alt='imagen de producto'>
