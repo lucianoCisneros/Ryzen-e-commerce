@@ -14,6 +14,27 @@ const categoriesController = {
         })
             .then(() => res.redirect('/productos/visores'))
             .catch(error => console.log(error));
+    },
+    edit: (req, res) => {
+        let totalCategories = DB.Category.findAll();
+
+        Promise.all([totalCategories])
+            .then(function ([categories]) {
+                res.render('edit-category', { categories: categories });
+            })
+            .catch(error => console.log(error));
+    },
+    updateCategory: (req, res) => {
+        DB.Category.update({
+            name: req.body.name,
+            description: req.body.description,
+        }, {
+            where: {
+                id: req.params.id
+            }
+        })
+            .then(() => res.redirect('/'))
+            .catch(error => console.log(error));
     }
 }
 

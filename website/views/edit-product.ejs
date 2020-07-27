@@ -12,14 +12,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
     <link rel="stylesheet" href='/css/styleCreate.css'>
-    <title>RYZEN | Home</title>
+    <title>RYZEN | Editar Producto</title>
 </head>
 
 <body>
     <!-- Header -->
     <%- include('partials/headerNavBar') %>
     <%- include('partials/mobileNavBar') %>
-    <!-- /Header -->  
+    <!-- /Header -->
 
     <!--home-->
     <form action="/productos/editar/<%= products.id %>" method="POST" enctype="multipart/form-data">
