@@ -5,7 +5,7 @@ let span = document.getElementById('close');
 
 if (window.innerWidth > 991){
 img.addEventListener('click', function(){
-    modal.style.display = "block";
+    modal.style.display = "flex";
     img.src = this.src;
     addEventListener('keydown', function () {
         modal.style.display = "none";

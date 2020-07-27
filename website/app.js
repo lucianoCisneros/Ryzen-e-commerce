@@ -25,7 +25,7 @@ const productRoutes = require("./routes/products");
 const shopCartRoutes = require("./routes/shopCart");
 const aboutUsRoutes = require("./routes/aboutUs");
 const categoriesRouter = require("./routes/categories");
-const profileRoutes = require("./routes/profileRoutes");
+const profileRoutes = require("./routes/profile");
 
 app.use(rememberUserMiddleware);
 app.use("/", homeRoutes);
