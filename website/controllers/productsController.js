@@ -54,17 +54,6 @@ const productsController = {
             })
             .catch(error => console.log(error));
     },
-    category: (req, res) => {
-        return res.render("add-category")
-    },
-    createCategory: (req,res) => {
-        DB.Category.create({
-            name: req.body.name,
-            description: req.body.description
-        })
-            .then(() => res.redirect('/productos/categorias'))
-            .catch(error => console.log(error));
-    },
     update: (req,res) => {
         DB.Product.update({
             name: req.body.name,

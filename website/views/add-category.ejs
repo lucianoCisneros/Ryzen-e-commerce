@@ -11,7 +11,7 @@
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href='/css/styleRegister.css'>
+    <link rel="stylesheet" href='/css/styleCreate.css'>
     <title>RYZEN | Home</title>
 </head>
 
@@ -22,32 +22,42 @@
     <!-- /Header -->
 
     <!--home-->
-    <div class="wrap">
-        <div class="form-container">
-            <form action="/productos/categorias" method="post" enctype="application/x-www-form-urlencoded">
-                <div class="input-group">
-                    <i class="fas fa-user"></i>
-                    <label for="name"></label>
-                    <input type="text" placeholder="Nombre" required id="name" name="name">
-                    <span class="bar"></span>
+    <form action="/categorias/crear" method="POST" enctype="application/x-www-form-urlencoded">
+        <div class="background">
+            <div class="container">
+                <div class="screen">
+    
+                    <div class="scren-body">
+                        <div class="screen-body-item left">
+                            <div class="app-title">
+                                <span>Crear Categoria</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="screen-body-item">
+                        <div class="app-form">
+                            <div class="app-form-group">
+                                <label for="name"></label>
+                                <input class="app-form-control" type="text" name="name" placeholder="Nombre" required id="name">
+                                <span class="bar"></span>
+                            </div>
+
+                            <div class="app-form-group">
+                                <label for="description"></label>
+                                <textarea class="app-form-control" name="description" placeholder="Descripción" required id="description"></textarea>
+                                <span class="bar"></span>
+                            </div>
+
+                            <div class="app-form-group buttons">
+                                <button type="submit" value="Crear" class="app-form-buttons">Crear Categoria</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="input-group">
-                    <i class="fas fa-user"></i>
-                    <label for="description"></label>
-                    <input type="text" placeholder="Descripcion" required id="description" name="description">
-                    <span class="bar"></span>
-                </div>
-                <div class="input-group">
-                    <button type="submit">
-                        <i class="fas fa-user-circle"></i>
-                    </button>
-                </div>
-                <div class="switch-login">
-                    <p>¿Ya tienes una cuenta? <a href="/login"><span>Iniciar Sesión</span></a></p>
-                </div>
-            </form>
+            </div>
         </div>
-    </div>
+    </form>
 
     <!--footer--> <br>
     <%- include('partials/footer') %>
