@@ -42,8 +42,12 @@ const usersController = {
                     delete usuarioEncontrado.password;
                     req.session.user = usuarioEncontrado;
                     if (req.body.rememberUser != undefined) {
+                        if (user.rol == 10) {
+                            res.locals.admin = 1;
+                        }
                         res.cookie('username', usuarioEncontrado.userName, { maxAge: 10000 * 300 * 300 });
                     }
+
                     return res.redirect('/');
                 })
         } else {
@@ -58,6 +62,9 @@ const usersController = {
         }
 
         return res.redirect('/');
+    },
+    profile: (req, res) => {
+        return res.render('profile');
     }
 }
 

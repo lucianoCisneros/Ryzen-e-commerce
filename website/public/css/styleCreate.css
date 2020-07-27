@@ -408,6 +408,11 @@ div .iconos i{
         width: 73%;
     }
 }
+@media (max-width: 575px){
+    .screen{
+        border-radius: 0;
+    }
+}
 @media screen and (max-width: 600px){
     .screen-body{
         padding: 40px;

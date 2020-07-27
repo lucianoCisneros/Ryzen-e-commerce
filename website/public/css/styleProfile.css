@@ -78,7 +78,7 @@ div .dos{
 
 div .iconos{
     border-left: 2px solid white;
-    /*margin-left: 10px;*/
+    margin-left: 10px;
 }
 
 div .iconos i{
@@ -209,35 +209,92 @@ div .iconos i{
 
 .profile{
     display: flex;
-    background: white;
+    background: url('../img/background4.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    padding: 30px 0;
+    height: 82vh;
 }
 .profileContainer{
-    font-size: 2rem;
+    font-size: 1.6rem;
     width: 100%;
+}
+.profile h2{
+    font-size: 2.9rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 6px #0a0a0a;
+    text-transform: uppercase;
 }
 .name p{
     color: black;
-    font-size: 2.4rem;
-    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-shadow: 0 0 5px white;
+    /* text-align: center; */
+}
+.options{
+    border-radius: 10px;
+    background: rgba(0,0,0,0.7);
+}
+.options a{
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 0 6px #0a0a0a;
+}
+.linksDiv{
+    margin: 30px 0;
 }
 .profileChanges{
     display: flex;
-    justify-content: space-around;
-    margin: 10px 0;
+    justify-content: space-between;
+    /* margin: 10px 0; */
 }
 .productOptions{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 10px 0;
 }
 .categoryOptions{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 10px 0;
 }
 .permissionOptions{
     display: flex;
+    justify-content: space-between;
     margin: 10px 0;
+}
+.profileContainer a{
+    margin: 30px 0;
+    text-transform: uppercase;
+}
+.profileContainer a:hover {
+    /* color: black; */
+    text-shadow: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.contactDiv {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.contactContainer{
+    padding-top:10px;
+}
+.linkIg .fab{
+    color: white;
+    font-size: 3.5rem;
+    margin-right:5px;
+}
+.contacto{
+    text-align: left;
+    font-size: 2rem; 
+    color: white;
+    font-weight: bold;
 }
 @media (min-width: 487px){
     .logo{
@@ -254,5 +311,10 @@ div .iconos i{
     .secondDescriptionContainers{
     margin-top: 10px;
     margin-bottom: 10px;
+    }
+}
+@media (min-width: 992px){
+    .profile{
+        height: 82vh;
     }
 }

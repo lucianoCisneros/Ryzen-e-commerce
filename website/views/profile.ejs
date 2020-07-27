@@ -18,29 +18,40 @@
     <!-- /Header -->
     <div class="profile">
         <div class="profileContainer">
-            <div class="profileData">
+            <div class="title container">
+                <h2>Panel de usuario</h2>
+            </div>
+            <div class="profileData container">
                 <div class="name">
-                    <p><%= locals.user.userName %></p>
+                    <p>Bienvenido <%= locals.user.name + ' ' + locals.user.lastName %></p>
                 </div>
             </div>
-            <div class="profileOptions">
-                <div class="profileChanges">
-                    <a href="">Historial de compras</a>
-                    <a href="">Cambiar contraseña</a>
+            <div class="options container">
+                <div class="profileOptions">
+                    <div class="profileChanges">
+                        <div class="linksDiv">
+                            <a href="">Historial de compras</a>
+                        </div>
+                        <div class="linksDiv">
+                            <a href="">Cambiar contraseña</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="adminOptions">
-                <div class="productOptions">
-                    <a href="/productos/crear">Crear producto</a>
-                    <a href="">Editar producto</a>
+                <% if (locals.user.rol == 10) { %>
+                <div class="adminOptions">
+                    <div class="productOptions">
+                        <a href="/productos/crear">Crear producto</a>
+                        <a href="">Editar producto</a>
+                    </div>
+                    <div class="categoryOptions">
+                        <a href="/productos/categorias">Crear categoría</a>
+                        <a href="">Editar categoría</a>
+                    </div>
+                    <div class="permissionOptions">
+                        <a href="">Cambiar permisos</a>
+                    </div>
                 </div>
-                <div class="categoryOptions">
-                    <a href="/productos/categorias">Crear categoría</a>
-                    <a href="">Editar categoría</a>
-                </div>
-                <div class="permissionOptions">
-                    <a href="">Cambiar permisos</a>
-                </div>
+                <% } %>
             </div>
         </div>
     </div>
