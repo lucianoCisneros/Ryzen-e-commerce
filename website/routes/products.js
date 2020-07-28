@@ -31,7 +31,7 @@ var upload = multer({
 
 router.get('/', productsController.index);
 router.get('/crear', authMiddleware, productsController.create);
-router.post('/crear', authMiddleware, upload.any('img'), productsController.store);
+router.post('/crear', authMiddleware, upload.single('img'), productsController.store);
 router.get('/visores', productsController.visorsCategory);
 router.get('/aplicaciones', productsController.appsCategory);
 router.get('/editar/:id', authMiddleware, productsController.edit);

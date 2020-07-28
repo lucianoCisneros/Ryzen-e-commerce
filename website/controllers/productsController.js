@@ -37,8 +37,8 @@ const productsController = {
             thirdDescription: req.body.thirdDescription,
             brand: req.body.brand,
             img: req.file.filename,
-            secImg: req.file.filename,
-            thirdImg: req.file.filename,
+            secImg: req.body.secImg,
+            thirdImg: req.body.thirdImg,
             video: req.body.video,
             idCategory: req.body.category
         }

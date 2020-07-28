@@ -27,6 +27,12 @@ const profileController = {
             .catch(error => console.log(error));
     },
     updatePermisos: (req, res) => {
+        return res.render('update-profile');
+    },
+    formProfile: (req, res) => {
+        return res.render('update-profile');
+    },
+    updateProfile: (req, res) => {
 
     },
     history: (req, res) => {
