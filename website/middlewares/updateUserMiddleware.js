@@ -4,10 +4,10 @@ const bcrypt = require('bcryptjs');
 
 let updateUserMiddleware = [
     body('oldPassword')
-        .custom(({ req }) => {
+        .custom(({req}) => {
             DB.User.findOne({
                 where: {
-                    userName: req.session.user.userName
+                    userName: req.session.user.id
                 }
             })
             .then(userFound => {

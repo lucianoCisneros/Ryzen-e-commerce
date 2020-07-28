@@ -40,11 +40,6 @@ const profileController = {
 
         if (errors.isEmpty()) {
             delete updateUser.retype;
-            updateUser.userName = req.session.user.username;
-            updateUser.name = req.session.user.name;
-            updateUser.lastName = req.session.user.lastname;
-            updateUser.birthday = req.session.user.birthday;
-            updateUser.email = req.session.user.email;
             updateUser.password = bcrypt.hashSync(updateUser.newPassword, 15);
 
             DB.User.update(updateUser)
