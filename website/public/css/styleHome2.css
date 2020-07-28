@@ -156,6 +156,7 @@ html{
 }
 
 /* DESKTOP HEADER BEGINS */
+
 .cabecera {
     display: flex;
     flex-wrap: wrap;
