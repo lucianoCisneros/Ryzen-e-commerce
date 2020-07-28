@@ -98,7 +98,7 @@ const shopCart = {
             }
         })
             .then(carts => {
-                return res.render('/historial', {toThousand});
+                return res.render('vista', {carts, toThousand});
             })
     }
 }
