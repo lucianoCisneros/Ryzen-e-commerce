@@ -313,6 +313,10 @@ div .iconos i{
     width: 100vw;
     padding-left: 0px;
     padding-right: 0px;
+            background: url('../img/background12.jpg');
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
 }
 .contactos, .contactos .titulos{
     color: white;
@@ -339,8 +343,9 @@ div .iconos i{
 .titulos {
     text-align: center;
     font-size: 2.5rem;
-    color: black;
+    color: white;
     font-weight: bold;
+    text-shadow: 0 0 5px black;
 }
 
 .producto-home-desc {
@@ -382,6 +387,8 @@ img {
 .quienes-somos {
     text-align: center;
     padding: 5px;
+    color: white;
+    text-shadow: 0 0 5px black;
 }
 .quienesSomos{
     display: block;
@@ -407,6 +414,10 @@ img {
     color: white;
     font-weight: bold;
 }
+/* .nosotros{
+    background: rgba(255,255,255,0.3);
+    padding:10px
+} */
 /* .contactInfo{
     font-size: 1.3rem;
 } */

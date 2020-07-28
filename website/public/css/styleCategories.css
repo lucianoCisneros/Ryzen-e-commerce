@@ -415,7 +415,9 @@ div .iconos i{
     margin-bottom: 100px;
     background: rgba(255,255,255,0.4);
 }
-
+.wrapperApps{
+    height: 58.1vh;
+}
 .products-title {
     font-size: 2.4em;
     font-weight: 400;

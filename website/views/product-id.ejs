@@ -67,7 +67,7 @@
                                         <br> 
                                     <%} %>
                                 </div>
-                                <div class="botones">
+                                <div class="botones">.po
                                     <% if (producto.price == 0) { %>
                                     <h2 class="precio" style="color:green; font-size: 3rem; margin: 10px 0px;">Gratis</h2>
                                     <% } else { %>
@@ -84,26 +84,31 @@
                             </form>
                         </article>
                     </div>
+                    <% if (producto.idCategory == 1 || producto.idCategory == 2 ) { %>
                     <div class="container  col-12 col-xl-11 col-lg-11 especificaciones">
                         <div class="row col-xl-11 col-lg-11 col-12">
                             <div class="especificacionesTecnicas col-12 col-lg-11 col-xl-11">
                                 <div class="titulosEspecificaciones col-12">
                                     <ul>
-                                        <li><a href="#titulosEspecificaciones">Especificaciones</a></li>
-                                        <li><a href="#">Manuales</a></li>
-                                        <li><a href="#">F.A.Q</a></li>
+                                        <li id="specsA">Especificaciones</li>
+                                        <li id="manualA">Manuales</li>
+                                        <li>F.A.Q</li>
                                     </ul>
                                 </div>
-                                <div class="especificacionesDetalles col-12">
+                                <div class="especificacionesDetalles col-12" id="especificacionesDetalles">
                                     <ul>
                                         <% ((producto.description).split('.')).map(e => { %>
                                             <li><%= e %></li>
                                         <% }) %>
                                     </ul>
                                 </div>
+                                <div class="manuals col-12" id="manuals">
+                                    <p>Manual de Oculus Rift S: <a href="https://scontent.faep5-1.fna.fbcdn.net/v/t39.2365-6/61306535_427847951112840_7744020880174350336_n.pdf?_nc_cat=104&_nc_sid=ad8a9d&_nc_ohc=4ab42dTolykAX-swcB0&_nc_ht=scontent.faep5-1.fna&oh=6be79bc250f2c8802a153d3d29a9a31a&oe=5F45A6C8">LINK</a></p>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <% } %>
                 </section>
             </div>
         </div>

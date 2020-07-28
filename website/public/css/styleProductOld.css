@@ -528,6 +528,7 @@ div .iconos i{
     font-weight: bold;
     margin-top: 10px;
     margin-right: 10px;
+    cursor: pointer;
 }
 .titulosEspecificaciones a{
     color: black;
@@ -543,6 +544,9 @@ div .iconos i{
 }
 .especificacionesDetalles{
     color: black;
+}
+.manuals{
+    display: none;
 }
 .carritoBox{
     display: flex;
@@ -671,6 +675,7 @@ div .iconos i{
 .comprar button:hover {
     background: rgb(40, 167, 69);
     color: white;
+    text-shadow: 0 0 5px white;
     box-shadow: 0 0 5px black;
 }
 .botones button{
