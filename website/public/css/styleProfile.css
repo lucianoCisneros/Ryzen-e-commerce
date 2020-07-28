@@ -318,8 +318,19 @@ div .iconos i{
     text-shadow: 0 0 6px #0a0a0a;
     text-transform: uppercase;
 }
+.profileData{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 0px;
+}
+.name{
+    padding: 15px 0;
+    width: 95%;
+}
 .name p{
     color: black;
+    margin-bottom: 0;
     font-size: 2.2rem;
     font-weight: bold;
     text-shadow: 0 0 5px white;
@@ -327,46 +338,78 @@ div .iconos i{
 }
 .options{
     border-radius: 10px;
-    background: rgba(0,0,0,0.7);
+    background: rgba(255,255,255,0.5);
+    padding-left: 0;
+    padding-right: 0;
 }
 .options a{
     text-decoration: none;
-    color: white;
-    text-shadow: 0 0 6px #0a0a0a;
+    color: black;
+    /* text-shadow: 0 0 6px #0a0a0a; */
+    /* padding-left: 15px; */
 }
 .linksDiv{
-    margin: 30px 0;
+    padding: 15px 0;
+    width: 95%;
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fa-arrow-right{
+    font-size: 2rem;
+    /* background: black; */
+    border: 2px solid black;
+    border-radius: 60px;
+    color: black;
+    padding: 5px;
+}
+
+.linksDiv:hover a{
+    font-weight: bold;
+}
+.linksDiv:hover i{
+    background: black;
+    color: white;
 }
 .profileChanges{
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
     /* margin: 10px 0; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .productOptions{
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    margin: 10px 0;
+    margin: 10px 0; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .categoryOptions{
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    margin: 10px 0;
+    margin: 10px 0; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .permissionOptions{
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    margin: 10px 0;
+    margin: 10px 0; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-.profileContainer a{
-    margin: 30px 0;
-    text-transform: uppercase;
-}
-.profileContainer a:hover {
-    /* color: black; */
+/* .profileContainer a:hover {
+    color: black;
     text-shadow: none;
     font-weight: bold;
     text-transform: uppercase;
-}
+} */
 .contactDiv {
     display: flex;
     flex-wrap: wrap;

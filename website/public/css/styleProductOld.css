@@ -700,9 +700,9 @@ div .iconos i{
     }
 }
 @media (max-width:443px){
-    .cartButton{
+    /* .cartButton{
         margin-top: 10px;
-    }
+    } */
     .imageDiv{
         padding-left: 0px;
         padding-right: 0px;
@@ -723,6 +723,18 @@ div .iconos i{
     }
     .especificaciones{
         border-radius: 0px;
+    }
+    .carritoBox{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .carts{
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+    }
+    .carroDiv{
+        border-radius: 0;
     }
 }
 @media only screen and (max-width: 1075px) and (min-width: 992px) {  
@@ -874,7 +886,7 @@ div .iconos i{
         box-shadow: 0 0 10px rgba(0, 0, 0, 1);
     } 
     .imgCarrito{
-        height: 100%;
+        /* height: 100%; */
         padding-left: 0px;
         padding-right: 0px;
     }

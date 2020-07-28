@@ -74,6 +74,9 @@ body{
 }*/
 
 /* DESKTOP HEADER */
+.desktop-header{
+    background: black;
+}
 .cabecera {
     display: flex;
     flex-wrap: wrap;
@@ -342,9 +345,11 @@ div .iconos i{
 }
 .wrap{
     width: 90%;
+    height: 86vh;
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -354,6 +359,9 @@ div .iconos i{
     margin-top: 10px;
     flex-wrap: wrap;
 }
+.registerErrors ul{
+    width: 100%;
+}
 .errorsTitle{
     font-weight: bold;
     font-size: 25px;
@@ -362,8 +370,11 @@ div .iconos i{
     text-transform: uppercase;
     padding: 0;
     margin-top: 2%;
+    text-shadow: 0 0 6px #0a0a0a;
 }
-
+.errorsTitle span{
+    text-shadow: 0 0 0px;
+}
 .registerErrors.col-12{
     padding: 0;
 }
@@ -374,8 +385,7 @@ div .iconos i{
 
 .errorType{
     font-size: 1.4rem;
-    margin-left: auto;
-    margin-right: auto;
+    /* text-align: center; */
     /*list-style: none;*/
 }
 
@@ -401,7 +411,8 @@ div .iconos i{
 
 form{
     padding: 2rem 0;
-    background-color: #fff;
+    /* background-color: #fff; */
+    background: rgba(255,255,255,0.5);
     border-radius: 20px;
     box-shadow: 0 1px 1.5rem rgba(0, 0, 0, 0.1);
     margin-top: 2%;
@@ -422,6 +433,7 @@ form{
     font-weight: 400;
     position: relative;
     padding: 1rem 0;
+    background: transparent;
     margin-top: .5rem;
     border: none;
     outline: none;
@@ -479,7 +491,7 @@ form{
 }
 
 .switch-login p{
-    color: #a1a1a1;
+    color: black;
     font-size: 1.5rem;
 }
 .switch-login a{
@@ -487,6 +499,7 @@ form{
 }
 .switch-login a span{
     color: #37474F;
+    font-weight: bold;
 }
 
 .switch-login a span:hover{
@@ -497,8 +510,30 @@ form{
 @media (max-width: 349px){
     .input-group input{
         width: 85%;
+    }
+    .errorsTitle{
+        font-size: 23px;
+    }
 }
+@media (max-width: 375px){
+    .errorType{
+       text-align: left;
+    }
+    .registerErrors ul{
+        list-style: none;
+    }
 }
+@media (min-width: 420px){
+    .errorList{
+        display: flex;
+        justify-content: center;
+    }
+}
+/* @media (max-width: 450px){
+    .registerErrors ul{
+        list-style: none;
+    }
+} */
 @media screen and (max-width: 700px){
     .form-container::before{
         height: 10rem;
@@ -526,9 +561,6 @@ form{
     .errorsTitle{
         justify-content: center;
         text-align: center;
-    }
-    .errorList{
-        display: flex;
     }
 }
 @media (min-width: 800px){
