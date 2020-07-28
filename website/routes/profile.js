@@ -10,5 +10,6 @@ router.get('/permisos', profileController.formPermisos);
 router.post('/permisos', profileController.updatePermisos);
 router.get('/actualizar-perfil', profileController.formProfile);
 router.post('/actualizar-perfil', profileController.updateProfile);
+router.get('/historial', profileController.history);
 
 module.exports = router;

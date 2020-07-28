@@ -1,4 +1,5 @@
 const DB = require('../database/models/');
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const profileController = {
     index: (req,res) => {
@@ -33,6 +34,21 @@ const profileController = {
     },
     updateProfile: (req, res) => {
 
+    },
+    history: (req, res) => {
+        /* DB.Cart.findAll({
+            where: {
+                idUser: req.session.user.id
+            },
+            include: {
+                all: true,
+                nested: true
+            }
+        })
+            .then(carts => {
+                return res.render('shopList', {carts, toThousand });
+            }) */
+            return res.render('shopList');
     }
 }
 

@@ -86,20 +86,6 @@ const shopCart = {
             .then(() => {
                 return res.redirect('/');
             })
-    },
-    history: (req, res) => {
-        DB.Cart.findAll({
-            where: {
-                idUser: req.session.user.id
-            },
-            include: {
-                all: true,
-                nested: true
-            }
-        })
-            .then(carts => {
-                return res.render('vista', {carts, toThousand});
-            })
     }
 }
 
