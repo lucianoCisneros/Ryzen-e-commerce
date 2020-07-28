@@ -653,10 +653,16 @@ div .iconos i{
 .botonesCarrito{
     width: 100%;
 }
-.cartButton{
+.cartButton {
     background: #ffc107;
     color: black;
     text-shadow: 0 0 6px white;
+}
+
+.cartButton:hover{
+    background: #ffc107;
+    color: white;
+    box-shadow: 0 0 5px black;
 }
 .comprar button{
     background: rgba(40,167,69,0.85);
