@@ -13,7 +13,7 @@ const shopCart = {
             .then(items => {
 
                 let total = items.reduce((total, item) => total += parseInt(item.subTotal), 0);
-
+                console.log(items.length)
                 return res.render('shopCart', { items, total, toThousand });
             })
     },
