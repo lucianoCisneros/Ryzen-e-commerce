@@ -5,7 +5,9 @@
     box-sizing: border-box;
     color: black;
 }
-
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
 body {
     background-color: black;
     background: url('../img/background9.jpg');

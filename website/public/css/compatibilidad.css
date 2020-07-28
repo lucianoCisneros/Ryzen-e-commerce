@@ -4,6 +4,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
 .compatibleContainer{
     flex-wrap: wrap;
     width: 95%;

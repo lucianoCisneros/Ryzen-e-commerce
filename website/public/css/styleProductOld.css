@@ -6,6 +6,9 @@
 html{
     font-size: 11px;
 }
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
 body {
     /* background: black; */
     background: url('../img/background9.jpg');

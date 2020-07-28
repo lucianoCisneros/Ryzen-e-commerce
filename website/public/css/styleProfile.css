@@ -5,7 +5,9 @@
     box-sizing: border-box;
     color: white;
 }
-
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
 body {
     background: black;
     background-attachment: fixed;

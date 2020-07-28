@@ -42,7 +42,7 @@ const usersController = {
                     delete usuarioEncontrado.password;
                     req.session.user = usuarioEncontrado;
                     if (req.body.rememberUser != undefined) {
-                        if (user.rol == 10) {
+                        if (DB.User.rol == 10) {
                             res.locals.admin = 1;
                         }
                         res.cookie('username', usuarioEncontrado.userName, { maxAge: 10000 * 300 * 300 });
