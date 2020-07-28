@@ -300,12 +300,15 @@ div .iconos i{
 
 .profile{
     display: flex;
-    background: url('../img/background4.jpg');
+    background: url('../img/background13.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    padding: 30px 0;
+    padding: 35px 0;
     height: 82vh;
+}
+.title{
+    padding-bottom: 30px;
 }
 .profileContainer{
     font-size: 1.6rem;
