@@ -96,15 +96,9 @@
                                 </div>
                                 <div class="especificacionesDetalles col-12">
                                     <ul>
-                                        <li>Dimensiones: 207,8 x 122,5 x 98,6 mm</li>
-                                        <li>Peso: 345 g</li>
-                                        <li>Angulo de visión de 101º</li>
-                                        <li>Sensores: giroscopio, acelerómetro, de proximidad y geomagnético.</li>
-                                        <li>Batería: Batería AAA * 2 ea (1,000 mAh, con un promedio de 2 h de uso diario durará 40 días)
-                                        </li>
-                                        <li>Control: Touchpad (Clicable), Trigger, Tecla de inicio, Tecla de retroceso, Tecla de volumen
-                                        </li>
-                                        <li>Compatibilidad: Galaxy S7, S7 edge, Note5, S6 edge+, S6, S6 edge</li>
+                                        <% ((producto.description).split('.')).map(e => { %>
+                                            <li><%= e %></li>
+                                        <% }) %>
                                     </ul>
                                 </div>
                             </div>
@@ -120,21 +114,20 @@
                 <section class="moreInfo-description">
                     <div class="infoContainer">
                         <div class="infoPrimera col-lg-7">
-                            <h3 class="infoTitulo">Más de 800 aplicaciones y juegos</h3>
-                            <p class="infoDescripcion"><%= producto.description %></p>
+                            <h3 class="infoTitulo"><%= producto.title %></h3>
+                            <p class="infoDescripcion"><%= producto.secDescription %></p>
                         </div>
                         <div class="infoImagen col-12 col-md-10 col-lg-5 col-xl-5">
-                            <img src="/img/control.webp" alt="Info imagen" srcset="">
+                            <img src="<%= producto.secImg %>" alt="Info imagen" srcset="">
                         </div>
                     </div>
                     <div class="moreInfoContainer">
                         <div class="infoImagenSegunda col-12 col-md-10 col-lg-5 col-xl-5">
-                            <img src="/img/aplicaciones.jpg" alt="" srcset="">
+                            <img src="<%= producto.thirdImg %>" alt="Info imagen 2" srcset="">
                         </div>
                         <div class="infoSegunda col-lg-7">
-                            <h4 class="infoTitulo">Explora nuevas dimensiones</h4>
-                            <p class="subInfoDescripcion">Viaja a nuevos mundos y contempla paisajes mágicos con su amplio campo de visión de 101º. Su rastreo de cabeza, mucho
-                            más estable y preciso gracias a su acelerómetro y giroscopio incorporados, lo convertirá en un agradable paseo.</p>
+                            <h4 class="infoTitulo"><%= producto.secTitle %></h4>
+                            <p class="subInfoDescripcion"><%= producto.thirdDescription %></p>
                         </div>
                     </div>
                 </section>
@@ -143,7 +136,7 @@
                 <div class="row rowVideo col-12">
                     <div class="col-12 contenedorVideo">
                         <div class="youtubeContainer col-12 col-lg-8 col-xl-8">
-                        <iframe class="youtubeVideo" width="560" height="315" src="https://www.youtube-nocookie.com/embed/-gnvQS2xhRg?controls=0" frameborder="0"
+                        <iframe class="youtubeVideo" width="560" height="315" src="<%= producto.video %>" frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         <div class="accion col-4">

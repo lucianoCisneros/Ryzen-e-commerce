@@ -33,22 +33,30 @@ const profileController = {
         return res.render('update-profile');
     },
     updateProfile: (req, res) => {
-
+        DB.User.update({
+            rol: req.body.rol
+        }, {
+            where: {
+                id: req.body.user
+            }
+        })
+            .then(() => res.redirect('/perfil'))
+            .catch(error => console.log(error));;
     },
     history: (req, res) => {
-        /* DB.Cart.findAll({
+        DB.Cart.findAll({
             where: {
                 idUser: req.session.user.id
             },
             include: {
                 all: true,
-                nested: true
+                nested: true,
             }
         })
             .then(carts => {
                 return res.render('shopList', {carts, toThousand });
-            }) */
-            return res.render('shopList');
+                /* res.send(carts[0].items.name) */
+            })
     }
 }
 

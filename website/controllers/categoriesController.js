@@ -30,7 +30,7 @@ const categoriesController = {
             description: req.body.description,
         }, {
             where: {
-                id: req.params.id
+                id: req.body.category
             }
         })
             .then(() => res.redirect('/'))

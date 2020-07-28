@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styleProductOld.css">
+    <link rel="stylesheet" href="/css/styleShopList.css">
     
     <title>RYZEN | Historial de compras</title>
 </head>
@@ -23,23 +23,35 @@
                 <section class="carritoSection">
                     <div class="carroDiv">
                         <div class="carritoTitulo col-lg-12">
-                            <h2><span>Historial</span></h2>
+                            <h2><span>Historial de compras</span></h2>
                         </div>
+                        <% if (carts.length !== 0) { %>
                         <div>
+                        <% carts.forEach(cart => { %>
                             <div class="carros">
                                 <div class="prodCarrito col-lg-12">
                                     <div class="infoProdCarrito">
                                         <div class="wrapperHistorial">
-                                            <h3> 17/10/2020 </h3>
+                                            <h3> <%= (cart.createdAt).getDate() %>/<%= (cart.createdAt).getMonth() + 1 %>/<%= (cart.createdAt).getFullYear() %></h3>
                                             <div class="productList">
-                                                <p class="productPrice">Visores Samsung Gear VR - 1 Unidad- $2000</p>
-                                                <p class="productPrice">Visores Samsung Gear VR - 1 Unidad - $2000</p>
+                                                <% cart.items.forEach(e => { %>
+                                                <p class="productPrice"> <%= e.name %> - <%= e.quantity %> 
+                                                    <% if(e.quantity == 1 ) { %>
+                                                        <span> Unidad </span>
+                                                    <%} else { %>
+                                                        <span> Unidades </span>
+                                                    <% } %>
+                                                     - $<%= toThousand(e.price) %></p>
+                                                <% } ) %>
                                             </div>
-                                            <span class="precioHistorial"> $1500 </span>
+                                            <span class="precioHistorial"> $<%= toThousand(cart.total) %> </span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        <% })} else { %>
+                        <p class="noCart">Aún no realizaste ninguna compra.</p>
+                        <% } %>
                         </div>
                     </div>
                 </section>

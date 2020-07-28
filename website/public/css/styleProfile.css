@@ -433,6 +433,11 @@ div .iconos i{
     color: white;
     font-weight: bold;
 }
+@media (max-width:360px){
+    .profile{
+        height: auto;
+    }
+}
 @media (min-width: 487px){
     .logo{
         margin-right: 3.7rem;

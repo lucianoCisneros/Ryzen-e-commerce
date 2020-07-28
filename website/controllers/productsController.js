@@ -11,8 +11,6 @@ const productsController = {
             include: [{ association: "categories" }]
         })
             .then(producto => {
-                let prueba = (producto.description).split('.');
-                console.log(prueba)
                 return res.render('product-id', { producto: producto, toThousand })
             })
             .catch(error => console.log(error));

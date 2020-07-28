@@ -39,19 +39,19 @@
                         <div class="app-form">
 
                             <div class="app-form-group">
-                                <label class="category" for="">Usuario:</label>
+                                <label class="category" for="user">Usuario:</label>
                                 <select class="select" name="user" id="user">
                                     <% for (let i = 0; i < users.length; i++) { %>
                                     <option value="<%=users[i].id%>">
-                                        <%= users[i].name %>
+                                        <%= users[i].userName %>
                                     </option>
                                     <% } %>
                                 </select>
                             </div>
 
                             <div class="app-form-group">
-                                <label class="category" for="">Admin:</label>
-                                <select class="select" name="user" id="user">
+                                <label class="category" for="rol">Admin:</label>
+                                <select class="select" name="rol" id="rol">
                                     <option value="10">Si</option>
                                     <option value="0">No</option>
                                 </select>
