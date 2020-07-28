@@ -4,7 +4,7 @@ let { validationResult } = require("express-validator");
 
 const usersController = {
     indexRegister: (req, res) => {
-        res.render("register")
+        return res.render("register")
     },
     register: (req, res) => {
         const errors = validationResult(req);
@@ -23,11 +23,11 @@ const usersController = {
                 .then(() => res.redirect('/login'));
 
         } else {
-            res.render('register', { errors: errors.errors });
+            return res.render('register', { errors: errors.errors });
         }
     },
     indexLogin: (req, res) => {
-        res.render('login');
+        return res.render('login');
     },
     login: (req, res) => {
         const errors = validationResult(req);
@@ -42,16 +42,16 @@ const usersController = {
                     delete usuarioEncontrado.password;
                     req.session.user = usuarioEncontrado;
                     if (req.body.rememberUser != undefined) {
-                        if (user.rol == 10) {
+                        if (usuarioEncontrado.rol == 10) {
                             res.locals.admin = 1;
                         }
-                        res.cookie('username', usuarioEncontrado.userName, { maxAge: 10000 * 300 * 300 });
+                        return res.cookie('username', usuarioEncontrado.userName, { maxAge: 10000 * 300 * 300 });
                     }
 
                     return res.redirect('/');
                 })
         } else {
-            res.render('login', { errors: errors.errors });
+            return res.render('login', { errors: errors.errors });
         }
     },
     logout: (req, res) => {

@@ -21,34 +21,44 @@
             <div class="title container">
                 <h2>Panel de usuario</h2>
             </div>
-            <div class="profileData container">
-                <div class="name">
-                    <p>Bienvenido <%= locals.user.name + ' ' + locals.user.lastName %></p>
-                </div>
-            </div>
             <div class="options container">
+                <div class="profileData container">
+                    <div class="name">
+                        <p>Bienvenido <%= locals.user.name + ' ' + locals.user.lastName %></p>
+                    </div>
+                </div>
                 <div class="profileOptions">
                     <div class="profileChanges">
                         <div class="linksDiv">
-                            <a href="">Historial de compras</a>
+                            <a href="">Historial de compras</a><i class="fas fa-arrow-right"></i>
                         </div>
                         <div class="linksDiv">
-                            <a href="">Cambiar contraseña</a>
+                            <a href="">Cambiar contraseña</a><i class="fas fa-arrow-right"></i>
                         </div>
                     </div>
                 </div>
                 <% if (locals.user.rol == 10) { %>
                 <div class="adminOptions">
                     <div class="productOptions">
-                        <a href="/productos/crear">Crear producto</a>
-                        <a href="">Editar producto</a>
+                        <div class="linksDiv">
+                        <a href="/productos/crear">Crear producto</a><i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="linksDiv">
+                        <a href="">Editar producto</a><i class="fas fa-arrow-right"></i>
+                        </div>
                     </div>
                     <div class="categoryOptions">
-                        <a href="/productos/categorias">Crear categoría</a>
-                        <a href="">Editar categoría</a>
+                        <div class="linksDiv">
+                        <a href="/productos/categorias">Crear categoría</a><i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="linksDiv">
+                        <a href="">Editar categoría</a><i class="fas fa-arrow-right"></i>
+                        </div>
                     </div>
                     <div class="permissionOptions">
-                        <a href="">Cambiar permisos</a>
+                        <div class="linksDiv">
+                        <a href="">Cambiar permisos</a><i class="fas fa-arrow-right"></i>
+                        </div>
                     </div>
                 </div>
                 <% } %>

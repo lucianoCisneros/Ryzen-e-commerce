@@ -16,8 +16,8 @@
     <!-- /Header -->
     
     <div class="wrap">
+        <% if (typeof errors!= 'undefined') { %>
         <div class="registerErrors col-12">
-            <% if (typeof errors!= 'undefined') { %>
             <p class="errorsTitle col-12"><span style="color: red">X</span> Error al registrar <span style="color: red">X</span></p>
             <ul>
                 <% for(let i=0; i< errors.length; i++) { %>
@@ -28,8 +28,8 @@
                 </div>
                 <% } %>
             </ul>
-            <% } %>
         </div>
+        <% } %>
         <div class="form-container">
             <form action="/registro" method="post" enctype="application/x-www-form-urlencoded">
                 <div class="input-group">

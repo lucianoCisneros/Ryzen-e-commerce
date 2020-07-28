@@ -67,6 +67,9 @@ body{
 }*/
 
 /* DESKTOP HEADER */
+.desktop-header{
+    background: black;
+}
 .cabecera {
     display: flex;
     flex-wrap: wrap;
@@ -262,9 +265,22 @@ div .iconos i{
 }
 .wrap{
     width: 100vw;
+    height: 82vh;
     margin: 0 auto;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+    /* align-items: center; */
+    flex-wrap: wrap;
+}
+.wrap2{
+    width: 100vw;
+    /* height: 82vh; */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* align-items: center; */
     flex-wrap: wrap;
 }
 
@@ -288,12 +304,16 @@ div .iconos i{
     font-size: 3rem;
     text-align: center;
     list-style: none;
+    text-shadow: 0 0 6px #0a0a0a;
 }
-
+.errorsTitle span{
+    text-shadow: 0 0 0px;
+}
 .errorType{
     font-size: 1.4rem;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
     /*list-style: none;*/
 }
 
@@ -314,7 +334,7 @@ div .iconos i{
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .form-container{
@@ -351,7 +371,8 @@ div .iconos i{
 form{
     /*transform: translateX(10rem);*/
     padding: 2rem 0;
-    background-color: #fff;
+    /* background-color: #fff; */
+    background: rgba(255,255,255,0.5);
     border-radius: 20px;
     box-shadow: 0 1px 1.5rem rgba(0, 0, 0, .1);
     margin-top: 2%;
@@ -370,6 +391,7 @@ form{
     font-weight: 400;
     position: relative;
     /*width: 100%;*/
+    background: transparent;
     padding: 1rem 0;
     margin-top: .5rem;
     border: none;
@@ -439,7 +461,7 @@ form{
 }
 
 .switch-login p{
-    color: #a1a1a1;
+    color: black;
     font-size: 1.5rem;
 }
 .switch-login a{
@@ -448,6 +470,7 @@ form{
 .switch-login a span{
 
     color: #37474F;
+    font-weight: bold;
 }
 
 .switch-login a span:hover{
@@ -460,12 +483,21 @@ form{
     .input-group input{
     width: 85%;
     }
+    .errorsTitle{
+        font-size: 23px;
+    }
 }
 
 @media (min-width: 425px){
     .switch-login p{
         margin-left: 5px;
         margin-right: 5px;
+    }
+}
+@media (max-width: 450px){
+    .registerErrors ul{
+        width: 100%;
+        list-style: none;
     }
 }
 @media screen and (max-width: 700px){
