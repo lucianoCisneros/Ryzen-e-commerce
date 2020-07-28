@@ -38,7 +38,7 @@
                         </div>
                         <article class="datos col-xl-4 col-lg-4 col-12">
                             <div class="datosProducto">
-                                <h2 class="nombre"><%= producto.name %></h2>
+                                <h2 class="nombre" name="name"><%= producto.name %></h2>
                                 <p style="font-size: 1.8rem;"><%= producto.brand %></p>
                                 <% if (producto.idCategory == '1' || producto.idCategory == '2') { %>
                                 <div class="copy-container">
@@ -57,16 +57,16 @@
                                 </div>
                             </div> -->
                             <form action="/carrito/agregar" method="POST" enctype="application/x-www-form-urlencoded">
-                            <div class="containerCantidadProducto">
-                                <% if (producto.price !== '0') { %>
-                                <div class="cantidad">
-                                    <label class="quantity" for="quantity">Cantidad:</label>
-                                    <input type="number" name="quantity" id="quantity" value="1">
+                                <div class="containerCantidadProducto">
+                                    <% if (producto.price !== '0') { %>
+                                    <div class="cantidad">
+                                        <label class="quantity" for="quantity">Cantidad:</label>
+                                        <input type="number" name="quantity" id="quantity" value="1">
+                                    </div>
+                                    <%} else { %>
+                                        <br> 
+                                    <%} %>
                                 </div>
-                                <%} else { %>
-                                    <br> 
-                                <%} %>
-                            </div>
                                 <div class="botones">
                                     <% if (producto.price == 0) { %>
                                     <h2 class="precio" style="color:green; font-size: 3rem; margin: 10px 0px;">Gratis</h2>
@@ -78,7 +78,7 @@
                                         <a href="/productos/editar/<%= producto.id %>"><button type="button" class="btn btn-outline-success btn-lg editButton">Editar</button></a>
                                         <input type="hidden" name="productId" value="<%= producto.id %>">
                                         <% } %>
-                                        <button type="submit" class="btn btn-outline-warning btn-lg cartButton">Agregar al carro</button>
+                                        <button type="submit" class="btn btn-outline-warning btn-lg cartButton">Agregar al carrito</button>
                                     </div>
                                 </div>
                             </form>
