@@ -550,6 +550,13 @@ div .iconos i{
     color: black;
     font-size: 1.2rem;
 }
+.historialBox{
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-size: 1.2rem;
+    height: 83.5vh;
+}
 .carritoRow{
     width: 100%;
 }
@@ -632,6 +639,10 @@ div .iconos i{
 .precioCarrito{
     font-family: 'Poppins', sans-serif;
     font-size: 2em;
+}
+.precioHistorial{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5em;
 }
 .prodCarrito:not(:first-child){
     margin-top: 5%;
@@ -752,6 +763,10 @@ div .iconos i{
         border-radius: 0px;
     }
     .carritoBox{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .historialBox{
         padding-left: 0;
         padding-right: 0;
     }
@@ -933,6 +948,13 @@ div .iconos i{
         width: 100%;
         justify-content: space-between;
         flex-wrap: wrap;
+    }
+    .wrapperHistorial{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
     }
     .productPrice{
         text-align: left;
