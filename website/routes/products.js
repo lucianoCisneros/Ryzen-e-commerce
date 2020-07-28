@@ -34,6 +34,7 @@ router.get('/crear', authMiddleware, productsController.create);
 router.post('/crear', authMiddleware, upload.single('img'), productsController.store);
 router.get('/visores', productsController.visorsCategory);
 router.get('/aplicaciones', productsController.appsCategory);
+router.get('/editar', authMiddleware, productsController.list)
 router.get('/editar/:id', authMiddleware, productsController.edit);
 router.post('/editar/:id', authMiddleware, upload.single('img'), productsController.update);
 router.post('/editar/eliminar/:id', authMiddleware, productsController.delete);

@@ -16,11 +16,9 @@ const categoriesController = {
             .catch(error => console.log(error));
     },
     edit: (req, res) => {
-        let totalCategories = DB.Category.findAll();
-
-        Promise.all([totalCategories])
-            .then(function ([categories]) {
-                res.render('edit-category', { categories: categories });
+        DB.Category.findByPk(req.params.id)
+            .then(categoria => {
+                return res.render('product-id', { categoria: categoria})
             })
             .catch(error => console.log(error));
     },
@@ -30,7 +28,7 @@ const categoriesController = {
             description: req.body.description,
         }, {
             where: {
-                id: req.body.category
+                id: req.params.id
             }
         })
             .then(() => res.redirect('/'))

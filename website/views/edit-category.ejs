@@ -22,7 +22,7 @@
     <!-- /Header -->
 
     <!--home-->
-    <form action="/categorias/crear" method="POST" enctype="application/x-www-form-urlencoded">
+    <form action="/categorias/editar/<%= req.params.id %>" method="POST" enctype="application/x-www-form-urlencoded">
         <div class="background">
             <div class="container">
                 <div class="screen">
@@ -37,27 +37,16 @@
 
                     <div class="screen-body-item">
 
-                        <div class="app-form-group">
-                            <label class="category" for="category">Categoría:</label>
-                            <select class="select" name="category" id="category">
-                                <% for (let i = 0; i < categories.length; i++) { %>
-                                <option value="<%=categories[i].id%>">
-                                    <%= categories[i].name %>
-                                </option>
-                                <% } %>
-                            </select>
-                        </div>
-
                         <div class="app-form">
                             <div class="app-form-group">
                                 <label for="name"></label>
-                                <input class="app-form-control" type="text" name="name" placeholder="Nombre" required id="name">
+                                <input class="app-form-control" type="text" name="name" placeholder="Nombre" required id="name" value="<%= categoria.name %>">
                                 <span class="bar"></span>
                             </div>
 
                             <div class="app-form-group">
                                 <label for="description"></label>
-                                <textarea class="app-form-control" name="description" placeholder="Descripción" required id="description"></textarea>
+                                <textarea class="app-form-control" name="description" placeholder="Descripción" required id="description"><%= categoria.description %></textarea>
                                 <span class="bar"></span>
                             </div>
 

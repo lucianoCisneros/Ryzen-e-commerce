@@ -50,6 +50,12 @@ const productsController = {
                 }
             });
     },
+    list: (req,res) => {
+        DB.Product.findAll()
+            .then((products)=>{
+                return res.render('list', {products:products})
+            })
+    },
     edit: (req,res) => {
         let totalProducts = DB.Product.findByPk(req.params.id);
         let totalCategories = DB.Category.findAll();
@@ -73,7 +79,11 @@ const productsController = {
                 id: req.params.id
             }
         })
-            .then(() => res.redirect('/'))
+            .then(() => {if (req.body.category == 1 || req.body.category == 2){
+                return res.redirect('/productos/visores')
+            } else {
+                return res.redirect('/productos/aplicaciones')
+            }})
             .catch(error => console.log(error));
     },
     delete: (req,res) => {
@@ -88,7 +98,7 @@ const productsController = {
     visorsCategory: (req,res) => {
         DB.Product.findAll({
             where: {
-                idCategory: 1
+                idCategory: [1, 2]
             }
         })
             .then((products) => res.render('categories-visors', {products: products, toThousand}))

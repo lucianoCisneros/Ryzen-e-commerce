@@ -25,41 +25,17 @@
             <div class="options container">
                 <div class="profileData container">
                     <div class="name">
-                        <p>Bienvenido <%= locals.user.name + ' ' + locals.user.lastName %></p>
+                        <p>Seleccione la opción a editar</p>
                     </div>
                 </div>
-                <div class="profileOptions">
-                    <div class="profileChanges">
-                        <div class="linksDiv">
-                            <a href="/perfil/historial">Historial de compras</a><i class="fas fa-arrow-right"></i>
-                        </div>
-                        <div class="linksDiv">
-                            <a href="">Cambiar contraseña</a><i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                </div>
-                <% if (locals.user.rol == 10) { %>
+                <% if (products.length !== 0) { %>
                 <div class="adminOptions">
                     <div class="productOptions">
+                        <% products.forEach((e) => { %>
                         <div class="linksDiv">
-                        <a href="/productos/crear">Crear producto</a><i class="fas fa-arrow-right"></i>
+                        <a href="/productos/editar/<%= e.id %>"><%= e.name %></a><i class="fas fa-arrow-right"></i>
                         </div>
-                        <div class="linksDiv">
-                        <a href="/productos/editar">Editar producto</a><i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                    <div class="categoryOptions">
-                        <div class="linksDiv">
-                        <a href="/categorias/crear">Crear categoría</a><i class="fas fa-arrow-right"></i>
-                        </div>
-                        <div class="linksDiv">
-                        <a href="/categorias/editar">Editar categoría</a><i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                    <div class="permissionOptions">
-                        <div class="linksDiv">
-                        <a href="">Cambiar permisos</a><i class="fas fa-arrow-right"></i>
-                        </div>
+                        <% }) %>
                     </div>
                 </div>
                 <% } %>
