@@ -3,7 +3,7 @@ function cartMiddleware(req,res,next) {
         next();
     }
     else {
-        return res.render('login', { errors: [{ msg: "Para acceder al carrito tenés que iniciar sesión" }] })
+        return res.render('login', { errors: [{ msg: "-Para acceder al carrito tenés que iniciar sesión" }] })
     }
 }
 

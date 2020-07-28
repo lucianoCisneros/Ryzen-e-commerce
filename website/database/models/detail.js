@@ -27,7 +27,7 @@ module.exports = function (sequelize, dataTypes) {
             type: dataTypes.STRING
         },
         video: {
-            type: dataTypes.INTEGER
+            type: dataTypes.TEXT
         },
         idProduct: {
             type: dataTypes.INTEGER

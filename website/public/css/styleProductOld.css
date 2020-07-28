@@ -6,6 +6,9 @@
 html{
     font-size: 11px;
 }
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
 body {
     /* background: black; */
     background: url('../img/background9.jpg');
@@ -130,7 +133,7 @@ div .iconos i{
     position: fixed;
     top: -84px; 
     width: 100%;
-    background-color: rgb(100, 111, 129);
+    background-color: black;
     padding: 20px;
     z-index: 9;
     transition: all 600ms;
@@ -154,7 +157,7 @@ div .iconos i{
     top: 130px;
     width: 100%;
     z-index: 8;
-    background-color: rgb(100, 111, 129);
+    background-color: black;
     display: none;
 }
 
@@ -225,6 +228,68 @@ div .iconos i{
 }
 .nav-items i{
     color: white;
+}
+
+#container-search-mb {
+    position: fixed;
+    top: -84px; 
+    width: 100%;
+    background-color: black;
+    padding: 20px;
+    z-index: 9;
+    transition: all 600ms;
+}
+
+#container-search-mb input {
+    display: block;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    font-size: 12px;
+    outline: 0;
+}
+
+#icon-search-mb {
+    cursor: pointer;
+}
+
+#iconoMb {
+    position: relative;
+    margin-left: auto;
+}
+
+#box-search-mb {
+    position: fixed;
+    top: 130px;
+    width: 100%;
+    z-index: 8;
+    background-color: black;
+    display: none;
+}
+
+#box-search-mb li a{
+    display: block;
+    width: 100%;
+    color: white;
+    padding: 12px 20px;
+}
+
+#box-search-mb li a:hover{
+    background-color: grey;
+}
+
+#box-search-mb li a i{
+    margin-right: 5px;
+}
+
+#cover-container-search-mb{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 7;
+    display: none;
 }
 /* MOBILE HEADER ENDS */
 

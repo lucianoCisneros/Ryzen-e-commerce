@@ -11,11 +11,23 @@ module.exports = function (sequelize, dataTypes) {
             type: dataTypes.STRING,
             allowNull: false
         },
+        title: {
+            type: dataTypes.STRING
+        },
+        secondaryTitle: {
+            type: dataTypes.STRING
+        },
         price: {
             type: dataTypes.DECIMAL,
             allowNull: false
         },
         description: {
+            type: dataTypes.TEXT
+        },
+        secDescription: {
+            type: dataTypes.TEXT
+        },
+        thirdDescription: {
             type: dataTypes.TEXT
         },
         brand: {
@@ -24,6 +36,12 @@ module.exports = function (sequelize, dataTypes) {
         img: {
             type: dataTypes.STRING,
             allowNull: false
+        },
+        secImg: {
+            type: dataTypes.STRING
+        },
+        thirdImg: {
+            type: dataTypes.STRING
         },
         idCategory: {
             type: dataTypes.INTEGER,
