@@ -73,8 +73,8 @@ const productsController = {
                 id: req.params.id
             }
         })
-            .then(() => res.redirect('/categorias'))
-            .catch(error => console.log(error));;
+            .then(() => res.redirect('/'))
+            .catch(error => console.log(error));
     },
     delete: (req,res) => {
         DB.Product.destroy({

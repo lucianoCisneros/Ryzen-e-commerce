@@ -30,8 +30,7 @@
                     <div class="scren-body">
                         <div class="screen-body-item left">
                             <div class="app-title">
-                                <span>EDITAR</span>
-                                <span>PRODUCTO</span>
+                                <span>Editar Producto</span>
                             </div>
                         </div>
                     </div>
@@ -42,6 +41,16 @@
                             <div class="app-form-group">
                                 <input class="app-form-control" type="text" name="name" placeholder="Nombre" required id="name"
                                     value='<%= products.name %>'>
+                            </div>
+
+                            <div class="app-form-group">
+                                <input class="app-form-control" type="text" name="title" placeholder="Titulo" required id="title"
+                                    value='<%= products.title %>'>
+                            </div>
+
+                            <div class="app-form-group">
+                                <input class="app-form-control" type="text" name="secTitle" placeholder="Titulo Secundario" required id="secTitle"
+                                    value='<%= products.secTitle %>'>
                             </div>
         
                             <div class="app-form-group">
@@ -58,10 +67,29 @@
                                 <input class="app-form-control" type="file" name="img" placeholder="" required id="img"
                                     value='<%= products.img %>'>
                             </div>
-        
+
                             <div class="app-form-group">
-                                <textarea class="app-form-control" name="description" placeholder="Descripción" required
-                                    id="description"><%= products.description %></textarea>
+                                <input class="app-form-control" type="text" name="secImg" placeholder="Imagen" required id="secImg" value="<%= products.secImg %>">
+                            </div>
+                            
+                            <div class="app-form-group">
+                                <input class="app-form-control" type="text" name="description" placeholder="especificaciones" required id="description"
+                                    value="<%= products.description %>">
+                            </div>
+                            
+                            <div class="app-form-group">
+                                <textarea class="app-form-control" name="secDescription" placeholder="Descripción" required
+                                    id="secDescription"><%= products.secDescription %></textarea>
+                            </div>
+
+                            <div class="app-form-group">
+                                <textarea class="app-form-control" name="thirdDescription" placeholder="Descripción Secundaria" required
+                                    id="thirdDescription"><%= products.thirdDescription %></textarea>
+                            </div>
+
+                            <div class="app-form-group">
+                                <input class="app-form-control" type="text" name="video" placeholder="Video URL" required id="video"
+                                    value="<%= products.video %>">
                             </div>
         
                             <div class="app-form-group">
@@ -82,8 +110,8 @@
                             </div>
         
                             <div class="app-form-group buttons">
-                                <button type="submit" class="app-form-buttons" value="Editar Producto">EDITAR PRODUCTO</button>
-                                <button type="submit" class="app-form-buttons" class="delete Borrar Producto" value="Borrar" formaction="/productos/editar/eliminar/<%= products.id %>">BORRAR PRODUCTO</button>
+                                <button type="submit" class="app-form-buttons" value="Editar Producto">Editar Producto</button>
+                                <button type="submit" class="app-form-buttons" class="delete Borrar Producto" value="Borrar" formaction="/productos/editar/eliminar/<%= products.id %>">Borrar Producto</button>
                             </div>
                         </div>
                     </div>
