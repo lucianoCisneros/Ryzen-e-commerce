@@ -71,7 +71,7 @@ h3{
         position: absolute;
         bottom: -3px;
         width: 0;
-        height: 1.25px;
+        height: 1.5px;
         margin: 5px 0 0;
         transition: all 0.2s ease-in-out;
         transition-duration: 0.5s;
@@ -336,6 +336,7 @@ div .iconos i{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    padding-bottom: 40px;
 }
 .imagenProducto{
     height: 100%;
@@ -436,23 +437,21 @@ div .iconos i{
     margin: 20px 0
 }
 .accion h3{
-    font-family: 'Chelsea Market', cursive;
-    font-size: 3em;
+    /* font-family: 'Chelsea Market', cursive; */
+    font-size: 3.3em;
     margin: 25% 0;
     margin-left: -10px;
     text-shadow: 0 0 10px black;
     text-align: center;
 }
-.rojo{
-    font-family: 'Chelsea Market', cursive;
-    
-}
 .especificaciones{
     display: flex;
-    background: rgba(255,255,255,0.4);
-    border-radius: 20px;
+    /* background: rgba(255,255,255,0.4); */
+    /* border-radius: 20px; */
+    border-top: 1px solid black;
     font-size: 1.46rem;
     flex-wrap: wrap;
+    padding-top: 20px;
 }
 .titulosEspecificaciones ul{
     display: flex;
@@ -583,6 +582,15 @@ div .iconos i{
     color: black;
     text-shadow: 0 0 6px white;
 }
+.comprar button{
+    background: rgba(40,167,69,0.85);
+    color: white;
+}
+.comprar button:hover {
+    background: rgb(40, 167, 69);
+    color: white;
+    box-shadow: 0 0 5px black;
+}
 .botones button{
     font-size: 2rem;
 }
@@ -613,10 +621,29 @@ div .iconos i{
     text-align: center;
     font-size: 28px;
 }
+.contactDiv {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.contactInfo{
+    list-style: none;
+}
+.contactContainer{
+    padding-top:10px;
+    background: black;
+}
 .linkIg .fab{
     color: white;
     font-size: 3.5rem;
     margin-right:5px;
+}
+.contacto{
+    text-align: left;
+    font-size: 2rem; 
+    color: white;
+    font-weight: bold;
 }
 @media (max-width: 320px){
     .detalle{
@@ -796,9 +823,9 @@ div .iconos i{
     .imagenProducto .productImg{
         cursor: zoom-in;
     }
-    .prodArticulo {
+    /* .prodArticulo {
         height: 67vh;
-    }
+    } */
     .video{
         margin-top: 20px;
     }
