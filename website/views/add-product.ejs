@@ -42,6 +42,15 @@
                                 <input class="app-form-control" type="text" name="name" placeholder="Nombre" required id="name"
                                     value="">
                             </div>
+
+
+                            <div class="app-form-group">
+                                <input class="app-form-control" type="text" name="title" placeholder="Titulo" required id="title" value="">
+                            </div>
+
+                            <div class="app-form-group">
+                                <input class="app-form-control" type="text" name="secTitle" placeholder="Titulo Secundario" required id="secTitle" value="">
+                            </div>
         
                             <div class="app-form-group">
                                 <input class="app-form-control" type="number" name="price" placeholder="Precio" required
@@ -54,22 +63,47 @@
                             </div>
         
                             <div class="app-form-group">
+                                <label class="category" for="">Imagen Principal:</label>
                                 <input class="app-form-control" type="file" name="img" placeholder="" required id="img"
                                     value="">
                             </div>
-        
+
                             <div class="app-form-group">
-                                <textarea class="app-form-control" name="description" placeholder="Descripción" required
-                                    id="description"></textarea>
+                                <label class="category" for="">Imagen Descripción:</label>
+                                <input class="app-form-control" type="file" name="secImg" placeholder="" required id="img" value="">
+                            </div>
+
+                            <div class="app-form-group">
+                                <label class="category" for="">Imagen Secundaria:</label>
+                                <input class="app-form-control" type="file" name="thirdImg" placeholder="" required id="img" value="">
                             </div>
         
+                            <div class="app-form-group">
+                                <textarea class="app-form-control" name="description" placeholder="Especifiaciones" required
+                                    id="description"></textarea>
+                            </div>
+
+                            <div class="app-form-group">
+                                <textarea class="app-form-control" name="secDescription" placeholder="Descripción" required
+                                    id="secDescription"></textarea>
+                            </div>
+
+                            <div class="app-form-group">
+                                <textarea class="app-form-control" name="thirdDescription" placeholder="Descripción Secundaria" required
+                                    id="thirdDescription"></textarea>
+                            </div>
+
+                            <div class="app-form-group">
+                                <input class="app-form-control" type="text" name="video" placeholder="Video URL" required id="video" value="">
+                            </div>
+
                             <div class="app-form-group">
                                 <label class="category" for="category">Categoría:</label>
                                 <select class="select" name="category" id="category">
                                     <% for (let i = 0; i < categories.length; i++) { %>
-                                        <option value="<%=categories[i].id%>">
-                                            <%= categories[i].name %>
-                                        </option>
+                                    <option value="<%=categories[i].id%>">
+                                        <%= categories[i].name %>
+                                    </option>
                                     <% } %>
                                 </select>
                             </div>

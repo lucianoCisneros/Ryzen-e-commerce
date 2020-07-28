@@ -28,10 +28,17 @@ const productsController = {
     store: (req,res) => {
         let newProduct = {
             name: req.body.name,
+            title: req.body.title,
+            secTitle: req.body.secTitle,
             price: req.body.price,
             description: req.body.description,
+            secDescription: req.body.secDescription,
+            thirdDescription: req.body.thirdDescription,
             brand: req.body.brand,
             img: req.file.filename,
+            secImg: req.file.filename,
+            thirdImg: req.file.filename,
+            video: req.body.video,
             idCategory: req.body.category
         }
         console.log(newProduct)

@@ -14,7 +14,7 @@ module.exports = function (sequelize, dataTypes) {
         title: {
             type: dataTypes.STRING
         },
-        secondaryTitle: {
+        secTitle: {
             type: dataTypes.STRING
         },
         price: {
@@ -41,6 +41,9 @@ module.exports = function (sequelize, dataTypes) {
             type: dataTypes.STRING
         },
         thirdImg: {
+            type: dataTypes.STRING
+        },
+        video: {
             type: dataTypes.STRING
         },
         idCategory: {
