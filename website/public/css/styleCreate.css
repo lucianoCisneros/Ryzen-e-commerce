@@ -472,6 +472,65 @@ div .iconos i{
     text-transform: uppercase;
     font-size: 14px;
 }
+.registerErrors{
+    display: flex;
+    color: white;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+.registerErrors ul{
+    width: 100%;
+    list-style: none;
+}
+.errorsTitle{
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    list-style: none;
+    text-transform: uppercase;
+    padding: 0;
+    margin-top: 2%;
+    text-shadow: 0 0 6px #0a0a0a;
+}
+.errorsTitle span{
+    text-shadow: 0 0 0px;
+}
+.registerErrors.col-12{
+    padding: 0;
+}
+
+.errorList.col-12{
+    padding: 0;
+}
+
+.errorType{
+    font-size: 1.4rem;
+    /* text-align: center; */
+    /*list-style: none;*/
+}
+
+@media (max-width: 349px){
+    .input-group input{
+        width: 85%;
+    }
+    .errorsTitle{
+        font-size: 23px;
+    }
+}
+@media (max-width: 375px){
+    .errorType{
+       text-align: left;
+    }
+    .registerErrors ul{
+        list-style: none;
+    }
+}
+@media (min-width: 420px){
+    .errorList{
+        display: flex;
+        justify-content: center;
+    }
+}
 
 @media screen and (max-width: 520px){
     .screen-body{

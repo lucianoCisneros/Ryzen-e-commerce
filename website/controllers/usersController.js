@@ -45,7 +45,7 @@ const usersController = {
                         if (usuarioEncontrado.rol == 10) {
                             res.locals.admin = 1;
                         }
-                        res.cookie('username', usuarioEncontrado.userName, { maxAge: 10000 * 300 * 300 });
+                        return res.cookie('username', usuarioEncontrado.userName, { maxAge: 10000 * 300 * 300 });
                     }
 
                     return res.redirect('/');

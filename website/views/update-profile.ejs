@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <script src="https://kit.fontawesome.com/d92a2a2802.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <link rel="stylesheet" href='/css/styleCreate.css'>
+    <title>RYZEN | Editar Producto</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <%- include('partials/headerNavBar') %>
+    <%- include('partials/mobileNavBar') %>
+    <!-- /Header -->
+
+    <!--home-->
+    <% if (typeof errors!= 'undefined') { %>
+    <div class="registerErrors col-12">
+        <p class="errorsTitle col-12"><span style="color: red">X</span> Error al actualizar <span style="color: red">X</span>
+        </p>
+        <ul>
+            <% for(let i=0; i< errors.length; i++) { %>
+            <div class="errorList col-12">
+                <li class="errorType">
+                    <%= errors[i].msg %>
+                </li>
+            </div>
+            <% } %>
+        </ul>
+    </div>
+    <% } %>
+    <form action="/perfil/actualizar-perfil" method="POST" enctype="application/x-www-form-urlencoded">
+        <div class="background">
+            <div class="container">
+                <div class="screen">
+
+                    <div class="scren-body">
+                        <div class="screen-body-item left">
+                            <div class="app-title">
+                                <span>Cambiar Contraseña</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="screen-body-item">
+                        <div class="app-form">
+
+                            <div class="app-form-group">
+                                <input class="app-form-control" type="password" name="oldPassword" placeholder="Contraseña Actual" required
+                                    id="oldPassword" value=''>
+                            </div>
+
+                            <div class="app-form-group">
+                                <input class="app-form-control" type="password" name="newPassword" placeholder="Nueva Contraseña" required id="newPassword"
+                                    value=''>
+                            </div>
+
+                            <div class="app-form-group">
+                                <input class="app-form-control" type="password" placeholder="Confirmar Nueva Contraseña" required id="retype" name="retype" value=''>
+                            </div>
+                            
+                            <div class="app-form-group buttons">
+                                <button type="submit" class="app-form-buttons" value="Actualizar">Confirmar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!--footer--><br>
+    <%- include('partials/footer') %>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="/js/js.js"></script>
+
+    <script text="text/javascript">
+        var cursor = document.querySelector('.cursor')
+        var cursor2 = document.querySelector('.cursor2')
+
+        document.addEventListener('mousemove', function (e) {
+            cursor.style.cssText = cursor2.style.cssText = 'left: ' + e.clientX + 'px; top: ' + e.clientY + 'px;'
+        })
+    </script>
+
+    <script text="text/javascript">
+
+        TweenMax.from('.container', 2, {
+            delay: 0.8,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+        });
+
+    </script>
+
+</body>
+
+</html>
