@@ -51,9 +51,12 @@ const productsController = {
             });
     },
     list: (req,res) => {
-        DB.Product.findAll()
-            .then((products)=>{
-                return res.render('list', {products:products})
+        let totalProducts = DB.Product.findAll()
+        let totalCategories = DB.Category.findAll();
+
+        Promise.all([totalProducts, totalCategories])
+            .then(function([products, categories]){
+                return res.render('list', {products:products, categories: categories})
             })
     },
     edit: (req,res) => {

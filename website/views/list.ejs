@@ -31,10 +31,15 @@
                 <% if (products.length !== 0) { %>
                 <div class="adminOptions">
                     <div class="productOptions">
+                        <% for (let i = 0; i < categories.length; i++) { %>
+                            <div class="linksDiv categorieDiv">
+                                <span class="categories" id="categorie<%= parseInt([i]) + 1 %>"><%= categories[i].name %></span><i class="fas fa-arrow-right"></i>
+                            </div>
+                        <% } %>
                         <% products.forEach((e) => { %>
-                        <div class="linksDiv">
-                        <a href="/productos/editar/<%= e.id %>"><%= e.name %></a><i class="fas fa-arrow-right"></i>
-                        </div>
+                            <div class="linksDiv productCategory productsJS productCategory<%= e.idCategory %>">
+                                <a href="/productos/editar/<%= e.id %>"><%= e.name %></a><i class="fas fa-arrow-right"></i>
+                            </div>
                         <% }) %>
                     </div>
                 </div>
@@ -54,6 +59,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
+        <script src="/js/profile.js"></script>
         <script src="/js/search.js"></script>
 </body>
 </html>

@@ -345,7 +345,7 @@ div .iconos i{
     padding-left: 0;
     padding-right: 0;
 }
-.options a{
+.options a, .options span{
     text-decoration: none;
     color: black;
     /* text-shadow: 0 0 6px #0a0a0a; */
@@ -359,6 +359,15 @@ div .iconos i{
     justify-content: space-between;
     align-items: center;
 }
+.categories{
+    cursor: pointer;
+}
+.productCategory{
+    display: none;
+}
+.categoryDivNone{
+    display: none;
+}
 .fa-arrow-right{
     font-size: 2rem;
     /* background: black; */
@@ -367,8 +376,7 @@ div .iconos i{
     color: black;
     padding: 5px;
 }
-
-.linksDiv:hover a{
+.linksDiv:hover a, .linksDiv:hover span{
     font-weight: bold;
 }
 .linksDiv:hover i{
