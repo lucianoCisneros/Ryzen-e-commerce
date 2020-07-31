@@ -326,10 +326,14 @@ div .iconos i{
     flex-wrap: wrap;
     justify-content: center;
     padding-left: 0px;
+    padding-right: 0px;
 }
 .name{
     padding: 15px 0;
     width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .name p{
     color: black;
@@ -338,6 +342,10 @@ div .iconos i{
     font-weight: bold;
     text-shadow: 0 0 5px white;
     /* text-align: center; */
+}
+.name span{
+    font-weight: bold;
+    cursor: pointer;
 }
 .options{
     border-radius: 10px;
@@ -363,6 +371,9 @@ div .iconos i{
     cursor: pointer;
 }
 .productCategory{
+    display: none;
+}
+.noDisplay {
     display: none;
 }
 .categoryDivNone{

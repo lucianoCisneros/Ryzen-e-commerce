@@ -475,9 +475,14 @@ div .iconos i{
 .infoTitulo{
     font-weight: bold;
     font-size: 24px;
+    text-align: center;
+}
+.infoDescripcion, .subInfoDescripcion{
+    text-align: center;
 }
 .infoImagen img{
     border-radius: 6px;
+    box-shadow: 0 0 30px black;
 }
 .infoContainer{
     display: flex;
@@ -490,6 +495,9 @@ div .iconos i{
     flex-wrap: wrap;
     align-items: center;
 }
+.infoImagenSegunda img{
+    box-shadow: 0 0 30px black;
+}
 .video{
     display: flex;
 }
@@ -499,7 +507,8 @@ div .iconos i{
     align-items: center;
 }
 .youtubeVideo{
-    margin: 20px 0
+    margin: 20px 0;
+    box-shadow: 0 0 30px black;
 }
 .accion h3{
     /* font-family: 'Chelsea Market', cursive; */
@@ -763,7 +772,7 @@ div .iconos i{
 @media only screen and (min-width:415px) and (max-width:443px){
     .buttonsDiv{
         padding: 11px;
-        padding-left: 0px;
+        /* padding-left: 0px; */
     }
 }
 @media (max-width:575px){

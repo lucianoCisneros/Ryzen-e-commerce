@@ -26,6 +26,7 @@
                 <div class="profileData container">
                     <div class="name">
                         <p>Seleccione la opción a editar</p>
+                        <span class="noDisplay">Volver</span>
                     </div>
                 </div>
                 <% if (products.length !== 0) { %>
@@ -37,7 +38,7 @@
                             </div>
                         <% } %>
                         <% products.forEach((e) => { %>
-                            <div class="linksDiv productCategory productsJS productCategory<%= e.idCategory %>">
+                            <div class="linksDiv noDisplay productsJS productCategory<%= e.idCategory %>">
                                 <a href="/productos/editar/<%= e.id %>"><%= e.name %></a><i class="fas fa-arrow-right"></i>
                             </div>
                         <% }) %>
