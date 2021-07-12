@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(session({ secret: 'piratas en el mapa' }));
 app.use(cookieParser());
 
-app.listen('3000', () => console.log('Servidor ejecutando en puerto 3000'));
+app.listen('3000', () => console.log('Server running at port: 3000'));
 
 // Web Routes
 const homeRoutes = require("./routes/home");
